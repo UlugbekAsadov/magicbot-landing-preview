@@ -7,6 +7,7 @@ import SwitchDarkLight from "../elements/SwitchDarkLight";
 import Footer1 from "./Footer/Footer1";
 import Header1 from "./Header/Header1";
 import PageHead from "./PageHead";
+import { useLocaleContext } from "@/context/locale.context";
 
 export default function Layout({
   headerLayout,
@@ -19,6 +20,7 @@ export default function Layout({
   pageTitleBtn,
   headerClass,
 }) {
+  const { translate } = useLocaleContext()
   useEffect(() => {
     const WOW = require("wowjs");
     window.wow = new WOW.WOW({
@@ -29,6 +31,7 @@ export default function Layout({
   return (
     <>
       <PageHead />
+      {translate("hola")}
       <div id="wrapper">
         {!headerLayout && <Header1 headerClass={headerClass} />}
         {headerLayout == 1 ? <Header1 headerClass={headerClass} /> : null}
