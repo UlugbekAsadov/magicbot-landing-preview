@@ -1,5 +1,9 @@
+"use client";
+import { useLocaleContext } from "@/context/locale.context";
 import Link from "next/link";
+
 export default function Seo_Section3() {
+  const { translate } = useLocaleContext();
   return (
     <>
       <section className="section background-contain-center-left spdtb">
@@ -33,15 +37,13 @@ export default function Seo_Section3() {
               <div className="lg-mt32">
                 <div className="heading mb32">
                   <div className="heading-sub color-navy">
-                    Marketing optimized
+                    {translate("marketing-optimization.advantages")}
                   </div>
                   <h2 className="heading-title">
-                    Increase your average cart revenue
+                    {translate("marketing-optimization.paragraph")}
                   </h2>
                   <div className="heading-desc">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout.
+                    {translate("marketing-optimization.text")}
                   </div>
                 </div>
                 <div className="block-icon-box layout-01 mb40">
@@ -53,10 +55,15 @@ export default function Seo_Section3() {
                             <img src="/assets/images/hft-07.svg" alt="Icon" />
                           </div>
                           <div className="content pdr50">
-                            <h3 className="title">Shipping methods</h3>
+                            <h3 className="title">
+                              {translate(
+                                "marketing-optimization.analytics-and-statistics.paragraph"
+                              )}
+                            </h3>
                             <div className="desc">
-                              It is a long established fact that a reader will
-                              be distracted
+                              {translate(
+                                "marketing-optimization.analytics-and-statistics.text"
+                              )}
                             </div>
                           </div>
                         </div>
@@ -69,10 +76,15 @@ export default function Seo_Section3() {
                             <img src="/assets/images/hft-08.svg" alt="Icon" />
                           </div>
                           <div className="content pdr50">
-                            <h3 className="title">Fully integrated</h3>
+                            <h3 className="title">
+                              {translate(
+                                "marketing-optimization.integration.paragraph"
+                              )}
+                            </h3>
                             <div className="desc">
-                              It is a long established fact that a reader will
-                              be distracted
+                              {translate(
+                                "marketing-optimization.integration.text"
+                              )}
                             </div>
                           </div>
                         </div>
@@ -85,10 +97,15 @@ export default function Seo_Section3() {
                             <img src="/assets/images/hft-09.svg" alt="Icon" />
                           </div>
                           <div className="content pdr50">
-                            <h3 className="title">Secure payments</h3>
+                            <h3 className="title">
+                              {translate(
+                                "marketing-optimization.secure-payment.paragraph"
+                              )}
+                            </h3>
                             <div className="desc">
-                              It is a long established fact that a reader will
-                              be distracted
+                              {translate(
+                                "marketing-optimization.secure-payment.text"
+                              )}
                             </div>
                           </div>
                         </div>
@@ -101,10 +118,15 @@ export default function Seo_Section3() {
                             <img src="/assets/images/hft-10.svg" alt="Icon" />
                           </div>
                           <div className="content pdr50">
-                            <h3 className="title">Data analytics</h3>
+                            <h3 className="title">
+                              {translate(
+                                "marketing-optimization.sell-2-click.paragraph"
+                              )}
+                            </h3>
                             <div className="desc">
-                              It is a long established fact that a reader will
-                              be distracted
+                              {translate(
+                                "marketing-optimization.sell-2-click.text"
+                              )}
                             </div>
                           </div>
                         </div>
@@ -112,7 +134,7 @@ export default function Seo_Section3() {
                     </div>
                   </div>
                 </div>
-                <div className="button-wrap">
+                {/* <div className="button-wrap">
                   <Link
                     href="/"
                     className="button text color-navy"
@@ -120,7 +142,7 @@ export default function Seo_Section3() {
                   >
                     Learn More <i className="las la-long-arrow-alt-right" />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

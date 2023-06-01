@@ -1,6 +1,9 @@
-import Image from "next/image";
+"use client";
+import { useLocaleContext } from "@/context/locale.context";
 import Link from "next/link";
 export default function Chat_Service_Section1() {
+  const { translate } = useLocaleContext();
+
   return (
     <>
       <section
@@ -12,15 +15,12 @@ export default function Chat_Service_Section1() {
             <div className="col-lg-6">
               <div className="heading mb32">
                 <h2 className="heading-title size-xl">
-                  Increase sales <br /> with{" "}
+                  {translate("hero.paragraph.text")}
                   <span className="color-navy nstyle={o-underline">
-                    Chatool
+                    {translate("hero.paragraph.highlight")}
                   </span>
                 </h2>
-                <div className="heading-desc">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </div>
+                <div className="heading-desc">{translate("hero.text")}</div>
               </div>
               <div className="button-wrap mt32">
                 <Link
@@ -28,7 +28,7 @@ export default function Chat_Service_Section1() {
                   className="button fullfield xs-mb10"
                   title="Try it free"
                 >
-                  Try it free
+                  {translate("hero.button-text")}
                 </Link>
               </div>
             </div>

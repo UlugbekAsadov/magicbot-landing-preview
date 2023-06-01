@@ -1,5 +1,8 @@
+"use client";
+import { useLocaleContext } from "@/context/locale.context";
 import Link from "next/link";
 export default function Seo_Section4() {
+  const { translate } = useLocaleContext();
   return (
     <>
       <section className="section background-contain-center-right spdtb overflow-hidden">
@@ -9,15 +12,13 @@ export default function Seo_Section4() {
               <div className="pdr60 lg-mt32">
                 <div className="heading mb32">
                   <div className="heading-sub color-navy">
-                    Design &amp; Configure
+                    {translate("advantages.advantages")}
                   </div>
                   <h2 className="heading-title">
-                    Your free online store is just a few clicks away.
+                    {translate("advantages.paragraph")}
                   </h2>
                   <div className="heading-desc">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout.
+                    {translate("advantages.text")}
                   </div>
                 </div>
                 <div className="block-icon-box layout-12 mb40">
@@ -27,10 +28,11 @@ export default function Seo_Section4() {
                         <img src="/assets/images/hft-11.svg" alt="Icon" />
                       </div>
                       <div className="content pdr50">
-                        <h3 className="title">Online editing</h3>
+                        <h3 className="title">
+                          {translate("advantages.variety-of-goods.paragraph")}
+                        </h3>
                         <div className="desc">
-                          It is a long established fact that a reader will be
-                          distracted
+                          {translate("advantages.variety-of-goods.text")}
                         </div>
                       </div>
                     </div>
@@ -41,10 +43,11 @@ export default function Seo_Section4() {
                         <img src="/assets/images/hft-12.svg" alt="Icon" />
                       </div>
                       <div className="content pdr50">
-                        <h3 className="title">Sell digital products</h3>
+                        <h3 className="title">
+                          {translate("advantages.product-options.paragraph")}
+                        </h3>
                         <div className="desc">
-                          It is a long established fact that a reader will be
-                          distracted
+                          {translate("advantages.product-options.text")}
                         </div>
                       </div>
                     </div>
@@ -55,16 +58,17 @@ export default function Seo_Section4() {
                         <img src="/assets/images/hft-13.svg" alt="Icon" />
                       </div>
                       <div className="content pdr50">
-                        <h3 className="title">Professional themes</h3>
+                        <h3 className="title">
+                          {translate("advantages.import-and-export.paragraph")}
+                        </h3>
                         <div className="desc">
-                          It is a long established fact that a reader will be
-                          distracted
+                          {translate("advantages.import-and-export.text")}
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="button-wrap">
+                {/* <div className="button-wrap">
                   <Link
                     href="/"
                     className="button text color-navy"
@@ -72,7 +76,7 @@ export default function Seo_Section4() {
                   >
                     Learn More <i className="las la-long-arrow-alt-right" />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-6 col-full-right lg-order-1">
