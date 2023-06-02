@@ -9,7 +9,6 @@ export const useLocaleContext = () => useContext(LocaleContext);
 
 function useDelayedRender(asyncFun, deps) {
   const [output, setOutput] = useState();
-
   useEffect(() => {
     (async function () {
       try {
@@ -18,7 +17,8 @@ function useDelayedRender(asyncFun, deps) {
         console.error(e);
       }
     })();
-  }, deps);
+  }, []);
+
   return output === undefined ? null : output;
 }
 
