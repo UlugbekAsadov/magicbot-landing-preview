@@ -72,7 +72,7 @@ export default function Layout({
         {footerLayout == 1 ? <Footer1 /> : null}
 
         <BackToTop />
-        {/* <SwitchDarkLight /> */}
+        <SwitchDarkLight />
       </div>
     </>
   );
