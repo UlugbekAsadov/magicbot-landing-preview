@@ -2,12 +2,23 @@ import HeaderRight from "./HeaderRight";
 import Logo from "./Logo";
 import Menu from "./Menu";
 import CanvasMenu from "./CanvasMenu";
+import { useEffect, useState } from "react";
 
 export default function Header({ headerClass }) {
+  const [width, setWidth] = useState(window.innerWidth);
+  const tabletScreenWidth = 768;
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <header id="header" className={`site-header ${headerClass}`}>
-        <CanvasMenu />
+        {width <= tabletScreenWidth ? <CanvasMenu /> : null}
         <div className="container-fluid">
           <div className="row flex-align-c inner">
             <div className="col-lg-3 col-6">
