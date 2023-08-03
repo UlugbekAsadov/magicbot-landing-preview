@@ -11,7 +11,7 @@ export default function App_Showcase_Section9() {
 
   return (
     <>
-      <div className="section-pricing section has-icon icon-bottom-center background-grey spdtb">
+      <div className="section-pricing section has-icon icon-bottom-center background-grey spdtb mb-20">
         <div className="container">
           <div className="toggle" onClick={toggleTrueFalse}>
             <span className="text">Monthly</span>

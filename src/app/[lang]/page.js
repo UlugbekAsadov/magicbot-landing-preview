@@ -26,11 +26,11 @@ export default function HomeAppShowcase() {
         <App_Showcase_Section5 />
         <App_Showcase_Section6 />
         <App_Showcase_Section7 />
-        <App_Showcase_Section8 />
+        {/* <App_Showcase_Section8 /> */}
         <App_Showcase_Section9 />
-        <App_Showcase_Section10 />
+        {/* <App_Showcase_Section10 /> */}
         <App_Showcase_Section11 />
-        <App_Showcase_Section12 />
+        {/* <App_Showcase_Section12 /> */}
       </Layout>
     </>
   );
