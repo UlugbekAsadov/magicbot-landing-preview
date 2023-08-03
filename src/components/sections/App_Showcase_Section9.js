@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-export default function Seo_Section6() {
+
+export default function App_Showcase_Section9() {
   const [isToggled, setToggled] = useState(false);
   const toggleTrueFalse = () => {
     setToggled(!isToggled);
@@ -10,12 +11,8 @@ export default function Seo_Section6() {
 
   return (
     <>
-      <div className="section-pricing section spdtb">
+      <div className="section-pricing section has-icon icon-bottom-center background-grey spdtb">
         <div className="container">
-          <div className="heading align-center">
-            <h2 className="heading-title size-l">Really Simple Pricing</h2>
-            <div className="heading-desc">No hidden fees, no limits</div>
-          </div>
           <div className="toggle" onClick={toggleTrueFalse}>
             <span className="text">Monthly</span>
             <span className={`switch ${isToggled ? " is-active" : ""}`} />
@@ -28,7 +25,7 @@ export default function Seo_Section6() {
             <div className="row">
               <div className="col-lg-4">
                 <div className="pricing-box">
-                  <div className="inner background-grey">
+                  <div className="inner">
                     <div className="icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +98,7 @@ export default function Seo_Section6() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/"
+                        href="/contact-01"
                         className="button fullfield"
                         title="Get Started"
                       >
@@ -113,7 +110,7 @@ export default function Seo_Section6() {
               </div>
               <div className="col-lg-4">
                 <div className="pricing-box popular">
-                  <div className="inner background-grey">
+                  <div className="inner">
                     <div className="icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +149,7 @@ export default function Seo_Section6() {
                       Basic<span className="badge-popular">Popular</span>
                     </div>
                     <div className="price">
-                      <div className="number">${isToggled ? " 59" : " 19"}</div>{" "}
+                      <div className="number">${isToggled ? " 29" : " 19"}</div>{" "}
                       / month
                     </div>
                     <div className="desc">
@@ -167,7 +164,7 @@ export default function Seo_Section6() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/"
+                        href="/contact-01"
                         className="button fullfield"
                         title="Get Started"
                       >
@@ -179,7 +176,7 @@ export default function Seo_Section6() {
               </div>
               <div className="col-lg-4">
                 <div className="pricing-box">
-                  <div className="inner background-grey">
+                  <div className="inner">
                     <div className="icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +218,7 @@ export default function Seo_Section6() {
                     </div>
                     <div className="name">Premium</div>
                     <div className="price">
-                      <div className="number">${isToggled ? " 69" : " 29"}</div>{" "}
+                      <div className="number">${isToggled ? " 69" : " 59"}</div>{" "}
                       / month
                     </div>
                     <div className="desc">
@@ -236,7 +233,7 @@ export default function Seo_Section6() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/"
+                        href="/contact-01"
                         className="button fullfield"
                         title="Get Started"
                       >
@@ -325,7 +322,7 @@ export default function Seo_Section6() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/"
+                        href="/contact-01"
                         className="button fullfield"
                         title="Get Started"
                       >
@@ -390,7 +387,7 @@ export default function Seo_Section6() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/"
+                        href="/contact-01"
                         className="button fullfield"
                         title="Get Started"
                       >
@@ -458,7 +455,7 @@ export default function Seo_Section6() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/"
+                        href="/contact-01"
                         className="button fullfield"
                         title="Get Started"
                       >
@@ -471,6 +468,7 @@ export default function Seo_Section6() {
             </div>
           </div>
         </div>
+        <img className="icon" src="/assets/images/asc6.png" alt="Image" />
       </div>
     </>
   );
