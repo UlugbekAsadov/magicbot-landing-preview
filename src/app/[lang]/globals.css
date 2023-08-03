@@ -24,3 +24,7 @@ body {
   max-width: 1400px !important;
   width: 100%;
 }
+
+a {
+  color: var(--sala-primary-dark, #111111);
+}
