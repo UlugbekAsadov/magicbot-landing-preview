@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="container">
             <div className="inner">
-              <div className="row">
+              <div className="row flex justify-between">
                 <div className="col-lg-3">
                   <div className="footer-item footer-about">
                     <div className="logo">
@@ -54,35 +54,9 @@ export default function Footer() {
                     </p>
                   </div>
                 </div>
+
                 <div className="col-lg-2">
-                  <div className="footer-item footer-menu">
-                    <p className="font-bold text-black mb-3">Company</p>
-                    <ul>
-                      <li>
-                        <Link href="/" title="About us">
-                          About us
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/" title="Blog">
-                          Blog
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/" title="Careers">
-                          Careers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/" title="Contact">
-                          Contact
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-lg-2">
-                  <div className="footer-item footer-menu">
+                  <div className="footer-item footer-menu ">
                     <p className="font-bold text-black mb-3">Resources</p>
                     <ul>
                       <li>
@@ -108,78 +82,6 @@ export default function Footer() {
                     </ul>
                   </div>
                 </div>
-                <div className="col-lg-2">
-                  <div className="footer-item footer-menu">
-                    <p className="font-bold text-black mb-3">Social Media</p>
-                    <ul>
-                      <li>
-                        <Link href="https://www.facebook.com" title="Facebook">
-                          Facebook
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="https://www.twitter.com" title="Twitter">
-                          Twitter
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://www.instagram.com"
-                          title="Instagram"
-                        >
-                          Instagram
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="https://www.linkedin.com" title="Linkedin">
-                          Linkedin
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-lg-3">
-                  <div className="footer-item footer-newsletter">
-                    <p className="font-bold text-black mb-3">Newsletter</p>
-                    <p>
-                      Subcribe our newsletter and stay up to date about the
-                      company
-                    </p>
-                    <form action="#" className="newsletter">
-                      <div className="field-input">
-                        <input
-                          type="email"
-                          defaultValue=""
-                          placeholder="Email address"
-                        />
-                      </div>
-                      <div className="field-submit">
-                        <button>Subcribe</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <div className="container">
-            <div className="inner flex flex-content-sb flex-align-c">
-              <div className="copyright">© 2023 Uxper. All rights reserved</div>
-              <div className="menu">
-                <ul>
-                  <li>
-                    <Link href="/" title="Terms">
-                      Terms
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/" title="Privacy Policy">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
