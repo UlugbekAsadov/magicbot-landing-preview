@@ -5,23 +5,22 @@ export default function App_Showcase_Section1() {
     <>
       <section
         className="section background-overlay background-full pdt180 oveflow-hidden"
-        style={{ backgroundImage: "url(/assets/images/hero-01.jpg)" }}
+        style={{ backgroundImage: "url(/assets/images/hero-dark.png)" }}
       >
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="heading heading-alway-white wow animate__animated animate__fadeInLeft ">
-                <div className="heading-sub">App showcase</div>
+                <div className="heading-sub d-none">Magicbot</div>
                 <h2 className="heading-title size-xl">
-                  Showcase your <br /> App in one place
+                  Легко покупать, умно выбирать!
                 </h2>
                 <div
                   className="heading-desc"
                   data-wow
                   animate__animated-delay="0.5s"
                 >
-                  Most Trending, Clean and Elegant Design based on deeply
-                  research
+                  Не путайте с обычными чат-ботами в Телеграм, веб-бот это мини приложение с более обширным функционалом, удобным интерфейсом и с подключенной онлайн оплатой.
                 </div>
               </div>
             </div>
@@ -36,7 +35,7 @@ export default function App_Showcase_Section1() {
                 />
                 <img
                   className="img02 wow animate__animated animate__fadeInUp "
-                  src="/assets/images/product-images/1.webp"
+                  src="/assets/images/hero-phone.png"
                   alt="Image"
                 />
               </div>
