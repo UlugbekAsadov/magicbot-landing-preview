@@ -36,7 +36,7 @@ export default function App_Showcase_Section1() {
                 />
                 <img
                   className="img02 wow animate__animated animate__fadeInUp "
-                  src="/assets/images/asc2.png"
+                  src="/assets/images/product-images/1.webp"
                   alt="Image"
                 />
               </div>

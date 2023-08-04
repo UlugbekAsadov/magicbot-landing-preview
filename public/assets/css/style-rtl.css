@@ -2076,10 +2076,11 @@ table th {
 }
 
 .images.layout-02 .img02 {
+    width: 100%;
     position: absolute;
     top: 0;
     width: 45%;
-    right: 50px;
+    /* right: 50px; */
     z-index: 2;
 }
 

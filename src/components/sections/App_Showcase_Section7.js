@@ -20,8 +20,8 @@ export default function App_Showcase_Section7() {
           </div>
           <div className="swiper">
             <Swiper
-              spaceBetween={30}
-              slidesPerView={4}
+              spaceBetween={10}
+              slidesPerView={3}
               pagination={{
                 clickable: true,
                 el: ".js-pagination",
@@ -35,49 +35,49 @@ export default function App_Showcase_Section7() {
             >
               <SwiperSlide>
                 <img
-                  src="/assets/images/app-scr-01.png"
+                  src="/assets/images/product-images/5.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="/assets/images/app-scr-02.png"
+                  src="/assets/images/product-images/6.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="/assets/images/app-scr-03.png"
+                  src="/assets/images/product-images/7.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="/assets/images/app-scr-04.png"
+                  src="/assets/images/product-images/8.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="/assets/images/app-scr-01.png"
+                  src="/assets/images/product-images/9.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="/assets/images/app-scr-02.png"
+                  src="/assets/images/product-images/10.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="/assets/images/app-scr-03.png"
+                  src="/assets/images/product-images/11.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="/assets/images/app-scr-04.png"
+                  src="/assets/images/product-images/12.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>

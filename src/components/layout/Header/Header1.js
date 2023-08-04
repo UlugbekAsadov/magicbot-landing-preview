@@ -1,5 +1,4 @@
-import HeaderRight from "./HeaderRight";
-import Logo from "./Logo";
+import Image from "next/image";
 import Menu from "./Menu";
 import CanvasMenu from "./CanvasMenu";
 import { useEffect, useState } from "react";
@@ -23,7 +22,7 @@ export default function Header({ headerClass }) {
           <div className="row flex-align-c inner">
             <div className="col-lg-3 col-6">
               <div className="header-left flex flex-align-c">
-                <Logo />
+                <Image src="/assets/images/logo-light.png" alt="logo" width={150} height={30} />
               </div>
             </div>
             <div className="col-lg-6 col-0 text-center">
