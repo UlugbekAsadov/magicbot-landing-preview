@@ -36,7 +36,7 @@ html::-webkit-scrollbar {
 }
 
 a {
-  color: var(--sala-primary-dark, #111111) !important;
+  color: var(--sala-primary-dark, #111111);
 }
 
 h3,
