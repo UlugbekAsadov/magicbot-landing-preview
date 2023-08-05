@@ -24,7 +24,7 @@ export default function App_Showcase_Section11() {
                 <div className="banner-right lg-hidden">
                   <img
                     className="wow animate__animated   animate__fadeInRight"
-                    src="/assets/images/product-images/1.webp"
+                    src="/assets/images/product-images/16.webp"
                     alt="Banner"
                   />
                 </div>

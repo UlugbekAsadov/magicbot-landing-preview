@@ -21,7 +21,7 @@ export default function App_Showcase_Section7() {
           <div className="swiper">
             <Swiper
               spaceBetween={10}
-              slidesPerView={3}
+              slidesPerView={4}
               pagination={{
                 clickable: true,
                 el: ".js-pagination",
@@ -33,18 +33,6 @@ export default function App_Showcase_Section7() {
               loop={true}
               modules={[Autoplay]}
             >
-              <SwiperSlide>
-                <img
-                  src="/assets/images/product-images/5.webp"
-                  alt="App Screenshots"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="/assets/images/product-images/6.webp"
-                  alt="App Screenshots"
-                />
-              </SwiperSlide>
               <SwiperSlide>
                 <img
                   src="/assets/images/product-images/7.webp"
@@ -78,6 +66,18 @@ export default function App_Showcase_Section7() {
               <SwiperSlide>
                 <img
                   src="/assets/images/product-images/12.webp"
+                  alt="App Screenshots"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/assets/images/product-images/13.webp"
+                  alt="App Screenshots"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/assets/images/product-images/14.webp"
                   alt="App Screenshots"
                 />
               </SwiperSlide>

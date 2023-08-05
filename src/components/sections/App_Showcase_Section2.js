@@ -69,6 +69,11 @@ export default function App_Showcase_Section2() {
                     alt="Image"
                   />
                   <img
+                    className="img03 wow animate__animated      animate__fadeInRight"
+                    src="/assets/images/asc5.png"
+                    alt="Image"
+                  />
+                  <img
                     className="img04 lg-hidden"
                     src="/assets/images/asc6.png"
                     alt="Image"

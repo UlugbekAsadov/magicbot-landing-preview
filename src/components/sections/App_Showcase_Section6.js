@@ -18,7 +18,12 @@ export default function App_Showcase_Section6() {
                   />
                   <img
                     className="img05 wow animate__animated   animate__fadeInLeft"
-                    src="/assets/images/product-images/4.webp"
+                    src="/assets/images/product-images/5.webp"
+                    alt="Image"
+                  />
+<img
+                    className="img06 wow animate__animated   animate__fadeInRight"
+                    src="/assets/images/product-images/6.webp"
                     alt="Image"
                   />
 
