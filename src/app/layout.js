@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../public/assets/css/style.css";
-import "./[lang]/globals.css";
+import "./globals.css";
 import { LocaleContextProvider } from "@/context/locale.context";
 
 const inter = Inter({ subsets: ["latin"] });
