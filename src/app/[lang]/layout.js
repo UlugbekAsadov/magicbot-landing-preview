@@ -1,11 +1,11 @@
 import { Inter } from "next/font/google";
-import "../../public/assets/libs/bootstrap/css/bootstrap.min.css";
-import "../../public/assets/libs/line-awesome/css/line-awesome.min.css";
+import "../../../public/assets/libs/bootstrap/css/bootstrap.min.css";
+import "../../../public/assets/libs/line-awesome/css/line-awesome.min.css";
 import "animate.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../../public/assets/css/style.css";
+import "../../../public/assets/css/style.css";
 import "./globals.css";
 import { LocaleContextProvider } from "@/context/locale.context";
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="[lang]#" />
+        <link rel="shortcut icon" href="src/app#" />
       </head>
       <body className={inter.className}>
         <LocaleContextProvider>{children}</LocaleContextProvider>
@@ -28,5 +28,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-export const runtime = 'edge'

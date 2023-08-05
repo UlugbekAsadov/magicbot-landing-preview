@@ -27,7 +27,7 @@ export const LocaleContextProvider = ({ children }) => {
 
   return useDelayedRender(async () => {
     const translate = await getTranslator(
-      `${params.lang || 'ru'}` // our middleware ensures this is valid
+      `${params.lang}` // our middleware ensures this is valid
     );
     const value = {
       translate,

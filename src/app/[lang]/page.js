@@ -12,45 +12,26 @@ import App_Showcase_Section10 from "@/components/sections/App_Showcase_Section10
 import App_Showcase_Section11 from "@/components/sections/App_Showcase_Section11";
 import App_Showcase_Section12 from "@/components/sections/App_Showcase_Section12";
 
-export const getStaticPaths = async () => {
-    return {
-        paths: [
-            {
-                params: {
-                    lang: 'uz',
-                },
-            },
-            {
-                params: {
-                    lang: 'ru',
-                },
-            },
-        ],
-        fallback: true,
-    }
-}
-
-
 export default function HomeAppShowcase() {
-    return (
-        <>
-            <Layout
-                headerClass="is-transparent sala-dark-scheme"
-                siteContentClass="pt0"
-            >
-                <App_Showcase_Section1/>
-                <App_Showcase_Section2/>
-                <App_Showcase_Section3/>
-                <App_Showcase_Section4/>
-                <App_Showcase_Section5/>
-                <App_Showcase_Section6/>
-                <App_Showcase_Section7/>
-                {/* <App_Showcase_Section8 /> */}
-                <App_Showcase_Section9/>
-                {/* <App_Showcase_Section10 /> */}
-                <App_Showcase_Section11/>
-                {/* <App_Showcase_Section12 /> */}
-            </Layout>
-        </>
-    );
+  return (
+    <>
+      <Layout
+        headerClass="is-transparent sala-dark-scheme"
+        siteContentClass="pt0"
+      >
+        <App_Showcase_Section1 />
+        <App_Showcase_Section2 />
+        <App_Showcase_Section3 />
+        <App_Showcase_Section4 />
+        <App_Showcase_Section5 />
+        <App_Showcase_Section6 />
+        <App_Showcase_Section7 />
+        {/* <App_Showcase_Section8 /> */}
+        <App_Showcase_Section9 />
+        {/* <App_Showcase_Section10 /> */}
+        <App_Showcase_Section11 />
+        {/* <App_Showcase_Section12 /> */}
+      </Layout>
+    </>
+  );
 }
