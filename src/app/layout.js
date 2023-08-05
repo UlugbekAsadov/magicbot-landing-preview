@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
 import "../../public/assets/libs/bootstrap/css/bootstrap.min.css";
 import "../../public/assets/libs/line-awesome/css/line-awesome.min.css";
 import "animate.css";
@@ -7,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../public/assets/css/style.css";
+import "./globals.css";
 import { LocaleContextProvider } from "@/context/locale.context";
 
 const inter = Inter({ subsets: ["latin"] });
