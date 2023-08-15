@@ -1,6 +1,9 @@
 "use client";
 
+import { useLocaleContext } from "@/context/locale.context";
+
 export default function App_Showcase_Section1() {
+  const { translate } = useLocaleContext();
   return (
     <>
       <section
@@ -13,14 +16,14 @@ export default function App_Showcase_Section1() {
               <div className="heading heading-alway-white wow animate__animated animate__fadeInLeft ">
                 <div className="heading-sub d-none">Magicbot</div>
                 <h2 className="heading-title size-xl">
-                  Легко покупать, умно выбирать!
+                  {translate("hero.paragraph")}
                 </h2>
                 <div
                   className="heading-desc"
                   data-wow
                   animate__animated-delay="0.5s"
                 >
-                  Не путайте с обычными чат-ботами в Телеграм, веб-бот это мини приложение с более обширным функционалом, удобным интерфейсом и с подключенной онлайн оплатой.
+                  {translate("hero.text")}
                 </div>
               </div>
             </div>
