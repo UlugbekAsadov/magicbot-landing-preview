@@ -16,8 +16,8 @@ export default function HomeAppShowcase() {
   return (
     <>
       <Layout
-        headerClass="is-transparent sala-dark-scheme"
-        siteContentClass="pt0"
+        headerClass="is-transparent "
+        siteContentClass="pt0 pb0 overflow-hidden"
       >
         <App_Showcase_Section1 />
         <App_Showcase_Section2 />

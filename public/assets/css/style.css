@@ -3003,7 +3003,7 @@ img.h600 {
   .container-md,
   .container-sm,
   .container-xl {
-    max-width: 1200px;
+    max-width: 1500px;
   }
 }
 @media (max-width: 1200px) {
