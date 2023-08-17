@@ -7,40 +7,39 @@ export default function App_Showcase_Section1() {
   const { translate } = useLocaleContext();
   return (
     <>
-      <section className="section opt120 has-shape spdb mt-16">
+      <section id={"top"} className="section opt120 has-shape spdb">
         <div className="shape shape-yellow layout-01" />
         <div className="shape shape-yellow layout-02" />
         <div className="shape shape-red" />
         <div className="shape shape-blue" />
-        <div className="container-xl">
-          <div className="row">
+        <div className="container">
+          <div className="row flex-align-c">
             <div className="col-lg-6">
               <div className="heading mb32">
-                <h2 className="heading-title size-xl">
+                <h2 className="heading-title !text-3xl md:!text-5xl md:!leading-[60px]">
                   {translate("hero.paragraph")}
                 </h2>
-                <div className="heading-desc">{translate("hero.text")}</div>
+                <div className="mt-3 text-sm md:text-xl">
+                  {translate("hero.text")}
+                </div>
               </div>
-              <div className="button-wrap mb16">
-                <Link
-                  href="/contact-01"
-                  className="button fullfield"
-                  title="Buy now with just $50"
-                >
-                  {translate("hero.button-text")}
-                </Link>
-              </div>
+              <Link
+                href="/contact-01"
+                className="w-fit px-4 py-2 bg-blue-600 text-white rounded-md block"
+              >
+                {translate("hero.button-text")}
+              </Link>
             </div>
-            <div className="col-lg-6 lg-order-1">
-              <div className="images layout-02 ">
+            <div className="col-lg-6 mt-12 sm:mt-24 md:mt-0">
+              <div className="images lg-mt32 layout-12">
                 <div className="inner">
                   <img
-                    className="img05 wow animate__animated   animate__fadeInRight"
+                    className="custom-image-1 wow animate__animated   animate__fadeInLeft"
                     src="/assets/images/product-images/7.webp"
                     alt="Image"
-                  />{" "}
+                  />
                   <img
-                    className="img06 wow animate__animated    animate__fadeInLeft"
+                    className="custom-image-2 wow animate__animated    animate__fadeInLeft hidden md:block"
                     src="/assets/images/product-images/4_1.webp"
                     alt="Image"
                   />

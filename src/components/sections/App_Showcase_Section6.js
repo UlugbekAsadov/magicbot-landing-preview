@@ -5,67 +5,56 @@ import Link from "next/link";
 export default function App_Showcase_Section6() {
   return (
     <>
-      <section className="section pt120 spdb">
+      <section className="section spdt">
         <div className="container">
-          <div className="row flex-align-c">
-            <div className="col-lg-6">
-              <div className="images layout-02 lg-mb60">
-                <div className="inner">
-                  <img
-                    className="img01"
-                    src="/assets/images/asc3.png"
-                    alt="Image"
-                  />
-                  <img
-                    className="img05 wow animate__animated   animate__fadeInLeft"
-                    src="/assets/images/product-images/5.webp"
-                    alt="Image"
-                  />
-<img
-                    className="img06 wow animate__animated   animate__fadeInRight"
-                    src="/assets/images/product-images/6.webp"
-                    alt="Image"
-                  />
+          <div className="row ">
+            <div className="col-lg-6 lg-order-2">
+              <div className="pdr50 pdl80 lg-mt32">
+                <div className="heading mb24">
+                  <div className="heading-sub">Управление в одном месте</div>
+                  <h2 className="heading-title size-l">Простота и Удобство</h2>
+                  <div className="heading-desc">
+                    Адаптивная админ-панель с CRM и обработкой заказов. Все, что
+                    вам нужно для эффективного управления магазином
+                  </div>
+                </div>
+                <div className="block-list layout-01 block-list-flex">
+                  <ul>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Адаптивность ПК и Мобилка</span>
+                    </li>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Внутренняя CRM система</span>
+                    </li>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Обработка заказов</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 lg-order-1 flex items-center">
+              <div className="pdl50">
+                <div className="images layout-10">
+                  <div className="inner -translate-x-7">
+                    <img
+                      className="  wow animate__animated   animate__fadeInLeft"
+                      src="/assets/images/product-images/17.png"
+                      alt="Image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                  <img
-                    className="img07 lg-hidden"
-                    src="/assets/images/asc8.png"
-                    alt="Image"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="heading mb24">
-                <div className="heading-sub color-navy">awesome features</div>
-                <h2 className="heading-title size-l">Comes standard</h2>
-                <div className="heading-desc">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </div>
-              </div>
-              <div className="block-list layout-01 block-list-flex">
-                <ul>
-                  <li>
-                    <i className="las la-check" />
-                    <span>Vivamus ac elementum urna.</span>
-                  </li>
-                  <li>
-                    <i className="las la-check" />
-                    <span>Feugiat metus suscipiti.</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="button-wrap mt32">
-                <Link
-                  href="/contact-01"
-                  className="button fullfield"
-                  title="Start for Free"
-                >
-                  Start for Free
-                </Link>
-              </div>
-            </div>
+          <div className=" heading align-center mt-16">
+            <h2 className="text-center  heading-title size-l">
+              Тарифы, подходящие для любого бизнеса
+            </h2>
           </div>
         </div>
       </section>

@@ -45,3 +45,48 @@ h3,
   line-height: 1.3 !important;
   font-weight: 600 !important;
 }
+
+.custom-image-1 {
+  width: 75% !important;
+  margin: 0 auto !important;
+}
+
+.custom-image-2 {
+  width: 75% !important;
+  margin: 0 auto !important;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  z-index: -1;
+}
+
+.custom-image-3 {
+  width: 50%;
+  margin: 0 auto !important;
+}
+
+.custom-image-4 {
+  width: 50% !important;
+  margin: 0 auto !important;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  z-index: -1;
+}
+
+.custom-image {
+  width: 50% !important;
+  margin: 0 auto !important;
+}
+
+.logo-white-part {
+  fill: black;
+}
+
+.sala-dark-scheme .logo-white-part {
+  fill: white;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}

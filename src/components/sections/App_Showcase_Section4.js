@@ -3,20 +3,64 @@
 export default function App_Showcase_Section4() {
   return (
     <>
-      <div
-        className="section-banner layout-03"
-        style={{ backgroundImage: "url(/assets/images/asc7.jpg)" }}
-      >
+      <section className="section spdt">
         <div className="container">
-          <div className="content">
-            <div className="heading heading-alway-white align-center">
-              <h2 className="heading-title">
-                Sala is changing <br /> the way money moves.
-              </h2>
+          <div className="row ">
+            <div className="col-lg-6 lg-order-2">
+              <div className="pdr50 pdl80 lg-mt32">
+                <div className="heading mb24">
+                  <div className="heading-sub">Интерфейс</div>
+                  <h2 className="heading-title size-l">Простота и Удобство</h2>
+                  <div className="heading-desc">
+                    Magicstore предлагает интуитивно понятный UX,
+                    мультиязычность и полную кастомизацию под ваш бренд. Ваш
+                    магазин в Telegram теперь может заменить веб-сайт или
+                    приложение
+                  </div>
+                </div>
+                <div className="block-list layout-01 block-list-flex">
+                  <ul>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Оптимизированный UX для быстрих покупки.</span>
+                    </li>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Поиск по товарам и категориям</span>
+                    </li>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Вариации и фильтрация товаров</span>
+                    </li>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Мультиязычность</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 lg-order-1">
+              <div className="pdl50">
+                <div className="images layout-10">
+                  <div className="inner -translate-x-7">
+                    <img
+                      className="custom-image-3  wow animate__animated   animate__fadeInLeft"
+                      src="/assets/images/product-images/7.webp"
+                      alt="Image"
+                    />
+                    <img
+                      className="custom-image-4 wow animate__animated   animate__fadeInRight"
+                      src="/assets/images/product-images/8.webp"
+                      alt="Image"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -11,14 +11,17 @@ export default function App_Showcase_Section9() {
 
   return (
     <>
-      <div className="section-pricing section has-icon icon-bottom-center background-grey spdtb mb-20">
+      <div
+        id="plans"
+        className="section-pricing section has-icon icon-bottom-center background-grey spdtb mb-20"
+      >
         <div className="container">
           <div className="toggle" onClick={toggleTrueFalse}>
-            <span className="text">Monthly</span>
+            <span className="text">Ежемесячно</span>
             <span className={`switch ${isToggled ? " is-active" : ""}`} />
-            <span className="text">Anually</span>
+            <span className="text">Ежегодно</span>
             <span className="discount">
-              <span className="discount-text">Save 20%</span>
+              <span className="discount-text">сэкономь 20%</span>
             </span>
           </div>
           <div className="pricing-table layout-01 is-active">
@@ -82,12 +85,12 @@ export default function App_Showcase_Section9() {
                         </g>
                       </svg>
                     </div>
-                    <div className="name">Free</div>
+                    <div className="name">Стартап</div>
                     <div className="price">
-                      <div className="number">$0</div> / month
+                      <div className="number">$0</div> / Месяц
                     </div>
                     <div className="desc">
-                      <p>Perfect for startups</p>
+                      <p>Идеально подходит для стартапов</p>
                     </div>
                     <ul className="list">
                       <li className="active">2 users</li>
@@ -100,9 +103,9 @@ export default function App_Showcase_Section9() {
                       <Link
                         href="/contact-01"
                         className="button fullfield"
-                        title="Get Started"
+                        title="Начать сейчас"
                       >
-                        Get Started
+                        Начать сейчас
                       </Link>
                     </div>
                   </div>
@@ -146,14 +149,14 @@ export default function App_Showcase_Section9() {
                       </svg>
                     </div>
                     <div className="name">
-                      Basic<span className="badge-popular">Popular</span>
+                      Бизнес<span className="badge-popular">Популярный</span>
                     </div>
                     <div className="price">
                       <div className="number">${isToggled ? " 29" : " 19"}</div>{" "}
-                      / month
+                      / Месяц
                     </div>
                     <div className="desc">
-                      <p>Perfect for company</p>
+                      <p>Идеально для компании</p>
                     </div>
                     <ul className="list">
                       <li className="active">Unlimited users</li>
@@ -166,9 +169,9 @@ export default function App_Showcase_Section9() {
                       <Link
                         href="/contact-01"
                         className="button fullfield"
-                        title="Get Started"
+                        title="Начать сейчас"
                       >
-                        Get Started
+                        Начать сейчас
                       </Link>
                     </div>
                   </div>
@@ -216,13 +219,13 @@ export default function App_Showcase_Section9() {
                         </g>
                       </svg>
                     </div>
-                    <div className="name">Premium</div>
+                    <div className="name">Премиум</div>
                     <div className="price">
                       <div className="number">${isToggled ? " 69" : " 59"}</div>{" "}
-                      / month
+                      / Месяц
                     </div>
                     <div className="desc">
-                      <p>Perfect for business</p>
+                      <p>Идеально подходит для бизнеса</p>
                     </div>
                     <ul className="list">
                       <li className="active">Unlimited users</li>
@@ -235,9 +238,9 @@ export default function App_Showcase_Section9() {
                       <Link
                         href="/contact-01"
                         className="button fullfield"
-                        title="Get Started"
+                        title="Начать сейчас"
                       >
-                        Get Started
+                        Начать сейчас
                       </Link>
                     </div>
                   </div>
@@ -308,10 +311,10 @@ export default function App_Showcase_Section9() {
                     </div>
                     <div className="name">Free</div>
                     <div className="price">
-                      <div className="number">$0</div> / month
+                      <div className="number">$0</div> / Месяц
                     </div>
                     <div className="desc">
-                      <p>Perfect for startups</p>
+                      <p>Идеально подходит для стартапов</p>
                     </div>
                     <ul className="list">
                       <li className="active">2 users</li>
@@ -324,9 +327,9 @@ export default function App_Showcase_Section9() {
                       <Link
                         href="/contact-01"
                         className="button fullfield"
-                        title="Get Started"
+                        title="Начать сейчас"
                       >
-                        Get Started
+                        Начать сейчас
                       </Link>
                     </div>
                   </div>
@@ -373,10 +376,10 @@ export default function App_Showcase_Section9() {
                       Basic<span className="badge-popular">Popular</span>
                     </div>
                     <div className="price">
-                      <div className="number">$59</div> / month
+                      <div className="number">$59</div> / Месяц
                     </div>
                     <div className="desc">
-                      <p>Perfect for company</p>
+                      <p>Идеально для компании</p>
                     </div>
                     <ul className="list">
                       <li className="active">Unlimited users</li>
@@ -389,9 +392,9 @@ export default function App_Showcase_Section9() {
                       <Link
                         href="/contact-01"
                         className="button fullfield"
-                        title="Get Started"
+                        title="Начать сейчас"
                       >
-                        Get Started
+                        Начать сейчас
                       </Link>
                     </div>
                   </div>
@@ -441,10 +444,10 @@ export default function App_Showcase_Section9() {
                     </div>
                     <div className="name">Premium</div>
                     <div className="price">
-                      <div className="number">$69</div> / month
+                      <div className="number">$69</div> / Месяц
                     </div>
                     <div className="desc">
-                      <p>Perfect for business</p>
+                      <p>Идеально подходит для бизнеса</p>
                     </div>
                     <ul className="list">
                       <li className="active">Unlimited users</li>
@@ -457,9 +460,9 @@ export default function App_Showcase_Section9() {
                       <Link
                         href="/contact-01"
                         className="button fullfield"
-                        title="Get Started"
+                        title="Начать сейчас"
                       >
-                        Get Started
+                        Начать сейчас
                       </Link>
                     </div>
                   </div>
