@@ -60,10 +60,9 @@ export default function ContactOne() {
             <div className="col-lg-6">
               <div className="contact-content">
                 <div className="heading">
-                  <h2 className="heading-title">Контакты.</h2>
+                  <h2 className="heading-title">{translate("form.contact")}</h2>
                   <div className="heading-desc">
-                    Возникли вопросы? Обратитесь к нашим менеджерам - они всегда
-                    рады помочь.
+                    {translate("form.title_2")}
                   </div>
                 </div>
                 <div className="contact-boxs">
@@ -75,7 +74,8 @@ export default function ContactOne() {
                           title="Call us"
                           className="background-navy"
                         >
-                          Телефон<span>+998 77 003-44-04</span>
+                          {translate("form.phone")}
+                          <span>+998 77 003-44-04</span>
                         </a>
                       </div>
                     </div>
@@ -87,16 +87,19 @@ export default function ContactOne() {
                           className="background-dark"
                           target={"_blank"}
                         >
-                          Телеграм<span>@humocommercee</span>
+                          {translate("form.telegram")}
+                          <span>@humocommercee</span>
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="heading">
-                  <h2 className="heading-title">Наш адрес</h2>
+                  <h2 className="heading-title">
+                    {translate("form.our_address")}
+                  </h2>
                   <div className="heading-desc">
-                    Город Ташкент, Мирзо-Улугбекский район, ул. Муминова 4а
+                    {translate("form.address")}
                   </div>
                 </div>
                 <iframe
@@ -112,17 +115,18 @@ export default function ContactOne() {
             <div className="col-lg-6 relative">
               <div className="contact-form layout-01">
                 <div className="heading">
-                  <h2 className="heading-title">Хотите подключиться?</h2>
-                  <div className="heading-desc">
-                    Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее
-                    время!
-                  </div>
+                  <h2 className="heading-title">
+                    {translate("form.wanna_connect")}
+                  </h2>
+                  <div className="heading-desc">{translate("form.title")}</div>
                 </div>
                 <form onSubmit={handleSubmitform}>
                   <div className="row">
                     <div className="col-md-12">
                       <div className="field-input">
-                        <label htmlFor="full_name">Имя и фамилия*</label>
+                        <label htmlFor="full_name">
+                          {translate("form.full_name")}*
+                        </label>
                         <input
                           type="text"
                           name="full_name"
@@ -137,7 +141,9 @@ export default function ContactOne() {
                     </div>
                     <div className="col-md-12">
                       <div className="field-input">
-                        <label htmlFor="phone_number">Номер телефона *</label>
+                        <label htmlFor="phone_number">
+                          {translate("form.phone_number")} *
+                        </label>
                         <input
                           type="text"
                           name="phone_number"
@@ -157,14 +163,16 @@ export default function ContactOne() {
                         />
                         {hasError && (
                           <span className="text-xs text-red-500">
-                            Validation error
+                            {translate("form.phone_number_required")}
                           </span>
                         )}
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div className="field-input">
-                        <label htmlFor="shop_name">Название магазина*</label>
+                        <label htmlFor="shop_name">
+                          {translate("form.store_name")}*
+                        </label>
                         <input
                           type="text"
                           name="shop_name"
@@ -182,8 +190,8 @@ export default function ContactOne() {
                       <div className="field-submit">
                         <input
                           type="submit"
-                          defaultValue="Send Message"
-                          name="submit"
+                          defaultValue={translate("form.submit")}
+                          name={translate("form.submit")}
                         />
                       </div>
                     </div>
