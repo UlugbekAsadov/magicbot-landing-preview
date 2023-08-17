@@ -8,6 +8,7 @@ import Footer1 from "./Footer/Footer1";
 import Header1 from "./Header/Header1";
 import PageHead from "./PageHead";
 import { useLocaleContext } from "@/context/locale.context";
+import Head from "next/head";
 
 export default function Layout({
   headerLayout,
@@ -30,7 +31,6 @@ export default function Layout({
   });
   return (
     <>
-      <PageHead />
       <div id="wrapper">
         {!headerLayout && <Header1 headerClass={headerClass} />}
         {headerLayout == 1 ? <Header1 headerClass={headerClass} /> : null}
