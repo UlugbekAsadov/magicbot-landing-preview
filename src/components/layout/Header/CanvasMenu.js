@@ -1,16 +1,18 @@
 import Link from "next/link";
 import { useState } from "react";
+import { navbarLinks } from "@/utils/mocks";
+import { useLocaleContext } from "@/context/locale.context";
 
 export default function CanvasMenu() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { translate } = useLocaleContext();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <>
-      <div className="canvas-menu" onClick={toggleMenu}>
+      <div className="canvas-menu !-top-1" onClick={toggleMenu}>
         <div className="icon cursor-pointer">
           <svg
             width="30px"
@@ -87,27 +89,16 @@ export default function CanvasMenu() {
       {isOpen && (
         <nav className="mobile-menu">
           <ul>
-            <li
-              className="wow animate__animated animate__fadeInLeft "
-              data-wow
-              animate__animated-delay="0s"
-            >
-              <Link href="/">Documentation</Link>
-            </li>
-            <li
-              className="wow animate__animated animate__fadeInLeft "
-              data-wow
-              animate__animated-delay="0.5s"
-            >
-              <Link href="/">Demos</Link>
-            </li>
-            <li
-              className="wow animate__animated animate__fadeInLeft "
-              data-wow
-              animate__animated-delay="1s"
-            >
-              <Link href="/">Support Center</Link>
-            </li>
+            {navbarLinks.map((link, index) => (
+              <li
+                className="wow animate__animated animate__fadeInLeft text-xl "
+                data-wow
+                animate__animated-delay={`${link.id}s`}
+                onClick={toggleMenu}
+              >
+                <Link href={link.href}>{translate(link.title)}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
       )}

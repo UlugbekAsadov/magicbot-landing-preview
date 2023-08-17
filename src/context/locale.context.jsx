@@ -2,6 +2,7 @@
 import { getTranslator } from "@/i18n";
 import { useParams } from "next/navigation";
 import React, { createContext, useContext, useEffect, useState } from "react";
+import NextNProgress from "nextjs-progressbar";
 
 const LocaleContext = createContext({});
 
@@ -27,13 +28,22 @@ export const LocaleContextProvider = ({ children }) => {
 
   return useDelayedRender(async () => {
     const translate = await getTranslator(
-      `${params.lang}` // our middleware ensures this is valid
+      `${params.lang}`, // our middleware ensures this is valid
     );
     const value = {
       translate,
     };
     return (
-      <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>
+      <LocaleContext.Provider value={value}>
+        <NextNProgress
+          color="#1591F4"
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={3}
+          showOnShallow={true}
+        />
+        {children}
+      </LocaleContext.Provider>
     );
   });
 };

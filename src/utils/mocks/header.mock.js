@@ -1,22 +1,22 @@
 export const navbarLinks = [
   {
-    id: 1,
+    id: 0.4,
     title: "navbar.main",
-    href: "/",
+    href: "/#top",
   },
   {
-    id: 2,
+    id: 0.8,
     title: "navbar.possibilities",
-    href: "/",
+    href: "#possibilities",
   },
   {
-    id: 1,
+    id: 1.2,
     title: "navbar.plans",
-    href: "/",
+    href: "#plans",
   },
   {
-    id: 1,
+    id: 1.6,
     title: "navbar.contacts",
-    href: "/",
+    href: "/contact",
   },
 ];

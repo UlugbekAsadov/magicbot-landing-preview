@@ -2408,17 +2408,18 @@ table th {
   left: 25%;
 }
 .images.layout-10 .img04 {
-  width: 62%;
+  width: 45%;
   position: absolute;
   top: 1%;
-  left: 65%;
+  left: 45%;
 }
 .images.layout-10 .img05 {
-  width: 75%;
+  width: 45%;
   position: absolute;
   top: 26%;
   left: 20%;
   z-index: 1;
+  transform: rotate(-5deg);
 }
 .images.layout-10 .img06 {
   width: 28%;
@@ -2507,7 +2508,6 @@ table th {
 }
 .images.layout-12 .inner {
   max-width: 400px;
-  margin: 0 auto;
   position: relative;
   text-align: center;
 }
@@ -3003,7 +3003,7 @@ img.h600 {
   .container-md,
   .container-sm,
   .container-xl {
-    max-width: 1200px;
+    max-width: 1500px;
   }
 }
 @media (max-width: 1200px) {
@@ -3905,8 +3905,9 @@ img.h600 {
   background: #fff;
   position: fixed;
   z-index: 999;
-  padding: 80px;
+  padding: 80px 30px;
   top: 0;
+  left: 0;
 }
 
 .mobile-menu a {
@@ -4100,7 +4101,9 @@ img.h600 {
   height: 60px;
   border-radius: 50%;
   background-color: var(--sala-primary-navy, #0057fc);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+  box-shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
   display: block;
   text-align: center;
@@ -11351,7 +11354,9 @@ form.checkout-coupon input[type="text"] {
   visibility: visible;
   transform-origin: 50% -10%;
   transform: translate3d(0, 0, -180px);
-  box-shadow: 0 10px 7px -7px rgba(0, 0, 0, 0.12), 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 10px 7px -7px rgba(0, 0, 0, 0.12),
+    0 0 4px rgba(0, 0, 0, 0.1);
   background-color: var(--sala-neutral-white, #ffffff);
   min-height: 370px;
   margin-top: 15px;
@@ -11749,16 +11754,7 @@ form.checkout-coupon input[type="text"] {
 .block-number .item .number .first {
   position: relative;
 }
-.block-number .item .number .first:after {
-  content: "";
-  height: 46px;
-  width: 6px;
-  display: inline-block;
-  vertical-align: -3px;
-  background-color: var(--sala-primary-navy, #0057fc);
-  transform: rotate(20deg);
-  margin: 0 10px;
-}
+
 .block-number .item .number .last {
   font-size: 32px;
 }

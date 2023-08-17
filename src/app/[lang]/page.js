@@ -16,8 +16,8 @@ export default function HomeAppShowcase() {
   return (
     <>
       <Layout
-        headerClass="is-transparent sala-dark-scheme"
-        siteContentClass="pt0"
+        headerClass="is-transparent "
+        siteContentClass="pt0 pb0 overflow-hidden"
       >
         <App_Showcase_Section1 />
         <App_Showcase_Section2 />
@@ -25,12 +25,8 @@ export default function HomeAppShowcase() {
         <App_Showcase_Section4 />
         <App_Showcase_Section5 />
         <App_Showcase_Section6 />
-        <App_Showcase_Section7 />
-        {/* <App_Showcase_Section8 /> */}
         <App_Showcase_Section9 />
-        {/* <App_Showcase_Section10 /> */}
-        <App_Showcase_Section11 />
-        {/* <App_Showcase_Section12 /> */}
+        <App_Showcase_Section10 />
       </Layout>
     </>
   );

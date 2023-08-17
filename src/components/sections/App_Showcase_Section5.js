@@ -2,122 +2,61 @@
 
 import { useState } from "react";
 export default function App_Showcase_Section5() {
-  const [isActive, setIsActive] = useState({
-    status: false,
-    key: 1,
-  });
-
-  const handleToggle = (key) => {
-    if (isActive.key === key) {
-      setIsActive({
-        status: false,
-      });
-    } else {
-      setIsActive({
-        status: true,
-        key,
-      });
-    }
-  };
   return (
     <>
       <section className="section spdt">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-6 lg-order-2">
-              <div className="heading mb24">
-                <div className="heading-sub color-navy">awesome features</div>
-                <h2 className="heading-title size-l">Comes standard</h2>
-                <div className="heading-desc">
-                  It is a long established fact that
-                </div>
-              </div>
-              <div className="block-accordion enable active-first layout-03 pdr80">
-                <div
-                  className={
-                    isActive.key == 1
-                      ? "accordion-item is-active"
-                      : "accordion-item"
-                  }
-                  onClick={() => handleToggle(1)}
-                >
-                  <h4 className="title">Light and dark mode</h4>
-                  <div
-                    className="content"
-                    style={
-                      isActive.key == 1
-                        ? { display: "block" }
-                        : { display: "none" }
-                    }
-                  >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                  </div>
-                </div>
-                <div
-                  className={
-                    isActive.key == 2
-                      ? "accordion-item is-active"
-                      : "accordion-item"
-                  }
-                  onClick={() => handleToggle(2)}
-                >
-                  <h4 className="title">Fully Responsive</h4>
-                  <div
-                    className="content"
-                    style={
-                      isActive.key == 2
-                        ? { display: "block" }
-                        : { display: "none" }
-                    }
-                  >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                  </div>
-                </div>
-                <div
-                  className={
-                    isActive.key == 3
-                      ? "accordion-item is-active"
-                      : "accordion-item"
-                  }
-                  onClick={() => handleToggle(3)}
-                >
-                  <h4 className="title">Clean and modern design</h4>
-                  <div
-                    className="content"
-                    style={
-                      isActive.key == 3
-                        ? { display: "block" }
-                        : { display: "none" }
-                    }
-                  >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+          <div className="row flex-align-c mt-14">
+            <div className="col-lg-6">
+              <div className="">
+                <div className="images layout-10">
+                  <div className="inner">
+                    <img
+                      className="custom-image wow animate__animated   animate__fadeInLeft"
+                      src="/assets/images/product-images/11_1.png"
+                      alt="Image"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 lg-order-1">
-              <div className="images layout-02 lg-mt32 lg-mb60">
-                <div className="inner">
-                  <img
-                    className="img01"
-                    src="/assets/images/asc3.png"
-                    alt="Image"
-                  />
-                  <img
-                    className="img05 wow animate__animated   animate__fadeInLeft"
-                    src="/assets/images/product-images/4.webp"
-                    alt="Image"
-                  />{" "}
-                  <img
-                    className="img06 wow animate__animated   animate__fadeInRight"
-                    src="/assets/images/product-images/4_1.webp"
-                    alt="Image"
-                  />
-                  <img
-                    className="img04 lg-hidden"
-                    src="/assets/images/asc8.png"
-                    alt="Image"
-                  />
+            <div className="col-lg-6">
+              <div className="pdr50 pdl80 lg-mt32">
+                <div className="heading mb24">
+                  <div className="heading-sub">Виртуальный продавец (AI)</div>
+                  <h2 className="heading-title size-l">
+                    Ваш личный AI-продавец
+                  </h2>
+                  <div className="heading-desc">
+                    Наш виртуальный продавец анализирует ваш ассортимент и
+                    предлагает клиентам именно то, что им нужно. 95 языков и
+                    возможность обучения делают его незаменимым помощником
+                  </div>
+                </div>
+                <div className="block-list layout-01 block-list-flex">
+                  <ul>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Анализирует вашу продукцию и типы товаров.</span>
+                    </li>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Рокомендует товары и понимает контекст</span>
+                    </li>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Максимально человеческий язык общения</span>
+                    </li>
+                    <li>
+                      <i className="las la-check" />
+                      <span>Возможность обучения и редактирование ответов</span>
+                    </li>
+
+                    <li>
+                      <i className="las la-check" />
+                      <span> Знание 95 языков</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

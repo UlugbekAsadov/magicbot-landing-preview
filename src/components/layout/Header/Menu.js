@@ -7,7 +7,7 @@ export default function Menu() {
 
   const rederNavLinks = navbarLinks.map((link) => (
     <li key={link.id} className="is-mega-menu">
-      <Link href={link.href} scroll={false}>
+      <Link href={link.href} scroll={true}>
         {translate(link.title)}
       </Link>
     </li>
