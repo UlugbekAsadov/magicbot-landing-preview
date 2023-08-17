@@ -18,7 +18,10 @@ export default function Header({ headerClass }) {
 
   return (
     <>
-      <header id="header" className={`site-header ${headerClass}`}>
+      <header
+        id="header"
+        className={`site-header ${headerClass} max-w-[1920px] w-full mx-auto relative`}
+      >
         <div className="container-fluid">
           <div className="row flex-align-c inner">
             <div className="col-lg-3 col-8">

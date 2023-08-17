@@ -52,9 +52,7 @@ export default function App_Showcase_Section6() {
           </div>
 
           <div className=" heading align-center mt-16">
-            <h2 className="text-center  heading-title size-l">
-              Тарифы, подходящие для любого бизнеса
-            </h2>
+            <h2 className="text-center  heading-title size-l">Наши тарифы</h2>
           </div>
         </div>
       </section>
