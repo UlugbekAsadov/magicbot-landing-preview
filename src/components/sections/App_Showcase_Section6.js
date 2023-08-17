@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import { useLocaleContext } from "@/context/locale.context";
 
 export default function App_Showcase_Section6() {
+  const { translate } = useLocaleContext();
   return (
     <>
       <section className="section spdt">
@@ -11,26 +12,38 @@ export default function App_Showcase_Section6() {
             <div className="col-lg-6 lg-order-2">
               <div className="pdr50 pdl80 lg-mt32">
                 <div className="heading mb24">
-                  <div className="heading-sub">Управление в одном месте</div>
-                  <h2 className="heading-title size-l">Простота и Удобство</h2>
+                  <div className="heading-sub">
+                    {translate("possibilities.crm_section.title")}
+                  </div>
+                  <h2 className="heading-title size-l">
+                    {translate("possibilities.crm_section.heading")}
+                  </h2>
                   <div className="heading-desc">
-                    Адаптивная админ-панель с CRM и обработкой заказов. Все, что
-                    вам нужно для эффективного управления магазином
+                    {translate("possibilities.crm_section.text")}
                   </div>
                 </div>
                 <div className="block-list layout-01 block-list-flex">
                   <ul>
                     <li>
                       <i className="las la-check" />
-                      <span>Адаптивность ПК и Мобилка</span>
+                      <span>
+                        {" "}
+                        {translate("possibilities.crm_section.adv_1")}
+                      </span>
                     </li>
                     <li>
                       <i className="las la-check" />
-                      <span>Внутренняя CRM система</span>
+                      <span>
+                        {" "}
+                        {translate("possibilities.crm_section.adv_2")}
+                      </span>
                     </li>
                     <li>
                       <i className="las la-check" />
-                      <span>Обработка заказов</span>
+                      <span>
+                        {" "}
+                        {translate("possibilities.crm_section.adv_3")}
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -52,7 +65,9 @@ export default function App_Showcase_Section6() {
           </div>
 
           <div className=" heading align-center mt-16">
-            <h2 className="text-center  heading-title size-l">Наши тарифы</h2>
+            <h2 className="text-center  heading-title size-l">
+              {translate("possibilities.crm_section.our_plans")}
+            </h2>
           </div>
         </div>
       </section>

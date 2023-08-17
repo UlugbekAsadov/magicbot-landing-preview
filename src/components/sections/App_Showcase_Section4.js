@@ -1,6 +1,9 @@
 "use client";
 
+import { useLocaleContext } from "@/context/locale.context";
+
 export default function App_Showcase_Section4() {
+  const { translate } = useLocaleContext();
   return (
     <>
       <section className="section spdt">
@@ -9,32 +12,41 @@ export default function App_Showcase_Section4() {
             <div className="col-lg-6 lg-order-2">
               <div className="pdr50 pdl80 lg-mt32">
                 <div className="heading mb24">
-                  <div className="heading-sub">Интерфейс</div>
-                  <h2 className="heading-title size-l">Простота и Удобство</h2>
+                  <div className="heading-sub">
+                    {translate("possibilities.interface_section.title")}
+                  </div>
+                  <h2 className="heading-title size-l">
+                    {translate("possibilities.interface_section.heading")}
+                  </h2>
                   <div className="heading-desc">
-                    Magicstore предлагает интуитивно понятный UX,
-                    мультиязычность и полную кастомизацию под ваш бренд. Ваш
-                    магазин в Telegram теперь может заменить веб-сайт или
-                    приложение
+                    {translate("possibilities.interface_section.text")}
                   </div>
                 </div>
                 <div className="block-list layout-01 block-list-flex">
                   <ul>
                     <li>
                       <i className="las la-check" />
-                      <span>Оптимизированный UX для быстрих покупки.</span>
+                      <span>
+                        {translate("possibilities.interface_section.adv_1")}
+                      </span>
                     </li>
                     <li>
                       <i className="las la-check" />
-                      <span>Поиск по товарам и категориям</span>
+                      <span>
+                        {translate("possibilities.interface_section.adv_2")}
+                      </span>
                     </li>
                     <li>
                       <i className="las la-check" />
-                      <span>Вариации и фильтрация товаров</span>
+                      <span>
+                        {translate("possibilities.interface_section.adv_3")}
+                      </span>
                     </li>
                     <li>
                       <i className="las la-check" />
-                      <span>Мультиязычность</span>
+                      <span>
+                        {translate("possibilities.interface_section.adv_4")}
+                      </span>
                     </li>
                   </ul>
                 </div>

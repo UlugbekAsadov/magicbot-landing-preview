@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useLocaleContext } from "@/context/locale.context";
 export default function App_Showcase_Section5() {
+  const { translate } = useLocaleContext();
   return (
     <>
       <section className="section spdt">
@@ -23,38 +25,38 @@ export default function App_Showcase_Section5() {
             <div className="col-lg-6">
               <div className="pdr50 pdl80 lg-mt32">
                 <div className="heading mb24">
-                  <div className="heading-sub">Виртуальный продавец (AI)</div>
+                  <div className="heading-sub">
+                    {translate("possibilities.ai_section.title")}
+                  </div>
                   <h2 className="heading-title size-l">
-                    Ваш личный AI-продавец
+                    {translate("possibilities.ai_section.heading")}
                   </h2>
                   <div className="heading-desc">
-                    Наш виртуальный продавец анализирует ваш ассортимент и
-                    предлагает клиентам именно то, что им нужно. 95 языков и
-                    возможность обучения делают его незаменимым помощником
+                    {translate("possibilities.ai_section.text")}
                   </div>
                 </div>
                 <div className="block-list layout-01 block-list-flex">
                   <ul>
                     <li>
                       <i className="las la-check" />
-                      <span>Анализирует вашу продукцию и типы товаров.</span>
+                      <span>{translate("possibilities.ai_section.adv_1")}</span>
                     </li>
                     <li>
                       <i className="las la-check" />
-                      <span>Рокомендует товары и понимает контекст</span>
+                      <span>{translate("possibilities.ai_section.adv_2")}</span>
                     </li>
                     <li>
                       <i className="las la-check" />
-                      <span>Максимально человеческий язык общения</span>
+                      <span>{translate("possibilities.ai_section.adv_3")}</span>
                     </li>
                     <li>
                       <i className="las la-check" />
-                      <span>Возможность обучения и редактирование ответов</span>
+                      <span>{translate("possibilities.ai_section.adv_4")}</span>
                     </li>
 
                     <li>
                       <i className="las la-check" />
-                      <span> Знание 95 языков</span>
+                      <span>{translate("possibilities.ai_section.adv_5")}</span>
                     </li>
                   </ul>
                 </div>

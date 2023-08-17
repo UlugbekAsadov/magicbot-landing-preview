@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
+import { useLocaleContext } from "@/context/locale.context";
 
 export default function App_Showcase_Section10() {
+  const { translate } = useLocaleContext();
   return (
     <>
       <section className="section-banner layout-09 mb-16">
@@ -11,7 +13,7 @@ export default function App_Showcase_Section10() {
               <div className="col-lg-6">
                 <div className="heading mb32">
                   <h2 className="heading-title size-l">
-                    Ваш собственный онлайн-магазин всего в нескольких кликах!
+                    {translate("banner.title")}
                   </h2>
                 </div>
                 <div className="button-wrap">
@@ -20,7 +22,7 @@ export default function App_Showcase_Section10() {
                     className="button fullfield"
                     title="Try it free"
                   >
-                    Начните бесплатно
+                    {translate("banner.free_start")}
                   </Link>
                 </div>
               </div>
@@ -53,7 +55,7 @@ export default function App_Showcase_Section10() {
                             />
                           </svg>
                         </div>
-                        <span>Масштабируйте свой бизнос!</span>
+                        <span> {translate("banner.adv_1")}</span>
                       </li>
                       <li className="wow animate__animated   animate__fadeInRight">
                         <div className="icon">
@@ -103,7 +105,7 @@ export default function App_Showcase_Section10() {
                             />
                           </svg>
                         </div>
-                        <span>Развивайте свой бизнес онлайн!</span>
+                        <span> {translate("banner.adv_2")}</span>
                       </li>
                     </ul>
                   </div>

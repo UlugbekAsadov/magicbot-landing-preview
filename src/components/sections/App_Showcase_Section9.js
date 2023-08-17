@@ -2,13 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLocaleContext } from "@/context/locale.context";
 
 export default function App_Showcase_Section9() {
-  const [isToggled, setToggled] = useState(false);
-  const toggleTrueFalse = () => {
-    setToggled(!isToggled);
-  };
-
+  const { translate } = useLocaleContext();
   return (
     <>
       <div
@@ -21,38 +18,32 @@ export default function App_Showcase_Section9() {
               <div className="col-lg-6">
                 <div className="pricing-box">
                   <div className="inner">
-                    <div className="name">ПРИ ОПЛАТЕ ЗА МЕСЯЦ</div>
+                    <div className="name">{translate("plans.monthly")}</div>
                     <div className="price">
-                      <div className="number">299,000</div> / Месяц
+                      <div className="number">299,000</div> /{" "}
+                      {translate("plans.per_month")}
                     </div>
                     <div className="desc">
-                      <p>
-                        Единовременная плата за установку составляет 4.990.000
-                        СУМОВ
-                      </p>
+                      <p>{translate("plans.title")}</p>
                     </div>
                     <ul className="list">
                       <li className="active">
-                        Более 10+ необходимых функций для вашего интернет
-                        магазина
+                        {translate("plans.month.adv_1")}
                       </li>
                       <li className="active">
-                        4 интеграций (Рауme, Click, SMS-провайдер, Billz)
+                        {translate("plans.month.adv_2")}
                       </li>
                       <li className="active">
-                        Подключение CRM системы, либо интеграции с другими
-                        системами - увеличат стоимость в зависимости от типа
-                        системы, сложности и варианта реализации 7 дней
-                        бесплатно
+                        {translate("plans.month.adv_3")}
                       </li>
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/contact-01"
+                        href="/contact"
                         className="button fullfield"
                         title="Начать сейчас"
                       >
-                        Начать сейчас
+                        {translate("plans.start_now")}
                       </Link>
                     </div>
                   </div>
@@ -64,35 +55,32 @@ export default function App_Showcase_Section9() {
                     <div className="name">
                       ПРИ ОПЛАТЕ ЗА ГОД
                       <span className="badge-popular">
-                        Скидка <span className="font-bold">20%</span>
+                        {translate("plans.discount")}{" "}
+                        <span className="font-bold">20%</span>
                       </span>
                     </div>
                     <div className="price">
-                      <div className="number">239,000</div> / Месяц
+                      <div className="number">239,000</div> /{" "}
+                      {translate("plans.per_month")}
                     </div>
                     <div className="desc">
-                      <p>
-                        Единовременная плата за установку составляет 4.990.000
-                        СУМОВ
-                      </p>
+                      <p>{translate("plans.title")}</p>
                     </div>
                     <ul className="list">
                       <li className="active">
-                        И другие греимущества, что и при оплате за месяц
+                        {translate("plans.annual.adv_1")}
                       </li>
                       <li className="active">
-                        Подключение CRM системы, либо интеграции с другими
-                        системами - увеличат стоимость в зависимости от типа
-                        системы, сложности и варианта реализации
+                        {translate("plans.annual.adv_2")}
                       </li>
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/contact-01"
+                        href="/contact"
                         className="button fullfield"
                         title="Начать сейчас"
                       >
-                        Начать сейчас
+                        {translate("plans.start_now")}
                       </Link>
                     </div>
                   </div>
