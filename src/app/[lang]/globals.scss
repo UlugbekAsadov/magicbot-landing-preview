@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "public/assets/libs/bootstrap/css/bootstrap.min.css";
+@import "public/assets/libs/line-awesome/css/line-awesome.min.css";
+
+@import "animate.css/animate.min.css";
+@import "swiper/swiper.min.css";
+
+@import "public/assets/css/style.css";
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
