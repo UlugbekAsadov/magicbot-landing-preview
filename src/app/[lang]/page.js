@@ -5,12 +5,8 @@ import App_Showcase_Section3 from "@/components/sections/App_Showcase_Section3";
 import App_Showcase_Section4 from "@/components/sections/App_Showcase_Section4";
 import App_Showcase_Section5 from "@/components/sections/App_Showcase_Section5";
 import App_Showcase_Section6 from "@/components/sections/App_Showcase_Section6";
-import App_Showcase_Section7 from "@/components/sections/App_Showcase_Section7";
-import App_Showcase_Section8 from "@/components/sections/App_Showcase_Section8";
 import App_Showcase_Section9 from "@/components/sections/App_Showcase_Section9";
 import App_Showcase_Section10 from "@/components/sections/App_Showcase_Section10";
-import App_Showcase_Section11 from "@/components/sections/App_Showcase_Section11";
-import App_Showcase_Section12 from "@/components/sections/App_Showcase_Section12";
 
 export default function HomeAppShowcase() {
   return (
