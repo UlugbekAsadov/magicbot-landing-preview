@@ -37,7 +37,7 @@ export default function App_Showcase_Section9() {
                         магазина
                       </li>
                       <li className="active">
-                        4 интеграций (Рауте, Click, SMS-провайдер, Billz)
+                        4 интеграций (Рауme, Click, SMS-провайдер, Billz)
                       </li>
                       <li className="active">
                         Подключение CRM системы, либо интеграции с другими
