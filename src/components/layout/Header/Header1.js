@@ -19,10 +19,9 @@ export default function Header({ headerClass }) {
   return (
     <>
       <header id="header" className={`site-header ${headerClass}`}>
-        {width <= tabletScreenWidth ? <CanvasMenu /> : null}
         <div className="container-fluid">
           <div className="row flex-align-c inner">
-            <div className="col-lg-3 col-6">
+            <div className="col-lg-3 col-8">
               <div className="header-left flex flex-align-c">
                 <Link href={"/"}>
                   <svg
@@ -149,8 +148,8 @@ export default function Header({ headerClass }) {
               </div>
             </div>
 
-            <div className="col-lg-3 col-6">
-              <HeaderRight />
+            <div className="col-lg-3 col-2 relative">
+              {width <= tabletScreenWidth ? <CanvasMenu /> : <HeaderRight />}
             </div>
           </div>
         </div>

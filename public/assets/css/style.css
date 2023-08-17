@@ -3905,8 +3905,9 @@ img.h600 {
   background: #fff;
   position: fixed;
   z-index: 999;
-  padding: 80px;
+  padding: 80px 30px;
   top: 0;
+  left: 0;
 }
 
 .mobile-menu a {
