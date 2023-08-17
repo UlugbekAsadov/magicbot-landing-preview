@@ -4,8 +4,9 @@ import { useLocaleContext } from "@/context/locale.context";
 import { useState } from "react";
 export default function ContactOne() {
   const [hasSubmitted, setHasSubmitForm] = useState(
-    sessionStorage.getItem("isLeadSubmitted")
+    sessionStorage.getItem("isLeadSubmitted"),
   );
+  const [isLoading, setIsLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     full_name: "",
     phone_number: "+998",
@@ -13,18 +14,35 @@ export default function ContactOne() {
   });
 
   const [hasError, setHasError] = useState(false);
+  const [hasNameError, setHasNameError] = useState(false);
+  const [hasStoreError, setHasStoreError] = useState(false);
+
   const { translate } = useLocaleContext();
 
   const handleChangeValue = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
-  const handleSubmitform = (e) => {
+  const handleSubmitForm = (e) => {
     e.preventDefault();
 
-    if (formValues.phone_number !== 13) {
+    setHasStoreError(false);
+    setHasNameError(false);
+    setHasError(false);
+
+    if (!formValues.full_name.length) {
+      return setHasNameError(true);
+    }
+
+    if (!formValues.shop_name.length) {
+      return setHasStoreError(true);
+    }
+
+    if (formValues.phone_number.length !== 13) {
       return setHasError(true);
     }
+
+    setIsLoading(true);
 
     try {
       const body = {
@@ -43,9 +61,12 @@ export default function ContactOne() {
 
       fetch(process.env.NEXT_PUBLIC_API + "/lead", config)
         .then((res) => res.json())
-        .then((data) => {
+        .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);
           setHasSubmitForm(true);
+        })
+        .finally(() => {
+          setIsLoading(false);
         });
     } catch (error) {
       alert(error);
@@ -120,7 +141,7 @@ export default function ContactOne() {
                   </h2>
                   <div className="heading-desc">{translate("form.title")}</div>
                 </div>
-                <form onSubmit={handleSubmitform}>
+                <form onSubmit={handleSubmitForm}>
                   <div className="row">
                     <div className="col-md-12">
                       <div className="field-input">
@@ -135,8 +156,12 @@ export default function ContactOne() {
                           className="px-3 "
                           value={formValues.full_name}
                           onChange={handleChangeValue}
-                          required
                         />
+                        {hasNameError && (
+                          <span className="text-xs text-red-500">
+                            {translate("form.required")}
+                          </span>
+                        )}
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -163,7 +188,7 @@ export default function ContactOne() {
                         />
                         {hasError && (
                           <span className="text-xs text-red-500">
-                            {translate("form.phone_number_required")}
+                            {translate("form.required")}
                           </span>
                         )}
                       </div>
@@ -181,18 +206,54 @@ export default function ContactOne() {
                           className="px-3 "
                           value={formValues.shop_name}
                           onChange={handleChangeValue}
-                          required
                         />
+
+                        {hasStoreError && (
+                          <span className="text-xs text-red-500">
+                            {translate("form.required")}
+                          </span>
+                        )}
                       </div>
                     </div>
 
                     <div className="col-md-12">
                       <div className="field-submit">
-                        <input
+                        <button
                           type="submit"
-                          defaultValue={translate("form.submit")}
-                          name={translate("form.submit")}
-                        />
+                          className="bg-blue-600 px-3 py-3 rounded-lg text-white w-full"
+                        >
+                          {isLoading ? (
+                            <svg
+                              version="1.1"
+                              id="L9"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlnsXlink="http://www.w3.org/1999/xlink"
+                              x="0px"
+                              y="0px"
+                              viewBox="0 0 100 100"
+                              enableBackground="new 0 0 0 0"
+                              xmlSpace="preserve"
+                              className="w-6 mx-auto"
+                            >
+                              <path
+                                fill="#fff"
+                                d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  attributeType="XML"
+                                  type="rotate"
+                                  dur="1s"
+                                  from="0 50 50"
+                                  to="360 50 50"
+                                  repeatCount="indefinite"
+                                ></animateTransform>
+                              </path>
+                            </svg>
+                          ) : (
+                            translate("form.submit")
+                          )}
+                        </button>
                       </div>
                     </div>
                   </div>
