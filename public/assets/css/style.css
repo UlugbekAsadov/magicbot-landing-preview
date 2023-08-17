@@ -11749,16 +11749,7 @@ form.checkout-coupon input[type="text"] {
 .block-number .item .number .first {
   position: relative;
 }
-.block-number .item .number .first:after {
-  content: "";
-  height: 46px;
-  width: 6px;
-  display: inline-block;
-  vertical-align: -3px;
-  background-color: var(--sala-primary-navy, #0057fc);
-  transform: rotate(20deg);
-  margin: 0 10px;
-}
+
 .block-number .item .number .last {
   font-size: 32px;
 }
