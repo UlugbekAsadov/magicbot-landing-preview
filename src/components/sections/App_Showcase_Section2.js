@@ -50,7 +50,7 @@ export default function App_Showcase_Section2() {
                       18
                     </span>
                     <span className="first">
-                      {translate("common.thausand_short")}
+                      {translate("common.thousand_short")}
                     </span>
                   </div>
                 </div>
