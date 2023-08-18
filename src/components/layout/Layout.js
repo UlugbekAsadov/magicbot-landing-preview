@@ -2,18 +2,12 @@
 
 import { useEffect } from "react";
 import BackToTop from "../elements/BackToTop";
-import SwitchDarkLight from "../elements/SwitchDarkLight";
-
 import Footer1 from "./Footer/Footer1";
 import Header1 from "./Header/Header1";
-import PageHead from "./PageHead";
 import { useLocaleContext } from "@/context/locale.context";
-import Head from "next/head";
 import { Top_Header } from "@/components/sections/Top_Header";
 
 export default function Layout({
-  headerLayout,
-  footerLayout,
   children,
   siteContentClass,
   pageTitle,
@@ -36,8 +30,7 @@ export default function Layout({
     <>
       <div id="wrapper">
         <Top_Header />
-        {!headerLayout && <Header1 lang={lang} headerClass={headerClass} />}
-        {headerLayout == 1 ? <Header1 headerClass={headerClass} /> : null}
+        <Header1 lang={lang} headerClass={headerClass} />
 
         <main id="main" className="site-main">
           {pageTitle && (
@@ -72,9 +65,7 @@ export default function Layout({
           </div>
         </main>
 
-        {!footerLayout && <Footer1 />}
-        {footerLayout == 1 ? <Footer1 /> : null}
-
+        <Footer1 />
         <BackToTop />
       </div>
     </>
