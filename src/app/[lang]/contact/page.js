@@ -1,7 +1,10 @@
 "use client";
+import React from "react";
 import Layout from "@/components/layout/Layout";
 import { useLocaleContext } from "@/context/locale.context";
 import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+
 export default function ContactOne({ params }) {
   const { lang } = params;
   const [hasSubmitted, setHasSubmitForm] = useState(
@@ -17,6 +20,7 @@ export default function ContactOne({ params }) {
   const [hasError, setHasError] = useState(false);
   const [hasNameError, setHasNameError] = useState(false);
   const [hasStoreError, setHasStoreError] = useState(false);
+  const recaptchaRef = React.createRef();
 
   const { translate } = useLocaleContext();
 
@@ -24,7 +28,7 @@ export default function ContactOne({ params }) {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
-  const handleSubmitForm = (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
 
     setHasStoreError(false);
@@ -44,12 +48,19 @@ export default function ContactOne({ params }) {
     }
 
     setIsLoading(true);
+    const token = await recaptchaRef.current.getValue();
+
+    console.log(token);
+    if (!Boolean(token)) {
+      return setIsLoading(false);
+    }
 
     try {
       const body = {
         name: formValues.full_name,
         phone: formValues.phone_number,
         shop: formValues.shop_name,
+        token,
       };
 
       const config = {
@@ -216,12 +227,18 @@ export default function ContactOne({ params }) {
                         )}
                       </div>
                     </div>
+                    <div className="col-md-12">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey="6LeHk0MkAAAAAPEykrEMED2ZLgQRpO0OWzaBbMW9"
+                      />
+                    </div>
 
                     <div className="col-md-12">
                       <div className="field-submit">
                         <button
                           type="submit"
-                          className="bg-blue-600 px-3 py-3 rounded-lg text-white w-full"
+                          className="bg-blue-600 px-3 py-3 rounded-lg text-white w-full mt-4"
                         >
                           {isLoading ? (
                             <svg
@@ -262,7 +279,7 @@ export default function ContactOne({ params }) {
               </div>
               {hasSubmitted && (
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center  backdrop-blur-lg">
-                  <div className="bg-white animate-submittionPopup flex flex-col items-center justify-center max-w-5xl w-full rounded-xl mx-5 px-5 py-8 md:py-14">
+                  <div className="header-color animate-submittionPopup flex flex-col items-center justify-center max-w-5xl w-full rounded-xl mx-5 px-5 py-8 md:py-14">
                     <h2 className="font-bold text-3xl md:text-4xl  gradient-text text-center">
                       {translate("form.thanks")}
                     </h2>

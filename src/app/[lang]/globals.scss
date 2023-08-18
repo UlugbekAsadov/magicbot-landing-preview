@@ -30,9 +30,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-display: inherit;
-}
 
 html::-webkit-scrollbar {
   display: none;
@@ -138,4 +135,10 @@ html {
 
 .black-color{
   color: var(--sala-primary-dark, #111111)
+}
+
+.rc-anchor-light{
+  color: var(--sala-primary-dark, #111111) !important;
+  background-color: var(--sala-shade-background, #f8f9fc) !important;
+
 }

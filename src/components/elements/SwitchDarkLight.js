@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 
 export default function SwitchDarkLight() {
@@ -18,11 +19,11 @@ export default function SwitchDarkLight() {
     <div className="flex items-center">
       {colorMode === "dark" ? (
         <button onClick={handleChangeTheme.bind(null, "light")}>
-          <img src="./assets/icons/sun-icon.svg" alt="sun-icon" />
+          <img src="/assets/icons/sun-icon.svg" alt="sun-icon" />
         </button>
       ) : (
         <button onClick={handleChangeTheme.bind(null, "dark")}>
-          <img src="./assets/icons/moon-icon.svg" alt="sun-icon" />
+          <img src="/assets/icons/moon-icon.svg" alt="moon-icon" />
         </button>
       )}
     </div>
