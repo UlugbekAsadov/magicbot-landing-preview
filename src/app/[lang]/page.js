@@ -8,12 +8,14 @@ import App_Showcase_Section6 from "@/components/sections/App_Showcase_Section6";
 import App_Showcase_Section9 from "@/components/sections/App_Showcase_Section9";
 import App_Showcase_Section10 from "@/components/sections/App_Showcase_Section10";
 
-export default function HomeAppShowcase() {
+export default function HomeAppShowcase({ params }) {
+  const { lang } = params;
   return (
     <>
       <Layout
         headerClass="is-transparent "
         siteContentClass="pt0 pb0 overflow-hidden"
+        lang={lang}
       >
         <App_Showcase_Section1 />
         <App_Showcase_Section2 />

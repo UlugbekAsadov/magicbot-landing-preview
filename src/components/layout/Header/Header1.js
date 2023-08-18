@@ -3,8 +3,9 @@ import CanvasMenu from "./CanvasMenu";
 import { useEffect, useState } from "react";
 import HeaderRight from "@/components/layout/Header/HeaderRight";
 import Link from "next/link";
+import LanguageDropdown from "@/components/elements/LanguageDropdown";
 
-export default function Header({ headerClass }) {
+export default function Header({ headerClass, lang }) {
   const [width, setWidth] = useState(window.innerWidth);
   const tabletScreenWidth = 768;
   useEffect(() => {
@@ -146,12 +147,22 @@ export default function Header({ headerClass }) {
             </div>
             <div className="col-lg-6 col-0 text-center">
               <div className="header-center">
-                <Menu />
+                <Menu lang={lang} />
               </div>
             </div>
 
             <div className="col-lg-3 col-2 relative">
-              {width <= tabletScreenWidth ? <CanvasMenu /> : <HeaderRight />}
+              <div className="flex items-center ">
+                <div className="header__language-dropdown">
+                  <LanguageDropdown lang={lang} />
+                </div>
+
+                {width <= tabletScreenWidth ? (
+                  <CanvasMenu lang={lang} />
+                ) : (
+                  <HeaderRight lang={lang} />
+                )}
+              </div>
             </div>
           </div>
         </div>

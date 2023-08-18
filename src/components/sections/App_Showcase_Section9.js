@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useLocaleContext } from "@/context/locale.context";
 
 export default function App_Showcase_Section9() {
-  const { translate } = useLocaleContext();
+  const { translate, currentLang } = useLocaleContext();
   return (
     <>
       <div
@@ -39,7 +39,7 @@ export default function App_Showcase_Section9() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/contact"
+                        href={`/${currentLang}/contact`}
                         className="button fullfield"
                         title="Начать сейчас"
                       >
@@ -76,7 +76,7 @@ export default function App_Showcase_Section9() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href="/contact"
+                        href={`/${currentLang}/contact`}
                         className="button fullfield"
                         title="Начать сейчас"
                       >

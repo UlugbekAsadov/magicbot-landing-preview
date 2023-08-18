@@ -4,7 +4,8 @@ import { useLocaleContext } from "@/context/locale.context";
 import Link from "next/link";
 
 export default function App_Showcase_Section1() {
-  const { translate } = useLocaleContext();
+  const { translate, currentLang } = useLocaleContext();
+
   return (
     <>
       <section id={"top"} className="section opt120 has-shape spdb">
@@ -24,7 +25,7 @@ export default function App_Showcase_Section1() {
                 </div>
               </div>
               <Link
-                href="/contact-01"
+                href={`/${currentLang}/contact`}
                 className="w-fit px-4 py-2 bg-blue-600 text-white rounded-md block"
               >
                 {translate("hero.button-text")}

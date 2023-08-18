@@ -2,8 +2,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { navbarLinks } from "@/utils/mocks";
 import { useLocaleContext } from "@/context/locale.context";
+import LanguageDropdown from "@/components/elements/LanguageDropdown";
 
-export default function CanvasMenu() {
+export default function CanvasMenu({ lang }) {
   const [isOpen, setIsOpen] = useState(false);
   const { translate } = useLocaleContext();
   const toggleMenu = () => {
@@ -96,9 +97,14 @@ export default function CanvasMenu() {
                 animate__animated-delay={`${link.id}s`}
                 onClick={toggleMenu}
               >
-                <Link href={link.href}>{translate(link.title)}</Link>
+                <Link href={`/${lang}/${link.href}`}>
+                  {translate(link.title)}
+                </Link>
               </li>
             ))}
+            <div className="wow animate__animated animate__fadeInLeft navbar__language-dropdown">
+              <LanguageDropdown />
+            </div>
           </ul>
         </nav>
       )}

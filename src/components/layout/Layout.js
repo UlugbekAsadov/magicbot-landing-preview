@@ -20,6 +20,7 @@ export default function Layout({
   pageTitleDesc,
   pageTitleBtn,
   headerClass,
+  lang,
 }) {
   const { translate } = useLocaleContext();
   useEffect(() => {
@@ -29,10 +30,11 @@ export default function Layout({
     });
     window.wow.init();
   });
+
   return (
     <>
       <div id="wrapper">
-        {!headerLayout && <Header1 headerClass={headerClass} />}
+        {!headerLayout && <Header1 lang={lang} headerClass={headerClass} />}
         {headerLayout == 1 ? <Header1 headerClass={headerClass} /> : null}
 
         <main id="main" className="site-main">

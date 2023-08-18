@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useLocaleContext } from "@/context/locale.context";
 
 export default function App_Showcase_Section10() {
-  const { translate } = useLocaleContext();
+  const { translate, currentLang } = useLocaleContext();
   return (
     <>
       <section className="section-banner layout-09 mb-16">
@@ -18,7 +18,7 @@ export default function App_Showcase_Section10() {
                 </div>
                 <div className="button-wrap">
                   <Link
-                    href="/contact"
+                    href={`/${currentLang}/contact`}
                     className="button fullfield"
                     title="Try it free"
                   >

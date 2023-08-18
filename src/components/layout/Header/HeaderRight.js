@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function HeaderRight() {
+export default function HeaderRight({ lang }) {
   return (
     <>
       <div className="header-right flex flex-align-c flex-content-e">
         <div className="buttons">
-          <Link href="/contact" className="button fullfield">
+          <Link href={`/${lang}/contact`} className="button fullfield">
             <i className="las la-headset" />
             <span>{"Бесплатное демо"}</span>
           </Link>

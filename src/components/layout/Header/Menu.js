@@ -2,12 +2,12 @@ import Link from "next/link";
 import { navbarLinks } from "@/utils/mocks";
 import { useLocaleContext } from "@/context/locale.context";
 
-export default function Menu() {
+export default function Menu({ lang }) {
   const { translate } = useLocaleContext();
 
-  const rederNavLinks = navbarLinks.map((link) => (
+  const renderNavLinks = navbarLinks.map((link) => (
     <li key={link.id} className="is-mega-menu">
-      <Link href={link.href} scroll={true}>
+      <Link href={`/${lang}${link.href}`} scroll={true}>
         {translate(link.title)}
       </Link>
     </li>
@@ -25,7 +25,7 @@ export default function Menu() {
           </span>
         </div>
 
-        <ul>{rederNavLinks}</ul>
+        <ul>{renderNavLinks}</ul>
       </div>
     </>
   );

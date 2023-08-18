@@ -32,6 +32,7 @@ export const LocaleContextProvider = ({ children }) => {
     );
     const value = {
       translate,
+      currentLang: params.lang,
     };
     return (
       <LocaleContext.Provider value={value}>
