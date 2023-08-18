@@ -26,7 +26,7 @@ export default function Header({ headerClass, lang }) {
           <div className="flex items-center justify-content-between">
             <div className="">
               <div className="header-left flex flex-align-c">
-                <Link href={"/"}>
+                <Link href={`/${lang}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
