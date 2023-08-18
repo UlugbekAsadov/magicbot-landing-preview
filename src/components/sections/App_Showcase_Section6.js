@@ -55,7 +55,7 @@ export default function App_Showcase_Section6() {
                   <div className="inner -translate-x-7">
                     <img
                       className="  wow animate__animated   animate__fadeInLeft"
-                      src="/assets/images/product-images/17.png"
+                      src="/assets/images/product-images/27.png"
                       alt="Image"
                     />
                   </div>

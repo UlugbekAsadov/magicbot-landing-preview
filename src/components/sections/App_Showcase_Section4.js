@@ -57,13 +57,13 @@ export default function App_Showcase_Section4() {
                 <div className="images layout-10">
                   <div className="inner -translate-x-7">
                     <img
-                      className="custom-image-3  wow animate__animated   animate__fadeInLeft"
-                      src="/assets/images/product-images/7.webp"
+                      className="custom-image-3  wow animate__animated animate__fadeInLeft"
+                      src="/assets/images/product-images/Dark%20mode.png"
                       alt="Image"
                     />
                     <img
                       className="custom-image-4 wow animate__animated   animate__fadeInRight"
-                      src="/assets/images/product-images/8.webp"
+                      src="/assets/images/product-images/4.png"
                       alt="Image"
                     />
                   </div>

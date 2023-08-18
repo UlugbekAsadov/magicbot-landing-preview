@@ -36,12 +36,12 @@ export default function App_Showcase_Section1() {
                 <div className="inner">
                   <img
                     className="custom-image-1 wow animate__animated   animate__fadeInLeft"
-                    src="/assets/images/product-images/7.webp"
+                    src="/assets/images/product-images/1.png"
                     alt="Image"
                   />
                   <img
                     className="custom-image-2 wow animate__animated    animate__fadeInLeft hidden md:block"
-                    src="/assets/images/product-images/4_1.webp"
+                    src="/assets/images/product-images/2.png"
                     alt="Image"
                   />
                 </div>

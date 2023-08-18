@@ -21,7 +21,7 @@ export default function App_Showcase_Section3() {
                   <div className="inner">
                     <img
                       className="custom-image wow animate__animated   animate__fadeInLeft"
-                      src="/assets/images/product-images/10.webp"
+                      src="/assets/images/product-images/3.png"
                       alt="Image"
                     />
                   </div>
