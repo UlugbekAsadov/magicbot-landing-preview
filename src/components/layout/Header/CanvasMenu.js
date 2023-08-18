@@ -13,7 +13,7 @@ export default function CanvasMenu({ lang }) {
 
   return (
     <>
-      <div className="canvas-menu !-top-1" onClick={toggleMenu}>
+      <div className="z-[1000]" onClick={toggleMenu}>
         <div className="icon cursor-pointer">
           <svg
             width="30px"
@@ -92,7 +92,7 @@ export default function CanvasMenu({ lang }) {
           <ul>
             {navbarLinks.map((link, index) => (
               <li
-                className="wow animate__animated animate__fadeInLeft text-xl "
+                className="wow animate__animated animate__fadeInLeft text-xl black-color"
                 data-wow
                 animate__animated-delay={`${link.id}s`}
                 onClick={toggleMenu}

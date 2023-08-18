@@ -3,7 +3,7 @@ import CanvasMenu from "./CanvasMenu";
 import { useEffect, useState } from "react";
 import HeaderRight from "@/components/layout/Header/HeaderRight";
 import Link from "next/link";
-import LanguageDropdown from "@/components/elements/LanguageDropdown";
+import SwitchDarkLight from "@/components/elements/SwitchDarkLight";
 
 export default function Header({ headerClass, lang }) {
   const [width, setWidth] = useState(window.innerWidth);
@@ -17,14 +17,14 @@ export default function Header({ headerClass, lang }) {
   }, []);
 
   return (
-    <>
-      <header
+    <div className="w-full  header-color sticky top-0 z-30">
+      <div
         id="header"
-        className={`site-header ${headerClass} max-w-[1920px] w-full mx-auto relative`}
+        className={` site-header ${headerClass} max-w-[1600px] w-full mx-auto !relative  `}
       >
         <div className="container-fluid">
-          <div className="row flex-align-c inner">
-            <div className="col-lg-3 col-8">
+          <div className="flex items-center justify-content-between">
+            <div className="">
               <div className="header-left flex flex-align-c">
                 <Link href={"/"}>
                   <svg
@@ -145,28 +145,29 @@ export default function Header({ headerClass, lang }) {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-6 col-0 text-center">
+            <div className="hidden md:flex text-center">
               <div className="header-center">
                 <Menu lang={lang} />
               </div>
             </div>
 
-            <div className="col-lg-3 col-2 relative">
-              <div className="flex items-center ">
-                <div className="header__language-dropdown">
-                  <LanguageDropdown lang={lang} />
+            <div className="flex items-center gap-3">
+              <div className="block md:hidden">
+                <SwitchDarkLight />
+              </div>
+              <div className=" relative">
+                <div className="flex items-center ">
+                  {width <= tabletScreenWidth ? (
+                    <CanvasMenu lang={lang} />
+                  ) : (
+                    <HeaderRight lang={lang} />
+                  )}
                 </div>
-
-                {width <= tabletScreenWidth ? (
-                  <CanvasMenu lang={lang} />
-                ) : (
-                  <HeaderRight lang={lang} />
-                )}
               </div>
             </div>
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </div>
   );
 }

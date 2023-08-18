@@ -22,9 +22,10 @@ const languages = [
 
 export default function LanguageDropdown({ lang }) {
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+  const langFromParams = window.location.pathname.split("/")[1];
 
   useEffect(() => {
-    switch (lang) {
+    switch (langFromParams) {
       case "uz":
         setSelectedLanguage(languages[0]);
         break;
@@ -32,7 +33,7 @@ export default function LanguageDropdown({ lang }) {
         setSelectedLanguage(languages[1]);
         break;
     }
-  }, [lang]);
+  }, [langFromParams]);
 
   const languageList = languages.map((language) => (
     <Link
@@ -41,7 +42,7 @@ export default function LanguageDropdown({ lang }) {
       key={language.id}
     >
       <Listbox.Option
-        className="relative cursor-pointer select-none py-2 pl-3"
+        className="relative cursor-pointer background-grey select-none py-2 pl-3"
         value={language}
       >
         {({ selected }) => (
@@ -50,7 +51,7 @@ export default function LanguageDropdown({ lang }) {
               <img src={language.icon} alt={language.title} />
               <span
                 className={`${
-                  selected ? "text-blue-400" : "text-black opacity-50"
+                  selected ? "text-blue-400" : " black-color opacity-50"
                 } ml-1 truncate block font-bold uppercase`}
               >
                 {language.title}
@@ -64,14 +65,14 @@ export default function LanguageDropdown({ lang }) {
 
   const languageListForMobile = languages.map((language) => (
     <Link
-      href={`/${language.locale}/${window.location.pathname}`}
+      href={`/${language.locale}`}
       locale={language.locale}
       key={language.id}
       className="language__item-mobile !h-10 !grid place-content-center !fs-10"
     >
       <p
         className={`flex items-center gap-1 uppercase ${
-          lang === language.locale ? "text-blue-400" : "text-black"
+          langFromParams === language.locale ? "text-blue-400" : "black-color"
         }  font-bold`}
         key={language.id}
       >
@@ -86,7 +87,7 @@ export default function LanguageDropdown({ lang }) {
         <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
           {({ open }) => (
             <div className="relative font-sf ">
-              <Listbox.Button className="relative w-full cursor-pointer bg-blue-100 py-2 pl-3 pr-8 text-left sm:text-sm rounded-full">
+              <Listbox.Button className="relative background-grey-1 w-fit cursor-pointer py-2 pl-3 pr-8 text-left sm:text-sm rounded-full">
                 <span className="flex items-center gap-1 uppercase text-blue-400 font-bold">
                   <img
                     src={selectedLanguage.icon}
@@ -96,7 +97,7 @@ export default function LanguageDropdown({ lang }) {
                 </span>
                 <span className="pointer-events-none absolute inset-y-0 right-0 ml-1 flex items-center pr-2">
                   <ChevronDownIcon
-                    className={`h-5 w-5 text-black transition-all ${
+                    className={`h-5 w-5 black-color transition-all ${
                       open ? "rotate-180" : "rotate-0"
                     }`}
                     aria-hidden="true"
@@ -111,7 +112,7 @@ export default function LanguageDropdown({ lang }) {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Listbox.Options className="absolute z-50 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options className="absolute z-50 mt-1 max-h-56 w-full header-color overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {languageList}
                 </Listbox.Options>
               </Transition>
@@ -120,7 +121,7 @@ export default function LanguageDropdown({ lang }) {
         </Listbox>
       </div>
       <div
-        className={`grid md:hidden border-t border-b border-zinc-100 mt-7 grid-cols-2 py-2`}
+        className={`grid md:hidden border-t border-b border-t-b-color mt-7 grid-cols-2 py-2`}
       >
         {languageListForMobile}
       </div>

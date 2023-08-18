@@ -1,30 +1,28 @@
 import { useEffect, useState } from "react";
 
 export default function SwitchDarkLight() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [colorMode, setColorMode] = useState(localStorage.getItem("theme"));
   useEffect(() => {
-    document.body.classList.toggle("sala-dark-scheme", isOpen);
-  }, [isOpen]);
+    document.body.classList.toggle("sala-dark-scheme", colorMode === "light");
+  }, []);
+
+  const handleChangeTheme = (theme) => {
+    document.body.classList.toggle("sala-dark-scheme", theme === "light");
+    setColorMode(theme);
+    localStorage.setItem("theme", theme);
+  };
 
   return (
-    <>
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        className={`dl-switcher${isOpen ? " sala-dark-scheme" : ""}`}
-      >
-        <div className="item">
-          <span className="state dark" data-text="Dark">
-            Dark
-          </span>
-          <span className="state light" data-text="Light">
-            Light
-          </span>
-        </div>
-        <div className="toddler">
-          <span className="dark-text">Dark</span>
-          <span className="light-text">Light</span>
-        </div>
-      </div>
-    </>
+    <div className="flex items-center">
+      {colorMode === "light" ? (
+        <button onClick={handleChangeTheme.bind(null, "dark")}>
+          <img src="./assets/icons/sun-icon.svg" alt="sun-icon" />
+        </button>
+      ) : (
+        <button onClick={handleChangeTheme.bind(null, "light")}>
+          <img src="./assets/icons/moon-icon.svg" alt="sun-icon" />
+        </button>
+      )}
+    </div>
   );
 }

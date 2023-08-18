@@ -9,6 +9,7 @@ import Header1 from "./Header/Header1";
 import PageHead from "./PageHead";
 import { useLocaleContext } from "@/context/locale.context";
 import Head from "next/head";
+import { Top_Header } from "@/components/sections/Top_Header";
 
 export default function Layout({
   headerLayout,
@@ -34,6 +35,7 @@ export default function Layout({
   return (
     <>
       <div id="wrapper">
+        <Top_Header />
         {!headerLayout && <Header1 lang={lang} headerClass={headerClass} />}
         {headerLayout == 1 ? <Header1 headerClass={headerClass} /> : null}
 
@@ -74,7 +76,6 @@ export default function Layout({
         {footerLayout == 1 ? <Footer1 /> : null}
 
         <BackToTop />
-        <SwitchDarkLight />
       </div>
     </>
   );

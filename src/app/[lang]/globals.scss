@@ -109,12 +109,33 @@ html {
     }
 }
 
+.border-t-b-color {
+  border-top-color: var(--sala-border-line, #eeeeee);
+  border-bottom-color:  var(--sala-border-line, #eeeeee);
+}
+
 .language__item-mobile {
-  border-right: 1px solid #d9d9d9;
+  border-right: 1px solid var(--sala-border-line, #eeeeee);
   font-size: 20px !important;
   letter-spacing: 0;
 }
 
 .language__item-mobile:last-child {
   border-right: none;
+}
+
+.header-color {
+  background-color: var(--sala-neutral-white) !important;
+}
+
+.header-bottom {
+  border-bottom: 1px solid var(--sala-border-line, #eeeeee)
+}
+
+.background-grey-1 {
+  background-color: var(--sala-shade-background, #f8f9fc);
+}
+
+.black-color{
+  color: var(--sala-primary-dark, #111111)
 }

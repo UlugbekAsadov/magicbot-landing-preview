@@ -2,7 +2,8 @@
 import Layout from "@/components/layout/Layout";
 import { useLocaleContext } from "@/context/locale.context";
 import { useState } from "react";
-export default function ContactOne() {
+export default function ContactOne({ params }) {
+  const { lang } = params;
   const [hasSubmitted, setHasSubmitForm] = useState(
     sessionStorage.getItem("isLeadSubmitted"),
   );
@@ -75,7 +76,7 @@ export default function ContactOne() {
 
   return (
     <>
-      <Layout pageTitle="Свяжитесь с нами">
+      <Layout pageTitle="Свяжитесь с нами" lang={lang}>
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
