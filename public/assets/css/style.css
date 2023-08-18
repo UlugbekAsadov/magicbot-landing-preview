@@ -4214,7 +4214,6 @@ img.h600 {
   left: -3%;
   width: 110%;
   height: 180%;
-  background-image: url("../images/hea-15.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -7043,21 +7042,18 @@ form.checkout-coupon input[type="text"] {
   left: -25%;
   width: 180%;
   height: 180%;
-  background-image: url("../images/hea-08.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   z-index: -1;
 }
 .heading .heading-title span.background-02 {
-  background-image: url("../images/hep-12.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
   padding-bottom: 8px;
 }
 .heading .heading-title span.background-03 {
-  background-image: url("../images/hep-24.png");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
@@ -7073,7 +7069,6 @@ form.checkout-coupon input[type="text"] {
   left: -40px;
   right: -40px;
   bottom: -15px;
-  background-image: url("../images/hst-02.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -7254,7 +7249,6 @@ form.checkout-coupon input[type="text"] {
   width: 40px;
   height: 19px;
   display: block;
-  background-image: url(../images/macaroni.webp);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
