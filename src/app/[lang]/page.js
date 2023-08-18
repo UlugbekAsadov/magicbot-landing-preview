@@ -7,6 +7,7 @@ import App_Showcase_Section5 from "@/components/sections/App_Showcase_Section5";
 import App_Showcase_Section6 from "@/components/sections/App_Showcase_Section6";
 import App_Showcase_Section9 from "@/components/sections/App_Showcase_Section9";
 import App_Showcase_Section10 from "@/components/sections/App_Showcase_Section10";
+import App_Showcase_Section7 from "@/components/sections/App_Showcase_Section7";
 
 export default function HomeAppShowcase({ params }) {
   const { lang } = params;
@@ -23,6 +24,7 @@ export default function HomeAppShowcase({ params }) {
         <App_Showcase_Section4 />
         <App_Showcase_Section5 />
         <App_Showcase_Section6 />
+        <App_Showcase_Section7 />
         <App_Showcase_Section9 />
         <App_Showcase_Section10 />
       </Layout>

@@ -58,7 +58,7 @@ export default function App_Showcase_Section4() {
                   <div className="inner -translate-x-7">
                     <img
                       className="custom-image-3  wow animate__animated animate__fadeInLeft"
-                      src="/assets/images/product-images/Dark%20mode.png"
+                      src="/assets/images/product-images/5.png"
                       alt="Image"
                     />
                     <img

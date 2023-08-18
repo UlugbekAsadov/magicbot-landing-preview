@@ -10,14 +10,19 @@ export default function App_Showcase_Section9() {
     <>
       <div
         id="plans"
-        className="section-pricing section has-icon icon-bottom-center background-grey spdtb mb-20"
+        className="section-pricing section has-icon icon-bottom-center header-color spdtb mb-20"
       >
         <div className="container">
+          <div className=" heading align-center mt-16">
+            <h2 className="text-center  heading-title size-l">
+              {translate("plans.our_plans")}
+            </h2>
+          </div>
           <div className="pricing-table layout-01 is-active">
             <div className="row">
-              <div className="col-lg-6">
+              <div className="col-lg-6 ">
                 <div className="pricing-box">
-                  <div className="inner">
+                  <div className="inner background-grey">
                     <div className="name">{translate("plans.monthly")}</div>
                     <div className="price">
                       <div className="number">299,000</div> /{" "}
@@ -49,9 +54,9 @@ export default function App_Showcase_Section9() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 ">
                 <div className="pricing-box popular">
-                  <div className="inner">
+                  <div className="inner background-grey">
                     <div className="name">
                       ПРИ ОПЛАТЕ ЗА ГОД
                       <span className="badge-popular">

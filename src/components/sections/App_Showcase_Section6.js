@@ -63,12 +63,6 @@ export default function App_Showcase_Section6() {
               </div>
             </div>
           </div>
-
-          <div className=" heading align-center mt-16">
-            <h2 className="text-center  heading-title size-l">
-              {translate("possibilities.crm_section.our_plans")}
-            </h2>
-          </div>
         </div>
       </section>
     </>
