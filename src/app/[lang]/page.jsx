@@ -9,25 +9,28 @@ import PlansSection from "@/components/sections/plans-section";
 import BannerSection from "@/components/sections/banner-section";
 import IntegrationSection from "@/components/sections/integration-section";
 import GuideSection from "@/components/sections/guide-section";
+import { ThemeContextProvider } from "@/context/theme.context";
 
 export default function HomeAppShowcase({ params }) {
   const { lang } = params;
   return (
-    <Layout
-      headerClass="is-transparent "
-      siteContentClass="pt0 pb0 overflow-hidden"
-      lang={lang}
-    >
-      <HeroSection />
-      <StatisticsSection />
-      <MarketingSection />
-      <InterfaceSection />
-      <AiSection />
-      <CrmSection />
-      <IntegrationSection />
-      <GuideSection />
-      <PlansSection />
-      <BannerSection />
-    </Layout>
+    <ThemeContextProvider>
+      <Layout
+        headerClass="is-transparent "
+        siteContentClass="pt0 pb0 overflow-hidden"
+        lang={lang}
+      >
+        <HeroSection />
+        <StatisticsSection />
+        <MarketingSection />
+        <InterfaceSection />
+        <AiSection />
+        <CrmSection />
+        <IntegrationSection />
+        <GuideSection />
+        <PlansSection />
+        <BannerSection />
+      </Layout>
+    </ThemeContextProvider>
   );
 }

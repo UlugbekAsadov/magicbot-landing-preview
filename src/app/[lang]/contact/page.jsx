@@ -4,6 +4,7 @@ import Layout from "@/components/layout/layout";
 import { useLocaleContext } from "@/context/locale.context";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ThemeContextProvider } from "@/context/theme.context";
 
 export default function ContactOne({ params }) {
   const { lang } = params;
@@ -86,7 +87,7 @@ export default function ContactOne({ params }) {
   };
 
   return (
-    <>
+    <ThemeContextProvider>
       <Layout pageTitle="Свяжитесь с нами" lang={lang}>
         <div className="container">
           <div className="row">
@@ -293,6 +294,6 @@ export default function ContactOne({ params }) {
           </div>
         </div>
       </Layout>
-    </>
+    </ThemeContextProvider>
   );
 }
