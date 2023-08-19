@@ -1,19 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useLocalStorage } from "react-use";
+import { useThemeContext } from "@/context/theme.context";
 
 export default function SwitchDarkLight() {
-  const [colorMode, setColorMode] = useState(
-    localStorage.getItem("theme") || "dark",
-  );
-  useEffect(() => {
-    document.body.classList.toggle("sala-dark-scheme", colorMode === "dark");
-  }, []);
-
-  const handleChangeTheme = (theme) => {
-    document.body.classList.toggle("sala-dark-scheme", theme === "dark");
-    setColorMode(theme);
-    localStorage.setItem("theme", theme);
-  };
+  const { colorMode, handleChangeTheme } = useThemeContext();
 
   return (
     <div className="flex items-center">

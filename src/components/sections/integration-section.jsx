@@ -2,9 +2,12 @@
 
 import { useLocaleContext } from "@/context/locale.context";
 import Image from "next/image";
+import { useLocalStorage } from "react-use";
+import { useThemeContext } from "@/context/theme.context";
 
 export default function IntegrationSection() {
   const { translate } = useLocaleContext();
+  const { colorMode } = useThemeContext();
 
   return (
     <>
@@ -38,10 +41,17 @@ export default function IntegrationSection() {
                   </div>
                 </div>
                 <div className="block-list layout-01 block-list-flex">
-                  <img
-                    src="/assets/icons/integration.svg"
-                    alt="magicbot-integrations"
-                  />
+                  {colorMode === "light" ? (
+                    <img
+                      src="/assets/images/integrations-light.png"
+                      alt="magicbot-integrations"
+                    />
+                  ) : (
+                    <img
+                      src="/assets/images/integrations-dark.png"
+                      alt="magicbot-integrations"
+                    />
+                  )}
                 </div>
               </div>
             </div>
