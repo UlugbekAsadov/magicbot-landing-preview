@@ -230,7 +230,7 @@ export default function ContactOne({ params }) {
                     <div className="col-md-12">
                       <ReCAPTCHA
                         ref={recaptchaRef}
-                        sitekey="6LeHk0MkAAAAAPEykrEMED2ZLgQRpO0OWzaBbMW9"
+                        sitekey="6LcUObonAAAAADniy41J3gKIxcgv-4XrBSkYyjsO"
                       />
                     </div>
 
