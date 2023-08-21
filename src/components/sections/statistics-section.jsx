@@ -12,6 +12,7 @@ export default function StatisticsSection() {
             <h2 className="heading-title size-l">
               {translate("statistics.paragraph")}
             </h2>
+            <p className="mt-2">{translate("statistics.desc")}</p>
           </div>
           <div className="block-number">
             <div className="row">

@@ -1,74 +1,75 @@
 {
   "common": {
-    "million_short": "млн",
-    "thousand_short": "тысяч"
+    "million_short": "mln",
+    "thousand_short": "ming"
   },
   "navbar": {
-    "main": "Главная",
-    "possibilities": "Возможности",
-    "plans": "Тарифы",
-    "contacts": "Контакты"
+    "main": "Bosh sahifa",
+    "possibilities": "Imkoniyatlar",
+    "plans": "Tariflar",
+    "contacts": "Kontaktlar"
   },
   "hero": {
-    "paragraph": "Превратите свой Telegram-бот в полноценный онлайн-магазин с Magicstore",
-    "text": "Оптимизированный интерфейс, интеллектуальные рекомендации и мощные инструменты маркетинга в одном решении",
-    "button-text": "Начать бесплатный пробный период?"
+    "paragraph": "Telegram botingizni Magicstore bilan to'liq onlayn do'konga aylantiring",
+    "text": "Optimallashtirilgan interfeys, aqlli tavsiyalar va kuchli marketing yechimlari bilan sotish osonroq",
+    "button-text": "Bepul versiyadan foydalanib ko'ring"
   },
   "statistics": {
-    "paragraph": "Зачем вам магазин в Telegram?",
-    "first_col": " АКТИВНЫЕ ПОЛЬЗОВАТЕЛИ ВСРЕДНЕМ ПО ВСЕМУ УЗБЕКИСТАНУ.",
-    "sec_col": " ОБЩАЯ АУДИТОРИЯ ТЕЛЕГРАМ КАНАЛОВ В УЗБЕКИСТАНЕ.",
-    "third_col": " КАНАЛОВ, СВЫШЕ 17 700 ЧАТОВ В УЗБЕКИСТАНЕ."
+    "paragraph": "Nega Telegramda sotish kerak?",
+    "desc": "Telegram O'zbekistondagi eng mashhur va ko'p  foydalanuvchiga ega bo'lgan messenjer",
+    "first_col": " O'ZBEKISTONDA FAOL FOYDALANUVCHILAR",
+    "sec_col": " O'ZBEKISTONDAGI KANALLARINING UMUMIY AUDITORIYASI",
+    "third_col": " 17 700 DAN ORTIQ KANALLAR VA GURUHLAR"
   },
   "possibilities": {
     "heading": "Преимущества платформы",
     "marketing_section": {
-      "title": "Маркетинг",
-      "heading": "Умный Маркетинг",
-      "text": "Сегментация, рекомендации, уведомления и многое другое. Magicstore поможет вам увеличить продажи и удержать клиентов",
-      "adv_1": "Рекомендация товаров по разным критериям",
-      "adv_2": "Сегментация для Push уведомлений",
-      "adv_3": "Личный профиль и возможность отслеживать товары",
-      "adv_4": "Возможность оплаты в рассрочку"
+      "title": "Marketing",
+      "heading": "Aqlli Marketing",
+      "text": "Segmentatsiya, tavsiyalar, bildirishnomalar va boshqalar – Magicstore sizga nafaqat savdo hajmini oshirishga, balki mijozlarni saqlab qolishga yordam beradi.",
+      "adv_1": "Turli mezonlarga asoslangan shaxsiylashtirilgan mahsulot tavsiyalari",
+      "adv_2": "Mijozlaringizga tegishli xabarlar uchun Push xabarnomalarini jonatish",
+      "adv_3": "Mijozlaringiz uchun shaxsiy profil: buyurtmalarni kuzatish, va yangilanishlardan xabardor bolish",
+      "adv_4": "Xaridlarni yanada qulayroq qiladigan bo'lib to'lash imkoniyati"
     },
     "interface_section": {
       "title": "Интерфейс",
       "heading": "Простота и Удобство",
-      "text": "Magicstore предлагает интуитивно понятный UX, мультиязычность и полную кастомизацию под ваш бренд. Ваш магазин в Telegram теперь может заменить веб-сайт или приложение",
-      "adv_1": "Оптимизированный UX для быстрих покупки",
-      "adv_2": "Поиск по товарам и категориям",
+      "text": "Magicstore предлагает интуитивный UX с мультиязычностью и полной кастомизацией под ваш бренд, заменяя веб-сайт или приложение.",
+      "adv_1": "Оптимизированный UX для быстрых покупок",
+      "adv_2": "Поиск по товарам и категориям, с вариациями и фильтрацией товаров.",
       "adv_3": "Вариации и фильтрация товаров",
-      "adv_4": "Мультиязычность"
+      "adv_4": "Мультиязычность для глобальной аудитории."
     },
     "ai_section": {
       "title": "Виртуальный продавец (AI)",
       "heading": "Ваш личный AI-продавец",
-      "text": "Наш виртуальный продавец анализирует ваш ассортимент и предлагает клиентам именно то, что им нужно. 95 языков и возможность обучения делают его незаменимым помощником",
-      "adv_1": " Анализирует вашу продукцию и типы товаров",
-      "adv_2": "Рокомендует товары и понимает контекст",
-      "adv_3": "Максимально человеческий язык общения",
-      "adv_4": "Возможность обучения и редактирование ответов",
+      "text": "Наш виртуальный продавец анализирует ваш ассортимент и предлагает клиентам именно то, что им нужно. С поддержкой 2 языков и возможностью обучения, он становится незаменимым помощником.",
+      "adv_1": "Анализирует продукцию и типы товаров для наилучших предложений.",
+      "adv_2": "Рекомендует товары, учитывая контекст и потребности клиентов.",
+      "adv_3": "Общается на максимально человеческом языке, обеспечивая естественное взаимодействие.",
+      "adv_4": "Позволяет обучать и редактировать ответы, чтобы подстроиться под ваш бренд и потребности.",
       "adv_5": "Знание 95 языков"
     },
     "crm_section": {
       "title": "Управление в одном месте",
       "heading": "Простота и Удобство",
-      "text": "Адаптивная админ-панель с CRM и обработкой заказов. Все, что вам нужно для эффективного управления магазином",
-      "adv_1": " Адаптивность ПК и Мобилка",
-      "adv_2": "Внутренняя CRM система",
+      "text": "Адаптивная админ-панель с CRM и обработкой заказов, обеспечивая все для эффективного управления магазином.",
+      "adv_1": "Адаптивность на ПК и мобильных устройствах.",
+      "adv_2": "Внутренняя CRM система и обработка заказов.",
       "adv_3": "Обработка заказов"
     },
     "integration": {
       "title": "ИНТЕГРАЦИИ",
-      "heading": "Широкий выбор готовых интеграций",
-      "text": "С помощью интеграций вы можете автоматизировать процессы взаимодействия с другими системами, такими как системы платежей и другими."
+      "heading": "Широкий выбор интеграций",
+      "text": "Автоматизируйте взаимодействие с системами платежей и другими с помощью готовых интеграций."
     }
   },
   "steps": {
     "paragraph": {
       "highlight": "3 простых",
-      "start_text": "Начните зарабатывать в ",
-      "end_text": "шагах"
+      "start_text": "Начните продавать в ",
+      "end_text": "шагах:"
     },
     "text": "Это займет всего несколько минут",
     "step_1": "Зарегистрируйтесь",
@@ -95,9 +96,9 @@
     "start_now": "Начать сейчас"
   },
   "banner": {
-    "title": "Ваш собственный онлайн-магазин всего в нескольких кликах!",
+    "title": "Создайте свой собственный онлайн-магазин всего в нескольких кликах!",
     "free_start": "Начните бесплатно",
-    "adv_1": "Масштабируйте свой бизнос!",
+    "adv_1": "Масштабируйте свой бизнес!",
     "adv_2": "Развивайте свой бизнес онлайн!"
   },
   "footer": {
