@@ -53,11 +53,6 @@ export default function AiSection() {
                       <i className="las la-check" />
                       <span>{translate("possibilities.ai_section.adv_4")}</span>
                     </li>
-
-                    <li>
-                      <i className="las la-check" />
-                      <span>{translate("possibilities.ai_section.adv_5")}</span>
-                    </li>
                   </ul>
                 </div>
               </div>

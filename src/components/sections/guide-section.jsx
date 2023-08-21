@@ -9,7 +9,7 @@ export default function GuideSection() {
         <div className="container">
           <div className="inner background-grey spdtb br10 pdl100 pdr100">
             <div className="row">
-              <div className="col-lg-5">
+              <div className="col-lg-6">
                 <div className="lg-pdl30 lg-pdr30">
                   <div className="heading mb32">
                     <h2 className="heading-title size-l">
@@ -39,7 +39,7 @@ export default function GuideSection() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-7">
+              <div className="col-lg-6">
                 <div className="lg-pdl30 lg-pdr30 lg-mt32">
                   <img src="/assets/images/rocket.png" alt="Image" />
                 </div>

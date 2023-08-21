@@ -38,13 +38,6 @@ export default function CrmSection() {
                         {translate("possibilities.crm_section.adv_2")}
                       </span>
                     </li>
-                    <li>
-                      <i className="las la-check" />
-                      <span>
-                        {" "}
-                        {translate("possibilities.crm_section.adv_3")}
-                      </span>
-                    </li>
                   </ul>
                 </div>
               </div>
