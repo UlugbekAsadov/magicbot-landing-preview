@@ -28,7 +28,7 @@ export default function Header({ headerClass, lang }) {
               <div className="header-left flex flex-align-c">
                 <Link href={`/${lang}`}>
                   <svg
-                    width="215"
+                    width="140"
                     height="56"
                     viewBox="0 0 215 86"
                     fill="none"
@@ -141,7 +141,7 @@ export default function Header({ headerClass, lang }) {
                 <SwitchDarkLight />
               </div>
               <div className=" relative">
-                <div className="flex items-center ">
+                <div className="flex items-center header-right ">
                   {width <= tabletScreenWidth ? (
                     <CanvasMenu lang={lang} />
                   ) : (

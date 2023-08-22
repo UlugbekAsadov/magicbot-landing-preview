@@ -8,7 +8,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section id={"top"} className="section opt120 has-shape spdb">
+      <section id={"top"} className="section pt-16 md:pt-24 has-shape spdb">
         <div className="shape shape-yellow layout-01" />
         <div className="shape shape-yellow layout-02" />
         <div className="shape shape-red" />

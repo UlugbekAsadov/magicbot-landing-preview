@@ -10146,8 +10146,9 @@ form.checkout-coupon input[type="text"] {
 .block-list.layout-04 li .number {
   width: 64px;
   height: 64px;
+  min-width: 48px;
+  min-height: 48px;
   border-radius: 50%;
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10155,8 +10156,32 @@ form.checkout-coupon input[type="text"] {
   font-weight: 500;
   color: var(--sala-primary-navy, #0057fc);
   background-color: var(--sala-neutral-white, #ffffff);
-  margin-right: 24px;
+  margin-right: 18px;
 }
+
+@media (max-width: 480px) {
+  .block-list.layout-04 li {
+    display: flex;
+    gap: 12px;
+  }
+  .block-list.layout-04 li .number {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .block-list.layout-04 li .title {
+    font-size: 18px !important;
+  }
+
+  .heading .heading-title.size-l {
+    font-size: 28px;
+  }
+}
+
 .block-list.layout-04 li .title {
   font-size: 24px;
   line-height: 1.33;

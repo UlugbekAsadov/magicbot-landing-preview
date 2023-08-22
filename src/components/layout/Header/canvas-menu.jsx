@@ -90,14 +90,14 @@ export default function CanvasMenu({ lang }) {
       {isOpen && (
         <nav className="mobile-menu">
           <ul>
-            {navbarLinks.map((link, index) => (
+            {navbarLinks.map((link) => (
               <li
                 className="wow animate__animated animate__fadeInLeft text-xl black-color"
                 data-wow
                 animate__animated-delay={`${link.id}s`}
                 onClick={toggleMenu}
               >
-                <Link href={`/${lang}/${link.href}`}>
+                <Link href={`/${lang}${link.href}`}>
                   {translate(link.title)}
                 </Link>
               </li>
