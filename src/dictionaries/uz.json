@@ -22,7 +22,7 @@
     "third_col": " 17 700 DAN ORTIQ KANALLAR VA GURUHLAR"
   },
   "possibilities": {
-    "heading": "Преимущества платформы",
+    "heading": "Platformaning afzalliklari",
     "marketing_section": {
       "title": "Marketing",
       "heading": "Aqlli Marketing",
@@ -66,11 +66,11 @@
   },
   "steps": {
     "paragraph": {
-      "highlight": "3 простых",
-      "start_text": "Начните продавать в ",
-      "end_text": "шагах:"
+      "highlight": "3 oddiy",
+      "start_text": "Onlayn sotuv uchun ",
+      "end_text": "qadam:"
     },
-    "text": "Bu bir necha daqiqa davom etadi",
+    "text": "Bu uchun bir necha daqiqa yetarli",
     "step_1": "Ro'yxatdan o'ting",
     "step_2": "Mahsulotlaringizni qo'shing",
     "step_3": "Sotishni boshlang"
