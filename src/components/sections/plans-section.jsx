@@ -58,7 +58,7 @@ export default function PlansSection() {
                 <div className="pricing-box popular">
                   <div className="inner background-grey">
                     <div className="name">
-                      ПРИ ОПЛАТЕ ЗА ГОД
+                      {translate("plans.yearly")}
                       <span className="badge-popular">
                         {translate("plans.discount")}{" "}
                         <span className="font-bold">20%</span>

@@ -33,36 +33,35 @@
       "adv_4": "Xaridlarni yanada qulayroq qiladigan bo'lib to'lash imkoniyati"
     },
     "interface_section": {
-      "title": "Интерфейс",
-      "heading": "Простота и Удобство",
-      "text": "Magicstore предлагает интуитивный UX с мультиязычностью и полной кастомизацией под ваш бренд, заменяя веб-сайт или приложение.",
-      "adv_1": "Оптимизированный UX для быстрых покупок",
-      "adv_2": "Поиск по товарам и категориям, с вариациями и фильтрацией товаров.",
-      "adv_3": "Вариации и фильтрация товаров",
-      "adv_4": "Мультиязычность для глобальной аудитории."
+      "title": "Interfeys",
+      "heading": "Oddiylik va qulaylik",
+      "text": "Magicstore veb-sayt yoki ilovani o`rniga ko'p tilli va brendingizga to'liq moslashtirilgan intuitiv UX-ni taklif qiladi.",
+      "adv_1": "Tez xarid qilish uchun optimallashtirilgan UX",
+      "adv_2": "Tovarlar va kategoriyalar bo'yicha qidirish, tovarlarning turlari bilan bo`yicha filtrlash.",
+      "adv_3": "Tovarlarning turlari va filtratsiyasi",
+      "adv_4": "O`zbek va rus tillarida"
     },
     "ai_section": {
-      "title": "Виртуальный продавец (AI)",
-      "heading": "Ваш личный AI-продавец",
-      "text": "Наш виртуальный продавец анализирует ваш ассортимент и предлагает клиентам именно то, что им нужно. С поддержкой 2 языков и возможностью обучения, он становится незаменимым помощником.",
-      "adv_1": "Анализирует продукцию и типы товаров для наилучших предложений.",
-      "adv_2": "Рекомендует товары, учитывая контекст и потребности клиентов.",
-      "adv_3": "Общается на максимально человеческом языке, обеспечивая естественное взаимодействие.",
-      "adv_4": "Позволяет обучать и редактировать ответы, чтобы подстроиться под ваш бренд и потребности.",
-      "adv_5": "Знание 95 языков"
+      "title": "Virtual sotuvchi (AI)",
+      "heading": "Sizning shaxsiy AI sotuvchingiz",
+      "text": "Bizning virtual sotuvchimiz sizning assortimentingizni tahlil qiladi va mijozlarga kerakli narsalarni taklif qiladi. 2 tilni qo'llab-quvvatlash va o'rganish imkoniyati bilan u ajralmas yordamchiga aylanadi.",
+      "adv_1": "Eng yaxshi takliflar uchun mahsulotlar va mahsulot turlarini tahlil qiladi.",
+      "adv_2": "Kontekst va mijozlar ehtiyojlarini hisobga olgan holda mahsulotlarni tavsiya qiladi.",
+      "adv_3": "Tabiiy o'zaro ta'sirni ta'minlab, iloji boricha inson tilida muloqot qiladi.",
+      "adv_4": "Sizning brendingiz va ehtiyojlaringizga moslashish uchun javoblarni o'rgatish va tahrirlash imkonini beradi."
     },
     "crm_section": {
-      "title": "Управление в одном месте",
-      "heading": "Простота и Удобство",
-      "text": "Адаптивная админ-панель с CRM и обработкой заказов, обеспечивая все для эффективного управления магазином.",
-      "adv_1": "Адаптивность на ПК и мобильных устройствах.",
-      "adv_2": "Внутренняя CRM система и обработка заказов.",
-      "adv_3": "Обработка заказов"
+      "title": "Bir joyda boshqarish",
+      "heading": "Oddiylik va qulaylik",
+      "text": "Do'konni samarali boshqarish uchun hamma narsani ta'minlaydigan crm va buyurtmalarni qayta ishlashga qulay boshqaruv paneli.",
+      "adv_1": "Kompyuter va mobil qurilmalarda moslashuvchanlik.",
+      "adv_2": "Ichki CRM tizimi va buyurtmalarni qayta ishlash.",
+      "adv_3": "Turli xil metrikalar"
     },
     "integration": {
-      "title": "ИНТЕГРАЦИИ",
-      "heading": "Широкий выбор интеграций",
-      "text": "Автоматизируйте взаимодействие с системами платежей и другими с помощью готовых интеграций."
+      "title": "Integratsiya",
+      "heading": "Integratsiyalarning keng tanlovi",
+      "text": "Tayyor integratsiyalar yordamida to'lov tizimlari va boshqalar bilan o'zaro aloqalarni avtomatlashtirish."
     }
   },
   "steps": {
@@ -71,54 +70,54 @@
       "start_text": "Начните продавать в ",
       "end_text": "шагах:"
     },
-    "text": "Это займет всего несколько минут",
-    "step_1": "Зарегистрируйтесь",
-    "step_2": "Добавьте свои товары",
-    "step_3": "Начните продавать"
+    "text": "Bu bir necha daqiqa davom etadi",
+    "step_1": "Ro'yxatdan o'ting",
+    "step_2": "Mahsulotlaringizni qo'shing",
+    "step_3": "Sotishni boshlang"
   },
   "plans": {
-    "our_plans": "Наши тарифы",
-    "monthly": "ПРИ ОПЛАТЕ ЗА МЕСЯЦ",
-    "per_month": "Месяц",
-    "title": "Единовременная плата за установку составляет 4.990.000 СУМОВ",
+    "our_plans": "Bizning tariflarimiz",
+    "monthly": "OYLIK TO`LOV",
+    "per_month": "bir oy uchun",
+    "title": "O'rnatish uchun bir martalik to'lov 4.990.000 so'mni tashkil etadi",
     "month": {
-      "adv_1": "Более 10+ необходимых функций для вашего интернет магазина",
-      "adv_2": " 4 интеграций (Рауmе, Click, SMS-провайдер, Billz)",
-      "adv_3": "Подключение CRM системы, либо интеграции с другими системами - увеличат стоимость в зависимости от типа системы, сложности и варианта реализации 7 дней бесплатно"
+      "adv_1": "Onlayn do'koningiz uchun 10+ dan ortiq zarur imkoniyatlar",
+      "adv_2": " 4 integratsiya (Payme, Click, SMS-provayder, Billz)",
+      "adv_3": "Подключение CRM системы или интеграции с другими системами могут повлиять на стоимость, которая зависит от типа системы, сложности и выбранного варианта реализации."
     },
-    "yearly": "ПРИ ОПЛАТЕ ЗА ГОД",
-    "discount": "Скидка",
+    "yearly": "Yillik to`lov",
+    "discount": "Chegirma",
     "annual": {
-      "adv_1": "Единовременная плата за установку составляет 4.990.000 СУМОВ",
-      "adv_2": "И другие греимущества, что и при оплате за месяц",
+      "adv_1": "O'rnatish uchun bir martalik to'lov 4.990.000 so'mni tashkil etadi",
+      "adv_2": "Va oy uchun to'lashda bo'lgani kabi boshqa afzalliklar",
       "adv_3": "Подключение CRM системы, либо интеграции с другими системами - увеличат стоимость в зависимости от типа системы, сложности и варианта реализации"
     },
-    "start_now": "Начать сейчас"
+    "start_now": "Hozir boshlang"
   },
   "banner": {
-    "title": "Создайте свой собственный онлайн-магазин всего в нескольких кликах!",
-    "free_start": "Начните бесплатно",
-    "adv_1": "Масштабируйте свой бизнес!",
-    "adv_2": "Развивайте свой бизнес онлайн!"
+    "title": "Osonlik bilan o'zingizning onlayn do'koningizni yarating!",
+    "free_start": "Bepul sinab ko`rish",
+    "adv_1": "Biznesingizni kengaytiring!",
+    "adv_2": "Onlayn biznesingizni rivojlantiring!"
   },
   "footer": {
-    "all_secured": "Все права защищены"
+    "all_secured": "Barcha huquqlar himoyalangan"
   },
   "form": {
-    "thanks": "Спасибо за ваш запрос!",
-    "message": "Наши сотрудники свяжутся с вами в ближайшее время. Оставайтесь с нами!",
-    "wanna_connect": "Хотите подключиться?",
-    "title": "Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время!",
-    "full_name": "Имя и фамилия",
-    "phone_number": "Номер телефона",
-    "store_name": "Название магазина",
-    "required": "Это поле обязательно",
-    "submit": "Отправить",
-    "contact": "Контакты",
-    "title_2": " Возникли вопросы? Обратитесь к нашим менеджерам - они всегда рады помочь.",
-    "phone": "Телефон",
-    "telegram": "Телеграм",
-    "our_address": "Наш адрес",
-    "address": "Город Ташкент, Мирзо-Улугбекский район, ул. Муминова 4а"
+    "thanks": "So'rovingiz uchun tashakkur!",
+    "message": "Bizning xodimlarimiz tez orada siz bilan bog'lanadi. Biz bilan qoling!",
+    "wanna_connect": "Ulanishni xohlaysizmi?",
+    "title": "So'rov qoldiring va bizning menejerlarimiz tez orada siz bilan bog'lanishadi!",
+    "full_name": "Ism-familiya",
+    "phone_number": "Telefon raqami",
+    "store_name": "Do'kon nomi",
+    "required": "Bu maydon majburiydir",
+    "submit": "So`rov yuborish",
+    "contact": "Aloqa ma'lumotlari",
+    "title_2": "Savollaringiz bormi? Menejerlarimizga murojaat qiling – ular yordam berishdan mamnun bo'lishadi.",
+    "phone": "Telefon",
+    "telegram": "Telegram",
+    "our_address": "Bizning manzilimiz",
+    "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A"
   }
 }
