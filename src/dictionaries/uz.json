@@ -10,8 +10,8 @@
     "contacts": "Kontaktlar"
   },
   "hero": {
-    "paragraph": "Telegram botingizni Magicstore bilan to'liq onlayn do'konga aylantiring",
-    "text": "Optimallashtirilgan interfeys, aqlli tavsiyalar va kuchli marketing yechimlari bilan sotish osonroq",
+    "paragraph": "Telegramdagi oddiy do'kondan Magicstorening aqlli do'koniga o'ting",
+    "text": "Optimallashtirilgan interfeys, aqlli tavsiyalar va kuchli marketing yechimlari bilan sotish yanada osonroq",
     "button-text": "Bepul versiyadan foydalanib ko'ring"
   },
   "statistics": {
@@ -22,20 +22,20 @@
     "third_col": " 17 700 DAN ORTIQ KANALLAR VA GURUHLAR"
   },
   "possibilities": {
-    "heading": "Platformaning afzalliklari",
+    "heading": "Magicstorening afzalliklari",
     "marketing_section": {
       "title": "Marketing",
       "heading": "Aqlli Marketing",
       "text": "Segmentatsiya, tavsiyalar, bildirishnomalar va boshqalar – Magicstore sizga nafaqat savdo hajmini oshirishga, balki mijozlarni saqlab qolishga yordam beradi.",
-      "adv_1": "Turli mezonlarga asoslangan shaxsiylashtirilgan mahsulot tavsiyalari",
-      "adv_2": "Mijozlaringizga tegishli xabarlar uchun Push xabarnomalarini jonatish",
-      "adv_3": "Mijozlaringiz uchun shaxsiy profil: buyurtmalarni kuzatish, va yangilanishlardan xabardor bolish",
+      "adv_1": "Turli mezonlarga asoslangan mahsulot tavsiyalari",
+      "adv_2": "Mijozlaringizga Push xabarnomalar jonatish",
+      "adv_3": "Shaxsiy profil: buyurtmalarni kuzatish, va o`zgarishlardan xabardor bolish",
       "adv_4": "Xaridlarni yanada qulayroq qiladigan bo'lib to'lash imkoniyati"
     },
     "interface_section": {
       "title": "Interfeys",
       "heading": "Oddiylik va qulaylik",
-      "text": "Magicstore veb-sayt yoki ilovani o`rniga ko'p tilli va brendingizga to'liq moslashtirilgan intuitiv UX-ni taklif qiladi.",
+      "text": "Magicstore sizning brendingiz uchun avtomatik ravishda eng qulay onlayn do'kon kashf qiladi. Bu shunchaki teleram bot emas.",
       "adv_1": "Tez xarid qilish uchun optimallashtirilgan UX",
       "adv_2": "Tovarlar va kategoriyalar bo'yicha qidirish, tovarlarning turlari bilan bo`yicha filtrlash.",
       "adv_3": "Tovarlarning turlari va filtratsiyasi",
@@ -44,8 +44,8 @@
     "ai_section": {
       "title": "Virtual sotuvchi (AI)",
       "heading": "Sizning shaxsiy AI sotuvchingiz",
-      "text": "Bizning virtual sotuvchimiz sizning assortimentingizni tahlil qiladi va mijozlarga kerakli narsalarni taklif qiladi. 2 tilni qo'llab-quvvatlash va o'rganish imkoniyati bilan u ajralmas yordamchiga aylanadi.",
-      "adv_1": "Eng yaxshi takliflar uchun mahsulotlar va mahsulot turlarini tahlil qiladi.",
+      "text": "Bizning virtual sotuvchimiz sizning assortimentingizni tahlil qiladi va mijozlarga kerakli mahsulotlarni taklif qiladi. 2 tilni qo'llab-quvvatlash va o'rganish imkoniyati bilan u ajralmas yordamchiga aylanadi.",
+      "adv_1": "Eng yaxshi takliflar uchun mahsulotlar va turlarini tahlil qiladi.",
       "adv_2": "Kontekst va mijozlar ehtiyojlarini hisobga olgan holda mahsulotlarni tavsiya qiladi.",
       "adv_3": "Tabiiy o'zaro ta'sirni ta'minlab, iloji boricha inson tilida muloqot qiladi.",
       "adv_4": "Sizning brendingiz va ehtiyojlaringizga moslashish uchun javoblarni o'rgatish va tahrirlash imkonini beradi."
