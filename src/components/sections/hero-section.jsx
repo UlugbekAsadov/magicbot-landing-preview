@@ -26,7 +26,7 @@ export default function HeroSection() {
               </div>
               <Link
                 href={`/${currentLang}/contact`}
-                className="w-fit px-4 py-2 bg-blue-600 text-white rounded-md block"
+                className="w-fit px-3 text-sm md:text-base md:px-4 py-2 bg-blue-600 text-white rounded-md block"
               >
                 {translate("hero.button-text")}
               </Link>
