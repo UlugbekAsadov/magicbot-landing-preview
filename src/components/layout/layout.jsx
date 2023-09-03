@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import BackToTop from "../elements/BackToTop";
 import Footer1 from "./Footer/footer";
 import Header1 from "./Header/header";
 import { useLocaleContext } from "@/context/locale.context";
 import { HeaderTop } from "@/components/sections/header-top";
+import { BackToTop } from "@/components/elements/BackToTop";
 
 export default function Layout({
   children,
