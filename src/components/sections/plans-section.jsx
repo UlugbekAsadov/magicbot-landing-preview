@@ -23,7 +23,7 @@ export default function PlansSection() {
               <div className="col-lg-6 ">
                 <div className="pricing-box">
                   <div className="inner background-grey">
-                    <div className="name">{translate("plans.monthly")}</div>
+                    <div className="name ">{translate("plans.monthly")}</div>
                     <div className="price">
                       <div className="number">299,000</div> /{" "}
                       {translate("plans.per_month")}
@@ -57,7 +57,7 @@ export default function PlansSection() {
               <div className="col-lg-6 ">
                 <div className="pricing-box popular">
                   <div className="inner background-grey">
-                    <div className="name">
+                    <div className="name  pricing__box-header">
                       {translate("plans.yearly")}
                       <span className="badge-popular">
                         {translate("plans.discount")}{" "}
