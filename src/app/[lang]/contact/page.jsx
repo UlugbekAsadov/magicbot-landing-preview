@@ -88,7 +88,7 @@ export default function ContactOne({ params }) {
 
   return (
     <ThemeContextProvider>
-      <Layout pageTitle="Свяжитесь с нами" lang={lang}>
+      <Layout pageTitle={translate("contact_page.title")} lang={lang}>
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -165,7 +165,9 @@ export default function ContactOne({ params }) {
                           type="text"
                           name="full_name"
                           id="full_name"
-                          placeholder="Введите свое и имя и фамилия"
+                          placeholder={translate(
+                            "contact_page.form.full_name_placeholder",
+                          )}
                           className="px-3 "
                           value={formValues.full_name}
                           onChange={handleChangeValue}
@@ -188,7 +190,9 @@ export default function ContactOne({ params }) {
                           id="phone_number"
                           maxLength={13}
                           minLength={13}
-                          placeholder="Введите свое номер телефона"
+                          placeholder={translate(
+                            "contact_page.form.phone_number_placeholder",
+                          )}
                           className="px-3 "
                           value={formValues.phone_number}
                           onChange={handleChangeValue}
@@ -215,7 +219,9 @@ export default function ContactOne({ params }) {
                           type="text"
                           name="shop_name"
                           id="shop_name"
-                          placeholder="Введите свое название магазина"
+                          placeholder={translate(
+                            "contact_page.form.shop_name_placeholder",
+                          )}
                           className="px-3 "
                           value={formValues.shop_name}
                           onChange={handleChangeValue}

@@ -2,7 +2,6 @@
 
 import { useLocaleContext } from "@/context/locale.context";
 import Image from "next/image";
-import { useLocalStorage } from "react-use";
 import { useThemeContext } from "@/context/theme.context";
 
 export default function IntegrationSection() {

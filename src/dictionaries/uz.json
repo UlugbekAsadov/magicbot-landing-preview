@@ -9,6 +9,9 @@
     "plans": "Tariflar",
     "contacts": "Kontaktlar"
   },
+  "header": {
+    "free_demo": "Bepul Demo"
+  },
   "hero": {
     "paragraph": "Telegramdagi oddiy do'kondan Magicstorening aqlli do'koniga o'ting",
     "text": "Optimallashtirilgan interfeys, aqlli tavsiyalar va kuchli marketing yechimlari bilan sotish yanada osonroq",
@@ -119,5 +122,13 @@
     "telegram": "Telegram",
     "our_address": "Bizning manzilimiz",
     "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A"
+  },
+  "contact_page": {
+    "title": "Biz bilan bog'lanish",
+    "form": {
+      "full_name_placeholder": "Ism va familiyangizni kiriting",
+      "phone_number_placeholder": "Telefon raqamingizni kiriting",
+      "shop_name_placeholder": "Do'koningizning nomini kiriting"
+    }
   }
 }
