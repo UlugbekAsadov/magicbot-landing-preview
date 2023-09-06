@@ -37,12 +37,12 @@ export default function HeroSection() {
                   <img
                     className="custom-image-1 wow animate__animated   animate__fadeInLeft"
                     src="/assets/images/product-images/1.png"
-                    alt="Image"
+                    alt="Magicbot uz images"
                   />
                   <img
                     className="custom-image-2 wow animate__animated    animate__fadeInLeft hidden md:block"
                     src="/assets/images/product-images/2.png"
-                    alt="Image"
+                    alt="Magicbot uz images"
                   />
                 </div>
               </div>

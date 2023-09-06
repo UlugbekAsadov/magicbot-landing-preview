@@ -16,7 +16,7 @@ export default function AiSection() {
                     <img
                       className="custom-image wow animate__animated   animate__fadeInLeft"
                       src="/assets/images/product-images/11.png"
-                      alt="Image"
+                      alt="Magicbot uz images"
                     />
                   </div>
                 </div>

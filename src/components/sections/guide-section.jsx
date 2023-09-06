@@ -41,7 +41,7 @@ export default function GuideSection() {
               </div>
               <div className="col-lg-6">
                 <div className="lg-pdl30 lg-pdr30 lg-mt32">
-                  <img src="/assets/images/step.png" alt="Image" />
+                  <img src="/assets/images/step.png" alt="Magicbot uz images" />
                 </div>
               </div>
             </div>

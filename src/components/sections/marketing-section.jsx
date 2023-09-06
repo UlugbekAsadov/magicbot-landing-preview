@@ -22,7 +22,7 @@ export default function MarketingSection() {
                     <img
                       className="custom-image wow animate__animated   animate__fadeInLeft"
                       src="/assets/images/product-images/3.png"
-                      alt="Image"
+                      alt="Magicbot uz images"
                     />
                   </div>
                 </div>
