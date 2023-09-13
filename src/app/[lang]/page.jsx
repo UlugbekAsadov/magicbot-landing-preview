@@ -28,7 +28,7 @@ export default function HomeAppShowcase({ params }) {
         <CrmSection />
         <IntegrationSection />
         <GuideSection />
-        <PlansSection />
+        {/*<PlansSection />*/}
         <BannerSection />
       </Layout>
     </ThemeContextProvider>
