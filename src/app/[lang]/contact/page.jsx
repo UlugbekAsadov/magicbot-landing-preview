@@ -21,6 +21,7 @@ export default function ContactOne({ params }) {
   const [hasError, setHasError] = useState(false);
   const [hasNameError, setHasNameError] = useState(false);
   const [hasStoreError, setHasStoreError] = useState(false);
+  const [hasCaptchaError, setHasCaptchaError] = useState(false);
   const recaptchaRef = React.createRef();
 
   const { translate } = useLocaleContext();
@@ -35,6 +36,7 @@ export default function ContactOne({ params }) {
     setHasStoreError(false);
     setHasNameError(false);
     setHasError(false);
+    setHasCaptchaError(false);
 
     if (!formValues.full_name.length) {
       return setHasNameError(true);
@@ -51,8 +53,8 @@ export default function ContactOne({ params }) {
     setIsLoading(true);
     const token = await recaptchaRef.current.getValue();
 
-    console.log(token);
     if (!Boolean(token)) {
+      setHasCaptchaError(true);
       return setIsLoading(false);
     }
 
@@ -239,6 +241,11 @@ export default function ContactOne({ params }) {
                         ref={recaptchaRef}
                         sitekey="6LcUObonAAAAADniy41J3gKIxcgv-4XrBSkYyjsO"
                       />
+                      {hasCaptchaError && (
+                        <span className="text-xs text-red-500">
+                          {translate("form.captcha_required")}
+                        </span>
+                      )}
                     </div>
 
                     <div className="col-md-12">

@@ -121,7 +121,8 @@
     "phone": "Telefon",
     "telegram": "Telegram",
     "our_address": "Bizning manzilimiz",
-    "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A"
+    "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A",
+    "captcha_required": "Kaptcha talab qilinadi"
   },
   "contact_page": {
     "title": "Biz bilan bog'lanish",
