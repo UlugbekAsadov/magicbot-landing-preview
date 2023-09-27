@@ -88,7 +88,7 @@ export default function ContactOne({ params }) {
 
   return (
     <ThemeContextProvider>
-      <Layout pageTitle="Свяжитесь с нами" lang={lang}>
+      <Layout pageTitle={translate("form.contact_us")} lang={lang}>
         <div className="container">
           <div className="row">
             <div className="col-lg-6">

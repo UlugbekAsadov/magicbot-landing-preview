@@ -7,7 +7,8 @@
     "main": "Bosh sahifa",
     "possibilities": "Imkoniyatlar",
     "plans": "Tariflar",
-    "contacts": "Kontaktlar"
+    "contacts": "Kontaktlar",
+    "free_demo": "Bepul demo"
   },
   "hero": {
     "paragraph": "Telegramdagi oddiy do'kondan Magicstorening aqlli do'koniga o'ting",
@@ -104,6 +105,7 @@
     "all_secured": "Barcha huquqlar himoyalangan"
   },
   "form": {
+    "contact_us": "Biz bilan bog'laning",
     "thanks": "So'rovingiz uchun tashakkur!",
     "message": "Bizning xodimlarimiz tez orada siz bilan bog'lanadi. Biz bilan qoling!",
     "wanna_connect": "Ulanishni xohlaysizmi?",
