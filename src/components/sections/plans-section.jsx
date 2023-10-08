@@ -25,7 +25,7 @@ export default function PlansSection() {
                   <div className="inner background-grey">
                     <div className="name ">{translate("plans.monthly")}</div>
                     <div className="price">
-                      <div className="number">299,000</div> /{" "}
+                      <div className="number">399,000</div> /{" "}
                       {translate("plans.per_month")}
                     </div>
                     <div className="desc">
@@ -44,7 +44,7 @@ export default function PlansSection() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href={`/${currentLang}/contact`}
+                        href={`https://magicstore.uz/${currentLang}/register`}
                         className="button fullfield"
                         title="Начать сейчас"
                       >
@@ -65,7 +65,7 @@ export default function PlansSection() {
                       </span>
                     </div>
                     <div className="price">
-                      <div className="number">239,000</div> /{" "}
+                      <div className="number">319,000</div> /{" "}
                       {translate("plans.per_month")}
                     </div>
                     <div className="desc">
@@ -81,7 +81,7 @@ export default function PlansSection() {
                     </ul>
                     <div className="button-wrap">
                       <Link
-                        href={`/${currentLang}/contact`}
+                        href={`https://magicstore.uz/${currentLang}/register`}
                         className="button fullfield"
                         title="Начать сейчас"
                       >

@@ -18,7 +18,7 @@ export default function BannerSection() {
                 </div>
                 <div className="button-wrap">
                   <Link
-                    href={`/${currentLang}/contact`}
+                    href={`https://magicstore.uz/${currentLang}/register`}
                     className="button fullfield"
                     title="Try it free"
                   >

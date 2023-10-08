@@ -25,7 +25,7 @@ export default function HeroSection() {
                 </div>
               </div>
               <Link
-                href={`/${currentLang}/contact`}
+                href={`https://magicstore.uz/${currentLang}/register`}
                 className="w-fit px-3 text-sm md:text-base md:px-4 py-2 bg-blue-600 text-white rounded-md block"
               >
                 {translate("hero.button-text")}
