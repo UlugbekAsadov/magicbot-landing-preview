@@ -28,18 +28,12 @@ export default function PlansSection() {
                       <div className="number">399,000</div> /{" "}
                       {translate("plans.per_month")}
                     </div>
-                    <div className="desc">
-                      <p>{translate("plans.title")}</p>
-                    </div>
                     <ul className="list">
                       <li className="active">
                         {translate("plans.month.adv_1")}
                       </li>
                       <li className="active">
                         {translate("plans.month.adv_2")}
-                      </li>
-                      <li className="active">
-                        {translate("plans.month.adv_3")}
                       </li>
                     </ul>
                     <div className="button-wrap">
@@ -68,15 +62,15 @@ export default function PlansSection() {
                       <div className="number">319,000</div> /{" "}
                       {translate("plans.per_month")}
                     </div>
-                    <div className="desc">
-                      <p>{translate("plans.title")}</p>
-                    </div>
                     <ul className="list">
                       <li className="active">
                         {translate("plans.annual.adv_1")}
                       </li>
                       <li className="active">
                         {translate("plans.annual.adv_2")}
+                      </li>
+                      <li className="active">
+                        {translate("plans.month.adv_3")}
                       </li>
                     </ul>
                     <div className="button-wrap">
