@@ -49,7 +49,7 @@ export default function CrmSection() {
                     <img
                       className="  wow animate__animated   animate__fadeInLeft"
                       src="/assets/images/product-images/27.png"
-                      alt="Image"
+                      alt="Magicbot uz images"
                     />
                   </div>
                 </div>

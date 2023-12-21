@@ -2,7 +2,6 @@
 
 import { useLocaleContext } from "@/context/locale.context";
 import Image from "next/image";
-import { useLocalStorage } from "react-use";
 import { useThemeContext } from "@/context/theme.context";
 
 export default function IntegrationSection() {
@@ -21,7 +20,7 @@ export default function IntegrationSection() {
                     <img
                       className="custom-image wow animate__animated   animate__fadeInLeft"
                       src="/assets/images/product-images/9.png"
-                      alt="Image"
+                      alt="Magicbot uz images"
                     />
                   </div>
                 </div>

@@ -59,12 +59,12 @@ export default function InterfaceSection() {
                     <img
                       className="custom-image-3  wow animate__animated animate__fadeInLeft"
                       src="/assets/images/product-images/5.png"
-                      alt="Image"
+                      alt="Magicbot uz images"
                     />
                     <img
                       className="custom-image-4 wow animate__animated   animate__fadeInRight"
                       src="/assets/images/product-images/4.png"
-                      alt="Image"
+                      alt="Magicbot uz images"
                     />
                   </div>
                 </div>

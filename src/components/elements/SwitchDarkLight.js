@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useLocalStorage } from "react-use";
+
 import { useThemeContext } from "@/context/theme.context";
 
 export default function SwitchDarkLight() {

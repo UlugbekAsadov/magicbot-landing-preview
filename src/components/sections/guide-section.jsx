@@ -5,7 +5,7 @@ export default function GuideSection() {
   const { translate } = useLocaleContext();
   return (
     <>
-      <section className="section spdt">
+      <section className="section spdt mb-20">
         <div className="container">
           <div className="inner background-grey spdtb br10 pdl100 pdr100">
             <div className="row">
@@ -41,7 +41,7 @@ export default function GuideSection() {
               </div>
               <div className="col-lg-6">
                 <div className="lg-pdl30 lg-pdr30 lg-mt32">
-                  <img src="/assets/images/rocket.png" alt="Image" />
+                  <img src="/assets/images/step.png" alt="Magicbot uz images" />
                 </div>
               </div>
             </div>
