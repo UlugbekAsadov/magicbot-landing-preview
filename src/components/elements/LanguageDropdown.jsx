@@ -8,13 +8,13 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 const languages = [
   {
     id: 1,
-    title: "Uz",
+    title: "O'zbekcha",
     locale: "uz",
     icon: "/assets/icons/uz-flag.svg",
   },
   {
     id: 2,
-    title: "Ru",
+    title: "Русский",
     locale: "ru",
     icon: "/assets/icons/ru-flag.svg",
   },
