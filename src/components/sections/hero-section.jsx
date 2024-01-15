@@ -34,7 +34,7 @@ export default function HeroSection() {
                 <Link
                     href={`https://t.me/magicstoreuz_bot`}
                     target={"_blank"}
-                    className="w-fit px-3 text-sm md:text-base md:px-4 py-2 dark:bg-gray-600 dark:text-white rounded-md block"
+                    className="w-full text-center sm:w-fit px-3 text-sm md:text-base md:px-4 py-2 bg-black text-white rounded-md block  fullfield"
                 >
                   {translate("hero.shop-text")}
                 </Link>
