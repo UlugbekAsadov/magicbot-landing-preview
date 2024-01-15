@@ -10,7 +10,7 @@ export default function PlansSection() {
     <>
       <div
         id="plans"
-        className="section-pricing section has-icon icon-bottom-center header-color spdtb mb-20"
+        className="section-pricing section has-icon icon-bottom-center header-color mb-20"
       >
         <div className="container">
           <div className=" heading align-center mt-16">
