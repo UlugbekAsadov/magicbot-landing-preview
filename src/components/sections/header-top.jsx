@@ -17,9 +17,9 @@ export const HeaderTop = () => {
         <div className="flex items-center justify-between container-fluid">
           <h2 className="header-left font-bold">+998 77 003 44 04</h2>
           <div className="header-right flex items-center gap-3">
-            <SwitchDarkLight />
+            {/*<SwitchDarkLight/>*/}
             <div>
-              <LanguageDropdown />
+              <LanguageDropdown/>
             </div>
           </div>
         </div>

@@ -7,15 +7,17 @@
     "main": "Bosh sahifa",
     "possibilities": "Imkoniyatlar",
     "plans": "Tariflar",
-    "contacts": "Kontaktlar"
+    "contacts": "Aloqa",
+    "free_demo": "Bepul demo"
   },
   "header": {
-    "free_demo": "Bepul Demo"
+    "free_demo": "Bepul sinab ko'rish"
   },
   "hero": {
-    "paragraph": "Telegramdagi oddiy do'kondan Magicstorening aqlli do'koniga o'ting",
-    "text": "Optimallashtirilgan interfeys, aqlli tavsiyalar va kuchli marketing yechimlari bilan sotish yanada osonroq",
-    "button-text": "Bepul versiyadan foydalanib ko'ring"
+    "paragraph": "Telegramda do'kon yarating va sotishni boshlang",
+    "text": "15 daqiqada katalog tuzing va buyurtmalarni qabul qiling",
+    "button-text": "Bepul sinab ko'rish",
+    "shop-text": "Demo do'kon"
   },
   "statistics": {
     "paragraph": "Nega Telegramda sotish kerak?",
@@ -86,12 +88,12 @@
     "month": {
       "adv_1": "Onlayn do'koningiz uchun 10+ dan ortiq zarur imkoniyatlar",
       "adv_2": " 4 integratsiya (Payme, Click, SMS-provayder, Billz)",
-      "adv_3": "Подключение CRM системы или интеграции с другими системами могут повлиять на стоимость, которая зависит от типа системы, сложности и выбранного варианта реализации."
+      "adv_3": "Boshqa CRM tizimlar bilan integratsiya qilish imkoniyati"
     },
     "yearly": "Yillik to`lov",
     "discount": "Chegirma",
     "annual": {
-      "adv_1": "O'rnatish uchun bir martalik to'lov 4.990.000 so'mni tashkil etadi",
+      "adv_1": "Yillik to`lov tanlanganda 20% chegirma",
       "adv_2": "Va oy uchun to'lashda bo'lgani kabi boshqa afzalliklar",
       "adv_3": "Подключение CRM системы, либо интеграции с другими системами - увеличат стоимость в зависимости от типа системы, сложности и варианта реализации"
     },
@@ -107,6 +109,7 @@
     "all_secured": "Barcha huquqlar himoyalangan"
   },
   "form": {
+    "contact_us": "Biz bilan bog'laning",
     "thanks": "So'rovingiz uchun tashakkur!",
     "message": "Bizning xodimlarimiz tez orada siz bilan bog'lanadi. Biz bilan qoling!",
     "wanna_connect": "Ulanishni xohlaysizmi?",
@@ -121,7 +124,8 @@
     "phone": "Telefon",
     "telegram": "Telegram",
     "our_address": "Bizning manzilimiz",
-    "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A"
+    "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A",
+    "captcha_required": "Kaptcha talab qilinadi"
   },
   "contact_page": {
     "title": "Biz bilan bog'lanish",

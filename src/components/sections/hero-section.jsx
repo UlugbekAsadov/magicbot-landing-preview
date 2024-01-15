@@ -57,7 +57,7 @@ function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
   const { currentLang } = useLocaleContext();
 
   return (
-    <section className="section pt-16 md:pt-24 has-shape hero__section spdb">
+    <section className="section pt-8 md:pt-16 has-shape hero__section spdb">
       <div className="shape shape-yellow layout-01" />
       <div className="shape shape-yellow layout-02" />
       <div className="shape shape-red" />
@@ -72,12 +72,21 @@ function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
               <div className="mt-3 text-sm md:text-xl">{text}</div>
             </div>
             {buttonText && (
-              <Link
-                href={`/${currentLang}/contact`}
-                className="w-fit px-3 text-sm md:text-base md:px-4 py-2 bg-blue-600 text-white rounded-md block"
-              >
-                {buttonText}
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center gap-2">
+                <Link
+                    href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=button&utm_campaign=landing`}
+                    className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-blue-600 text-white rounded-md block"
+                >
+                  {buttonText}
+                </Link>
+                <Link
+                    href={`https://t.me/magicstoreuz_bot`}
+                    target="_blank"
+                    className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-black text-white rounded-md block fullfield"
+                >
+                  {translate("hero.shop-text")}
+                </Link>
+              </div>
             )}
           </div>
           <div className="col-lg-6 mt-12 sm:mt-24 md:mt-0 hero__col">
@@ -85,16 +94,16 @@ function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
               <div className="inner">
                 {src1 && (
                   <img
-                    className="custom-image-1 wow animate__animated   animate__fadeInLeft"
-                    src={src1}
-                    alt="Magicbot uz images"
+                      className="custom-image-1 wow animate__animated   animate__fadeInLeft"
+                      src={src1}
+                      alt="Magicbot uz images"
                   />
                 )}
                 {src2 && (
                   <img
-                    className="custom-image-2 wow animate__animated    animate__fadeInLeft hidden md:block"
-                    src={src2}
-                    alt="Magicbot uz images"
+                      className="custom-image-2 wow animate__animated    animate__fadeInLeft hidden md:block"
+                      src={src2}
+                      alt="Magicbot uz images"
                   />
                 )}
               </div>

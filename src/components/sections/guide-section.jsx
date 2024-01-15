@@ -5,7 +5,7 @@ export default function GuideSection() {
   const { translate } = useLocaleContext();
   return (
     <>
-      <section className="section spdt">
+      <section className="section spdt mb-20">
         <div className="container">
           <div className="inner background-grey spdtb br10 pdl100 pdr100">
             <div className="row">
