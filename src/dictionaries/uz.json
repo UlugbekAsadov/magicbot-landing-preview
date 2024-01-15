@@ -7,11 +7,11 @@
     "main": "Bosh sahifa",
     "possibilities": "Imkoniyatlar",
     "plans": "Tariflar",
-    "contacts": "Kontaktlar",
+    "contacts": "Aloqa",
     "free_demo": "Bepul demo"
   },
   "header": {
-    "free_demo": "Bepul Demo"
+    "free_demo": "Bepul sinab ko'rish"
   },
   "hero": {
     "paragraph": "Telegramda do'kon yarating va sotishni boshlang",
