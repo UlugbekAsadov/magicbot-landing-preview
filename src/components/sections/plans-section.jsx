@@ -13,12 +13,12 @@ export default function PlansSection() {
 
   const plans = [
     {
-      duration: translate("plans.monthly"),
+      duration: "Basic",
       per_duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       title: translate("plans.title"),
       isPopular: false,
-      price: "299,000",
+      price: "199,000",
       advantages: [
         translate("plans.month.adv_1"),
         translate("plans.month.adv_2"),
@@ -26,15 +26,15 @@ export default function PlansSection() {
       ]
     },
     {
-      duration: translate("plans.yearly"),
+      duration: "Pro",
       per_duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       title: translate("plans.title"),
       isPopular: true,
-      price: "239,000",
+      price: "399,000",
       discount: {
         title: translate("plans.discount"),
-        amount: "20%"
+        amount: ""
       },
       advantages: [
         translate("plans.annual.adv_1"),
@@ -42,16 +42,12 @@ export default function PlansSection() {
       ]
     },
     {
-      duration: translate("plans.yearly"),
+      duration: "Premium",
       per_duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       title: translate("plans.title"),
-      isPopular: true,
-      price: "239,000",
-      discount: {
-        title: translate("plans.discount"),
-        amount: "20%"
-      },
+      isPopular: false,
+      price: "699,000",
       advantages: [
         translate("plans.annual.adv_1"),
         translate("plans.annual.adv_2"),
