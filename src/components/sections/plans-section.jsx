@@ -33,7 +33,7 @@ export default function PlansSection() {
       isPopular: true,
       price: "399,000",
       discount: {
-        title: translate("plans.discount"),
+        title: translate("plans.popular"),
         amount: ""
       },
       advantages: [

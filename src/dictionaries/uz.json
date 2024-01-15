@@ -28,6 +28,20 @@
   },
   "possibilities": {
     "heading": "Magicstorening afzalliklari",
+    "marketplace": {
+      "title": "Konversiya",
+      "heading": "Savdo hajmini oshiring",
+      "text": "Telegram magazin yordamida konversiyani 10 barobarga oshirish imkoniyati. Telegramdagi o'rtacha chek saytlarga qaraganda yuqori.",
+      "adv_1": "Har bir mijozga shaxsiy yondashuv",
+      "adv_2": "Strategiyalarni takomillashtirish uchun ilg'or savdo tahlili"
+    },
+    "sell": {
+      "title": "Sotuv",
+      "heading": "3 ta klikda soting",
+      "text": "Endi mijozlarni botga olib o'tishingiz shart emas, do'koningiz telegramda chegarasiz ishlaydi. Shunchaki do'konni kanalingiz yoki guruhingizga biriktiring(pin).",
+      "adv_1": "Bir bosqichli xarid: to'g'ridan-to'g'ri chatda ko'rish va sotib olish",
+      "adv_2": "Tovarlarga tezkor kirish uchun qulay do'kon tugmasi"
+    },
     "marketing_section": {
       "title": "Marketing",
       "heading": "Aqlli Marketing",
@@ -92,6 +106,7 @@
     },
     "yearly": "Yillik to`lov",
     "discount": "Chegirma",
+    "popular": "Ommabop",
     "annual": {
       "adv_1": "Yillik to`lov tanlanganda 20% chegirma",
       "adv_2": "Va oy uchun to'lashda bo'lgani kabi boshqa afzalliklar",
