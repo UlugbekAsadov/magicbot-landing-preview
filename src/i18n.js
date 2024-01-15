@@ -1,4 +1,4 @@
-export const defaultLocale = "ru";
+export const defaultLocale = "uz";
 export const locales = ["ru", "uz"];
 
 export const getLocalePartsFrom = ({ pathname, locale }) => {

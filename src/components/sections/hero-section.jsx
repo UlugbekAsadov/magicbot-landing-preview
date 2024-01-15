@@ -24,12 +24,21 @@ export default function HeroSection() {
                   {translate("hero.text")}
                 </div>
               </div>
-              <Link
-                href={`https://magicstore.uz/${currentLang}/register`}
-                className="w-fit px-3 text-sm md:text-base md:px-4 py-2 bg-blue-600 text-white rounded-md block"
-              >
-                {translate("hero.button-text")}
-              </Link>
+              <div className="d-flex">
+                <Link
+                    href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=button&utm_campaign=landing`}
+                    className="w-fit px-3 text-sm md:text-base md:px-4 py-2 bg-blue-600 text-white rounded-md block mr-3"
+                >
+                  {translate("hero.button-text")}
+                </Link>
+                <Link
+                    href={`https://t.me/magicstoreuz_bot`}
+                    target={"_blank"}
+                    className="w-fit px-3 text-sm md:text-base md:px-4 py-2 dark:bg-gray-600 dark:text-white rounded-md block"
+                >
+                  {translate("hero.shop-text")}
+                </Link>
+              </div>
             </div>
             <div className="col-lg-6 mt-12 sm:mt-24 md:mt-0">
               <div className="images lg-mt32 layout-12">

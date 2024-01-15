@@ -14,9 +14,10 @@
     "free_demo": "Bepul Demo"
   },
   "hero": {
-    "paragraph": "Telegramdagi oddiy do'kondan Magicstorening aqlli do'koniga o'ting",
-    "text": "Optimallashtirilgan interfeys, aqlli tavsiyalar va kuchli marketing yechimlari bilan sotish yanada osonroq",
-    "button-text": "Bepul versiyadan foydalanib ko'ring"
+    "paragraph": "Telegramda do'kon yarating va sotishni boshlang",
+    "text": "15 daqiqada katalog tuzing va buyurtmalarni qabul qiling",
+    "button-text": "Bepul sinab ko'rish",
+    "shop-text": "Demo do'kon"
   },
   "statistics": {
     "paragraph": "Nega Telegramda sotish kerak?",

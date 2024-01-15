@@ -9,11 +9,11 @@ export const navbarLinks = [
     title: "navbar.possibilities",
     href: "#possibilities",
   },
-  // {
-  //   id: 1.2,
-  //   title: "navbar.plans",
-  //   href: "#plans",
-  // },
+  {
+    id: 1.2,
+    title: "navbar.plans",
+    href: "#plans",
+  },
   {
     id: 1.6,
     title: "navbar.contacts",
