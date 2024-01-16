@@ -12,10 +12,10 @@ export default function SellSection() {
                         <div className="col-lg-6 lg-order-1 flex items-center">
                             <div className="pdl50">
                                 <div className="images layout-10">
-                                    <div className="inner -translate-x-7">
+                                    <div className="inner">
                                         <img
-                                            className="  wow animate__animated   animate__fadeInLeft"
-                                            src="/assets/images/product-images/27.png"
+                                            className="video-image wow animate__animated animate__fadeInLeft"
+                                            src="/assets/images/video.gif"
                                             alt="Magicbot uz images"
                                         />
                                     </div>

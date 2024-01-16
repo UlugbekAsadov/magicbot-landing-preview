@@ -47,8 +47,8 @@ export default function MarketSection() {
                                 <div className="images layout-10">
                                     <div className="inner -translate-x-7">
                                         <img
-                                            className="  wow animate__animated   animate__fadeInLeft"
-                                            src="/assets/images/product-images/27.png"
+                                            className="statistics-image wow animate__animated animate__fadeInRight"
+                                            src="/assets/images/statistics.png"
                                             alt="Magicbot uz images"
                                         />
                                     </div>
