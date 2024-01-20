@@ -6,7 +6,7 @@ export default function OurLeadsSection() {
   const { translate } = useLocaleContext();
 
   return (
-    <section className="section spdt">
+    <section className="section">
       <div className="container">
         <div className=" heading align-center mt-16">
           <h2 className="text-center  heading-title size-l">
@@ -37,11 +37,11 @@ export default function OurLeadsSection() {
             <div className="flex flex-col items-center">
               <img
                 className="w-[200px]"
-                src="/assets/images/product-images/2.png"
+                src="/assets/images/getbook.png"
                 alt="image"
               />
-              <a href="#" className="mt-2">
-                ssilka
+              <a href="https://t.me/getbookrobot" target="_blank" className="mt-2">
+                @getbookrobot
               </a>
             </div>
           </SwiperSlide>
@@ -49,11 +49,11 @@ export default function OurLeadsSection() {
             <div className="flex flex-col items-center">
               <img
                 className="w-[200px]"
-                src="/assets/images/product-images/2.png"
+                src="/assets/images/cwatches.png"
                 alt="image"
               />
-              <a href="#" className="mt-2">
-                ssilka
+              <a href="https://t.me/cwatches_bot" className="mt-2">
+                @cwatches_bot
               </a>
             </div>
           </SwiperSlide>
@@ -61,11 +61,11 @@ export default function OurLeadsSection() {
             <div className="flex flex-col items-center">
               <img
                 className="w-[200px]"
-                src="/assets/images/product-images/2.png"
+                src="/assets/images/ellos.png"
                 alt="image"
               />
-              <a href="#" className="mt-2">
-                ssilka
+              <a href="https://t.me/ellos_home_bot" className="mt-2">
+                @ellos_home_bot
               </a>
             </div>
           </SwiperSlide>
@@ -73,11 +73,11 @@ export default function OurLeadsSection() {
             <div className="flex flex-col items-center">
               <img
                 className="w-[200px]"
-                src="/assets/images/product-images/2.png"
+                src="/assets/images/beautylish.png"
                 alt="image"
               />
-              <a href="#" className="mt-2">
-                ssilka
+              <a href="https://t.me/Beautylish_bot" className="mt-2">
+                @Beautylish_bot
               </a>
             </div>
           </SwiperSlide>
