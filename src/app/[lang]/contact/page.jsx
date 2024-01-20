@@ -60,6 +60,7 @@ export default function ContactOne({ params }) {
 
     try {
       const body = {
+        title: 'Новый лид с сайта',
         name: formValues.full_name,
         phone: formValues.phone_number,
         question: formValues.question,
@@ -74,7 +75,7 @@ export default function ContactOne({ params }) {
         },
       };
 
-      fetch("https://magicstore.uz/api/v1/lead", config)
+      fetch("https://crm.magicbot.uz/api/v1/leads", config)
         .then((res) => res.json())
         .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);
