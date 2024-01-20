@@ -147,7 +147,7 @@ export const PlansCard = ({ name, isPopular, discount, price, duration, advantag
            </ul>
            <div className="button-wrap">
              <Link
-                 href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=button&utm_campaign=plans&plan=${name}`}
+                 href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=plan&utm_campaign=plans&plan=${name}`}
                  className=" card__cta cta"
                  title="Начать сейчас"
              >

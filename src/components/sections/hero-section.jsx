@@ -74,7 +74,7 @@ function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
             {buttonText && (
               <div className="flex flex-col sm:flex-row items-center gap-2">
                 <Link
-                    href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=button&utm_campaign=landing`}
+                    href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=hero_section&utm_campaign=landing`}
                     className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-blue-600 text-white rounded-md block"
                 >
                   {buttonText}
