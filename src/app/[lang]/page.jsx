@@ -18,9 +18,9 @@ export default function HomeAppShowcase({ params }) {
   return (
     <ThemeContextProvider>
       <Layout
-        headerClass="is-transparent "
-        siteContentClass="pt0 pb0 overflow-hidden"
-        lang={lang}
+          headerClass="is-transparent "
+          siteContentClass="pt0 pb0 overflow-hidden"
+          lang={lang}
       >
         <HeroSection />
         <StatisticsSection />
