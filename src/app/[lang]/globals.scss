@@ -159,3 +159,13 @@ html {
     margin: 0 auto !important;
   }
 }
+
+.slider__dots{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .slider__dots{
+    display: flex;
+  }
+}

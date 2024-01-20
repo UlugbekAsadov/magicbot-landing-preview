@@ -82,6 +82,13 @@ export default function OurLeadsSection() {
             </div>
           </SwiperSlide>
         </Swiper>
+
+        <div className="slider__dots flex items-center justify-center gap-2 mt-4">
+          <div className="w-2 h-2 bg-gray-300 rounded-full" />
+          <div className="w-2 h-2 bg-gray-300 rounded-full" />
+          <div className="w-2 h-2 bg-gray-300 rounded-full" />
+          <div className="w-2 h-2 bg-gray-300 rounded-full" />
+        </div>
       </div>
     </section>
   );
