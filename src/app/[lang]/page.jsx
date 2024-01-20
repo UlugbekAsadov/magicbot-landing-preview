@@ -12,15 +12,16 @@ import GuideSection from "@/components/sections/guide-section";
 import { ThemeContextProvider } from "@/context/theme.context";
 import MarketSection from "@/components/sections/market-section";
 import SellSection from "@/components/sections/sell-section";
+import OurLeadsSection from "@/components/sections/our-leads-section";
 
 export default function HomeAppShowcase({ params }) {
   const { lang } = params;
   return (
     <ThemeContextProvider>
       <Layout
-          headerClass="is-transparent "
-          siteContentClass="pt0 pb0 overflow-hidden"
-          lang={lang}
+        headerClass="is-transparent "
+        siteContentClass="pt0 pb0 overflow-hidden"
+        lang={lang}
       >
         <HeroSection />
         <StatisticsSection />
@@ -32,6 +33,7 @@ export default function HomeAppShowcase({ params }) {
         <CrmSection />
         <IntegrationSection />
         <GuideSection />
+        <OurLeadsSection />
         <PlansSection />
         <BannerSection />
       </Layout>

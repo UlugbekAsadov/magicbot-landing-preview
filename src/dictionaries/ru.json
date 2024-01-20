@@ -176,5 +176,8 @@
       "shop_name_placeholder": "Введите свое название магазина",
       "question_placeholder": " "
     }
+  },
+  "our_leads": {
+    "title": "Магазины созданные на нашем конструкторе"
   }
 }
