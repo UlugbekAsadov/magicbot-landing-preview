@@ -1,10 +1,5 @@
 export const navbarLinks = [
   {
-    id: 0.4,
-    title: "navbar.main",
-    href: "/#top",
-  },
-  {
     id: 0.8,
     title: "navbar.possibilities",
     href: "#possibilities",

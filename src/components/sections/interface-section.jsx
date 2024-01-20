@@ -55,7 +55,7 @@ export default function InterfaceSection() {
             <div className="col-lg-6 lg-order-1">
               <div className="pdl50">
                 <div className="images layout-10">
-                  <div className="inner -translate-x-7">
+                  <div className="inner -translate-x-10">
                     <img
                       className="custom-image-3  wow animate__animated animate__fadeInLeft"
                       src="/assets/images/product-images/5.png"

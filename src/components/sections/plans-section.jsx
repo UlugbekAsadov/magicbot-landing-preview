@@ -13,23 +13,23 @@ export default function PlansSection() {
 
   const plans = [
     {
-      duration: "Basic",
-      per_duration: translate("plans.per_month"),
+      name: "Basic",
+      duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
-      title: translate("plans.title"),
       isPopular: false,
       price: "199,000",
       advantages: [
-        translate("plans.month.adv_1"),
-        translate("plans.month.adv_2"),
-        translate("plans.month.adv_3")
+        translate("plans.basic.clients_limit"),
+        translate("plans.basic.products_limit"),
+        translate("plans.basic.newsletters_limit"),
+        translate("plans.basic.employees_limit"),
+        translate("plans.basic.modules"),
       ]
     },
     {
-      duration: "Pro",
-      per_duration: translate("plans.per_month"),
+      name: "Pro",
+      duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
-      title: translate("plans.title"),
       isPopular: true,
       price: "399,000",
       discount: {
@@ -37,20 +37,27 @@ export default function PlansSection() {
         amount: ""
       },
       advantages: [
-        translate("plans.annual.adv_1"),
-        translate("plans.annual.adv_2"),
+        translate("plans.pro.clients_limit"),
+        translate("plans.pro.products_limit"),
+        translate("plans.pro.newsletters_limit"),
+        translate("plans.pro.employees_limit"),
+        translate("plans.pro.modules"),
+        translate("plans.pro.ai"),
       ]
     },
     {
-      duration: "Premium",
-      per_duration: translate("plans.per_month"),
+      name: "Premium",
+      duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
-      title: translate("plans.title"),
       isPopular: false,
       price: "699,000",
       advantages: [
-        translate("plans.annual.adv_1"),
-        translate("plans.annual.adv_2"),
+        translate("plans.premium.clients_limit"),
+        translate("plans.premium.products_limit"),
+        translate("plans.premium.newsletters_limit"),
+        translate("plans.premium.employees_limit"),
+        translate("plans.premium.modules"),
+        translate("plans.premium.ai"),
       ]
     }
   ]
@@ -110,7 +117,7 @@ export default function PlansSection() {
 }
 
 
-export const PlansCard = ({ duration, isPopular, discount, price, per_duration, title, advantages = [], buttonText }) => {
+export const PlansCard = ({ name, isPopular, discount, price, duration, advantages = [], buttonText }) => {
   const { currentLang } = useLocaleContext();
 
   return (
@@ -119,7 +126,7 @@ export const PlansCard = ({ duration, isPopular, discount, price, per_duration, 
        <div className="pricing-box ">
          <div className="inner card">
            <div className="name  pricing__box-header">
-             {duration}
+             {name}
              {isPopular && (
                  <span className="badge-popular">
                   {discount?.title}{" "}
@@ -129,11 +136,7 @@ export const PlansCard = ({ duration, isPopular, discount, price, per_duration, 
            </div>
            <div className="price">
              <div className="number">{price}</div>{" "}
-             {per_duration}
-
-           </div>
-           <div className="desc">
-             <p>{title}</p>
+             {duration}
            </div>
            <ul className="list">
              {advantages?.map((adv, idx) => (
@@ -144,7 +147,7 @@ export const PlansCard = ({ duration, isPopular, discount, price, per_duration, 
            </ul>
            <div className="button-wrap">
              <Link
-                 href={`/${currentLang}/contact`}
+                 href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=button&utm_campaign=plans&plan=${name}`}
                  className=" card__cta cta"
                  title="Начать сейчас"
              >

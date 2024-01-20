@@ -45,7 +45,7 @@ export default function MarketSection() {
                         <div className="col-lg-6 lg-order-1 flex items-center">
                             <div className="pdl50">
                                 <div className="images layout-10">
-                                    <div className="inner -translate-x-7">
+                                    <div className="inner -translate-x-1">
                                         <img
                                             className="statistics-image wow animate__animated animate__fadeInRight"
                                             src="/assets/images/statistics.png"
