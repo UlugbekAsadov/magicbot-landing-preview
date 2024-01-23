@@ -116,7 +116,7 @@
     "start_now": "Hozir boshlang",
     "basic": {
       "clients_limit": "Mijozlar soni 500 tagacha",
-      "products_limit": "Mahsulotlar soni 100 tagacha",
+      "products_limit": "Mahsulotlar soni 50 tagacha",
       "newsletters_limit": "Xabarnomalar soni 2 tagacha",
       "employees_limit": "Xodimlar soni 2 tagacha",
       "modules": "Asosiy modullar"
