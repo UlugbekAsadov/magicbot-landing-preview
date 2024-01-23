@@ -11,7 +11,8 @@
     "free_demo": "Bepul demo"
   },
   "header": {
-    "free_demo": "Bepul sinab ko'rish"
+    "free_demo": "Bepul sinab ko'rish",
+    "announce": "14 kun davomida do'konni bepul foydalaning"
   },
   "hero": {
     "paragraph": "Telegramda do'kon yarating va sotishni boshlang",
@@ -28,6 +29,20 @@
   },
   "possibilities": {
     "heading": "Magicstorening afzalliklari",
+    "marketplace": {
+      "title": "Konversiya",
+      "heading": "Savdo hajmini oshiring",
+      "text": "Telegram magazin yordamida konversiyani 10 barobarga oshirish imkoniyati. Telegramdagi o'rtacha chek saytlarga qaraganda yuqori.",
+      "adv_1": "Har bir mijozga shaxsiy yondashuv",
+      "adv_2": "Strategiyalarni takomillashtirish uchun ilg'or savdo tahlili"
+    },
+    "sell": {
+      "title": "Sotuv",
+      "heading": "3 ta klikda soting",
+      "text": "Endi mijozlarni botga olib o'tishingiz shart emas, do'koningiz telegramda chegarasiz ishlaydi. Shunchaki do'konni kanalingiz yoki guruhingizga biriktiring(pin).",
+      "adv_1": "Bir bosqichli xarid: to'g'ridan-to'g'ri chatda ko'rish va sotib olish",
+      "adv_2": "Tovarlarga tezkor kirish uchun qulay do'kon tugmasi"
+    },
     "marketing_section": {
       "title": "Marketing",
       "heading": "Aqlli Marketing",
@@ -92,12 +107,36 @@
     },
     "yearly": "Yillik to`lov",
     "discount": "Chegirma",
+    "popular": "Ommabop",
     "annual": {
       "adv_1": "Yillik to`lov tanlanganda 20% chegirma",
       "adv_2": "Va oy uchun to'lashda bo'lgani kabi boshqa afzalliklar",
       "adv_3": "Подключение CRM системы, либо интеграции с другими системами - увеличат стоимость в зависимости от типа системы, сложности и варианта реализации"
     },
-    "start_now": "Hozir boshlang"
+    "start_now": "Hozir boshlang",
+    "basic": {
+      "clients_limit": "Mijozlar soni 500 tagacha",
+      "products_limit": "Mahsulotlar soni 50 tagacha",
+      "newsletters_limit": "Xabarnomalar soni 2 tagacha",
+      "employees_limit": "Xodimlar soni 2 tagacha",
+      "modules": "Asosiy modullar"
+    },
+    "pro": {
+      "clients_limit": "Mijozlar soni 25 000 tagacha",
+      "products_limit": "Mahsulotlar soni 10 000 tagacha",
+      "newsletters_limit": "Xabarnomalar soni 20 tagacha",
+      "employees_limit": "Xodimlar soni 10 tagacha",
+      "modules": "Kengaytirilgan modullar",
+      "ai": "Virtual sotuvchi (AI) *"
+    },
+    "premium": {
+      "clients_limit": "Cheksiz mijozlar",
+      "products_limit": "Cheksiz mahsulotlar",
+      "newsletters_limit": "Cheksiz xabarnomalar",
+      "employees_limit": "Cheksiz xodimlar",
+      "modules": "Barcha modullar",
+      "ai": "Virtual sotuvchi (AI) *"
+    }
   },
   "banner": {
     "title": "Osonlik bilan o'zingizning onlayn do'koningizni yarating!",
@@ -125,14 +164,19 @@
     "telegram": "Telegram",
     "our_address": "Bizning manzilimiz",
     "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A",
-    "captcha_required": "Kaptcha talab qilinadi"
+    "captcha_required": "Kaptcha talab qilinadi",
+    "question": "Siz qanday mahsulot yoki xizmatlarni sotishni rejalashtirmoqdasiz?"
   },
   "contact_page": {
     "title": "Biz bilan bog'lanish",
     "form": {
       "full_name_placeholder": "Ism va familiyangizni kiriting",
       "phone_number_placeholder": "Telefon raqamingizni kiriting",
-      "shop_name_placeholder": "Do'koningizning nomini kiriting"
+      "shop_name_placeholder": "Do'koningizning nomini kiriting",
+      "question_placeholder": " "
     }
+  },
+  "our_leads": {
+    "title": "Bizning platformamizda yaratilgan onlayn-do'konlarga misollar"
   }
 }

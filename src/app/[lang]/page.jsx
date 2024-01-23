@@ -10,6 +10,9 @@ import BannerSection from "@/components/sections/banner-section";
 import IntegrationSection from "@/components/sections/integration-section";
 import GuideSection from "@/components/sections/guide-section";
 import { ThemeContextProvider } from "@/context/theme.context";
+import MarketSection from "@/components/sections/market-section";
+import SellSection from "@/components/sections/sell-section";
+import OurLeadsSection from "@/components/sections/our-leads-section";
 
 export default function HomeAppShowcase({ params }) {
   const { lang } = params;
@@ -22,12 +25,15 @@ export default function HomeAppShowcase({ params }) {
       >
         <HeroSection />
         <StatisticsSection />
+        <SellSection />
+        <MarketSection />
         <MarketingSection />
         <InterfaceSection />
         <AiSection />
         <CrmSection />
         <IntegrationSection />
         <GuideSection />
+        <OurLeadsSection />
         <PlansSection />
         <BannerSection />
       </Layout>

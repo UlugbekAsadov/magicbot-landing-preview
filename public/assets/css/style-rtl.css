@@ -9012,7 +9012,7 @@ form.checkout-coupon input[type="text"] {
 }
 
 .pricing-box .inner {
-  padding: 40px 40px 120px;
+  padding: 30px 30px 110px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -9089,8 +9089,7 @@ form.checkout-coupon input[type="text"] {
 
 .pricing-box .list li::before {
   content: "\f00d";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
+   font-weight: 900;
   color: var(--sala-alway-neutral-white);
   font-size: 24px;
   margin-left: 16px;

@@ -15,12 +15,12 @@ export default function ContactOne({ params }) {
   const [formValues, setFormValues] = useState({
     full_name: "",
     phone_number: "+998",
-    shop_name: "",
+    question: "",
   });
 
   const [hasError, setHasError] = useState(false);
   const [hasNameError, setHasNameError] = useState(false);
-  const [hasStoreError, setHasStoreError] = useState(false);
+  const [hasQuestionError, setHasQuestionError] = useState(false);
   const [hasCaptchaError, setHasCaptchaError] = useState(false);
   const recaptchaRef = React.createRef();
 
@@ -33,7 +33,7 @@ export default function ContactOne({ params }) {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
 
-    setHasStoreError(false);
+    setHasQuestionError(false);
     setHasNameError(false);
     setHasError(false);
     setHasCaptchaError(false);
@@ -42,8 +42,8 @@ export default function ContactOne({ params }) {
       return setHasNameError(true);
     }
 
-    if (!formValues.shop_name.length) {
-      return setHasStoreError(true);
+    if (!formValues.question.length) {
+      return setHasQuestionError(true);
     }
 
     if (formValues.phone_number.length !== 13) {
@@ -60,9 +60,10 @@ export default function ContactOne({ params }) {
 
     try {
       const body = {
+        title: 'Новый лид с сайта',
         name: formValues.full_name,
         phone: formValues.phone_number,
-        shop: formValues.shop_name,
+        question: formValues.question,
         token,
       };
 
@@ -74,7 +75,7 @@ export default function ContactOne({ params }) {
         },
       };
 
-      fetch("https://magicstore.uz/api/v1/lead", config)
+      fetch("https://crm.magicbot.uz/api/v1/leads", config)
         .then((res) => res.json())
         .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);
@@ -111,20 +112,20 @@ export default function ContactOne({ params }) {
                           className="background-navy"
                         >
                           {translate("form.phone")}
-                          <span>+998 77 003-44-04</span>
+                          <span>+998 77 114-99-98</span>
                         </a>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="contact-box">
                         <a
-                          href="https://t.me/humocommercee"
+                          href="https://t.me/magicbotuz_support"
                           title="Email us"
                           className="background-dark"
                           target={"_blank"}
                         >
                           {translate("form.telegram")}
-                          <span>@humocommercee</span>
+                          <span>@magicbotuz_support</span>
                         </a>
                       </div>
                     </div>
@@ -215,21 +216,21 @@ export default function ContactOne({ params }) {
                     <div className="col-md-12">
                       <div className="field-input">
                         <label htmlFor="shop_name">
-                          {translate("form.store_name")}*
+                          {translate("form.question")}*
                         </label>
                         <input
                           type="text"
-                          name="shop_name"
-                          id="shop_name"
+                          name="question"
+                          id="question"
                           placeholder={translate(
-                            "contact_page.form.shop_name_placeholder",
+                            "contact_page.form.question_placeholder",
                           )}
                           className="px-3 "
-                          value={formValues.shop_name}
+                          value={formValues.question}
                           onChange={handleChangeValue}
                         />
 
-                        {hasStoreError && (
+                        {hasQuestionError && (
                           <span className="text-xs text-red-500">
                             {translate("form.required")}
                           </span>

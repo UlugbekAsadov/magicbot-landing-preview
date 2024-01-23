@@ -1,0 +1,41 @@
+.hero {
+  position: relative;
+}
+
+.hero__section {
+  --hsl: var(--hue), var(--saturation), var(--lightness);
+  --flow-space: 0.5em;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+  -webkit-mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #000 10%,
+    transparent 50%
+  );
+  mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #000 10%,
+    transparent 50%
+  );
+  transition: 400ms mask ease;
+  will-change: mask;
+}
+
+.hero__overlay .hero__section {
+  height: 100%;
+  background-color: hsla(var(--hsl), 0.15);
+  border-color: hsla(var(--hsl), 1);
+  box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+}
+
+.hero__overlay .hero__section {
+  --hue: 165;
+  --saturation: 82.26%;
+  --lightness: 51.37%;
+}

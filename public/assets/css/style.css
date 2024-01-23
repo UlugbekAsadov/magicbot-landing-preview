@@ -14,6 +14,7 @@ body,
   --sala-alway-dark: #111111;
   --sala-shade-border-line: #dddddd;
   --sala-shade-background: #f8f9fc;
+  --sala-pricing-button-background: #0057fc;
   --sala-shade-background-2: #f4f2fd;
   --sala-shade-background-3: #e9eaff;
   --sala-shade-background90: rgba(248, 249, 252, 0.9);
@@ -31,6 +32,7 @@ body .site-header.sala-dark-scheme,
 body.sala-dark-scheme,
 .site-header.alway-dark .site-header.sala-dark-scheme,
 .site-header.alway-dark.sala-dark-scheme {
+  --sala-pricing-button-background: #0c0c0d;
   --sala-primary-navy: #0057fc;
   --sala-primary-navy-2: #7527eb;
   --sala-primary-dark: #ffffff;
@@ -7257,6 +7259,7 @@ form.checkout-coupon input[type="text"] {
 }
 
 .pricing-table {
+  position: relative;
   display: none;
 }
 .pricing-table.is-active {
@@ -7398,7 +7401,7 @@ form.checkout-coupon input[type="text"] {
   height: 100%;
 }
 .pricing-box .inner {
-  padding: 40px 40px 120px;
+  padding: 30px 30px 110px;
   border-radius: 10px;
   position: relative;
   height: 100%;
@@ -7416,12 +7419,13 @@ form.checkout-coupon input[type="text"] {
   margin-bottom: 16px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .pricing-box .badge-popular {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.5;
   font-weight: 500;
-  padding: 3px 16px;
+  padding: 3px 10px;
   border-radius: 15px;
   background-color: var(--sala-tone-yellow, #ffdd0f);
   color: var(--sala-alway-dark, #111111);

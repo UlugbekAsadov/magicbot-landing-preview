@@ -51,6 +51,14 @@ h3,
   font-weight: 600 !important;
 }
 
+.video-image {
+  width: 75% !important;
+  margin: 0 auto !important;
+}
+.statistics-image {
+  width: 75% !important;
+  margin: 0 auto !important;
+}
 .custom-image-1 {
   width: 75% !important;
   margin: 0 auto !important;
@@ -140,4 +148,24 @@ html {
 .rc-anchor-light {
   color: var(--sala-primary-dark, #111111) !important;
   background-color: var(--sala-shade-background, #f8f9fc) !important;
+}
+@media only screen and (max-width: 760px) {
+  .video-image {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .statistics-image {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+}
+
+.slider__dots{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .slider__dots{
+    display: flex;
+  }
 }
