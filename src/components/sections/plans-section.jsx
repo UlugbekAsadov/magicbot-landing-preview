@@ -50,7 +50,7 @@ export default function PlansSection() {
       duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       isPopular: false,
-      price: "699,000",
+      price: "799,000",
       advantages: [
         translate("plans.premium.clients_limit"),
         translate("plans.premium.products_limit"),
