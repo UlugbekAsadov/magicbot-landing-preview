@@ -91,19 +91,29 @@ export default function CanvasMenu({ lang }) {
         <nav className="mobile-menu">
           <ul>
             {navbarLinks.map((link) => (
-              <li
+                <li
+                    className="wow animate__animated animate__fadeInLeft text-xl black-color"
+                    data-wow
+                    animate__animated-delay={`${link.id}s`}
+                    onClick={toggleMenu}
+                >
+                  <Link href={`/${lang}${link.href}`}>
+                    {translate(link.title)}
+                  </Link>
+                </li>
+            ))}
+            <li
                 className="wow animate__animated animate__fadeInLeft text-xl black-color"
                 data-wow
-                animate__animated-delay={`${link.id}s`}
+                animate__animated-delay={`4s`}
                 onClick={toggleMenu}
-              >
-                <Link href={`/${lang}${link.href}`}>
-                  {translate(link.title)}
-                </Link>
-              </li>
-            ))}
+            >
+              <Link href={'https://magicstore.uz/login'}>
+                {translate("auth.login")}
+              </Link>
+            </li>
             <div className="wow animate__animated animate__fadeInLeft navbar__language-dropdown">
-              <LanguageDropdown />
+              <LanguageDropdown/>
             </div>
           </ul>
         </nav>
