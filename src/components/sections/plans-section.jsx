@@ -14,20 +14,22 @@ export default function PlansSection() {
   const plans = [
     {
       name: "Start",
+      desc: translate("plans.start.desc"),
       duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       isPopular: false,
       price: "199,000",
       advantages: [
-        translate("plans.basic.clients_limit"),
-        translate("plans.basic.products_limit"),
-        translate("plans.basic.newsletters_limit"),
-        translate("plans.basic.employees_limit"),
-        translate("plans.basic.modules"),
+        translate("plans.start.clients_limit"),
+        translate("plans.start.products_limit"),
+        translate("plans.start.newsletters_limit"),
+        translate("plans.start.employees_limit"),
+        translate("plans.start.modules"),
       ]
     },
     {
       name: "Growth",
+      desc: translate("plans.growth.desc"),
       duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       isPopular: true,
@@ -37,27 +39,28 @@ export default function PlansSection() {
         amount: ""
       },
       advantages: [
-        translate("plans.pro.clients_limit"),
-        translate("plans.pro.products_limit"),
-        translate("plans.pro.newsletters_limit"),
-        translate("plans.pro.employees_limit"),
-        translate("plans.pro.modules"),
-        translate("plans.pro.ai"),
+        translate("plans.growth.clients_limit"),
+        translate("plans.growth.products_limit"),
+        translate("plans.growth.newsletters_limit"),
+        translate("plans.growth.employees_limit"),
+        translate("plans.growth.modules"),
+        translate("plans.growth.ai"),
       ]
     },
     {
       name: "Plus",
+      desc: translate("plans.plus.desc"),
       duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       isPopular: false,
       price: "799,000",
       advantages: [
-        translate("plans.premium.clients_limit"),
-        translate("plans.premium.products_limit"),
-        translate("plans.premium.newsletters_limit"),
-        translate("plans.premium.employees_limit"),
-        translate("plans.premium.modules"),
-        translate("plans.premium.ai"),
+        translate("plans.plus.clients_limit"),
+        translate("plans.plus.products_limit"),
+        translate("plans.plus.newsletters_limit"),
+        translate("plans.plus.employees_limit"),
+        translate("plans.plus.modules"),
+        translate("plans.plus.ai"),
       ]
     }
   ]
@@ -117,7 +120,7 @@ export default function PlansSection() {
 }
 
 
-export const PlansCard = ({ name, isPopular, discount, price, duration, advantages = [], buttonText }) => {
+export const PlansCard = ({ name, desc, isPopular, discount, price, duration, advantages = [], buttonText }) => {
   const { currentLang } = useLocaleContext();
 
   return (
@@ -138,6 +141,7 @@ export const PlansCard = ({ name, isPopular, discount, price, duration, advantag
              <div className="number">{price}</div>{" "}
              {duration}
            </div>
+           <div className="text-sm leading-6 text-gray-600">{desc}</div>
            <ul className="list">
              {advantages?.map((adv, idx) => (
                  <li className="active" key={idx}>

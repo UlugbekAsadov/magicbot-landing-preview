@@ -114,14 +114,16 @@
       "adv_3": "Подключение CRM системы, либо интеграции с другими системами - увеличат стоимость в зависимости от типа системы, сложности и варианта реализации"
     },
     "start_now": "Hozir boshlang",
-    "basic": {
+    "start": {
+      "desc": "Yangi sotuvchilar va o'z biznesini endigina boshlayotganlar uchun",
       "clients_limit": "Mijozlar soni 500 tagacha",
       "products_limit": "Mahsulotlar soni 50 tagacha",
       "newsletters_limit": "Xabarnomalar soni 2 tagacha",
       "employees_limit": "Xodimlar soni 2 tagacha",
       "modules": "Asosiy modullar"
     },
-    "pro": {
+    "growth": {
+      "desc": "O'rta biznes va o'z biznesini rivojlantirayotganlar uchun",
       "clients_limit": "Mijozlar soni 25 000 tagacha",
       "products_limit": "Mahsulotlar soni 10 000 tagacha",
       "newsletters_limit": "Xabarnomalar soni 20 tagacha",
@@ -129,7 +131,8 @@
       "modules": "Kengaytirilgan modullar",
       "ai": "Virtual sotuvchi (AI) *"
     },
-    "premium": {
+    "plus": {
+      "desc": "Katta sotuvchilar va o'z biznesini kengaytirayotganlar uchun",
       "clients_limit": "Cheksiz mijozlar",
       "products_limit": "Cheksiz mahsulotlar",
       "newsletters_limit": "Cheksiz xabarnomalar",
