@@ -13,7 +13,7 @@ export default function PlansSection() {
 
   const plans = [
     {
-      name: "Basic",
+      name: "Start",
       duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       isPopular: false,
@@ -27,7 +27,7 @@ export default function PlansSection() {
       ]
     },
     {
-      name: "Pro",
+      name: "Growth",
       duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       isPopular: true,
@@ -46,7 +46,7 @@ export default function PlansSection() {
       ]
     },
     {
-      name: "Premium",
+      name: "Plus",
       duration: translate("plans.per_month"),
       buttonText: translate("plans.start_now"),
       isPopular: false,
