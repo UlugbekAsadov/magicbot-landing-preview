@@ -112,7 +112,7 @@ export default function ContactOne({ params }) {
                           className="background-navy"
                         >
                           {translate("form.phone")}
-                          <span>+998 77 114-99-98</span>
+                          <span>+998 77 003 44 04</span>
                         </a>
                       </div>
                     </div>
