@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getOffsetTop } from "@/utils/funtions/calculate-distance";
 import { useEffect, useRef, useState } from "react";
 import "./styles/hero-section.css";
+import Image from "next/image";
 
 export const HeroSection = () => {
   const { translate } = useLocaleContext();
@@ -93,18 +94,10 @@ function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
             <div className="images lg-mt32 layout-12">
               <div className="inner">
                 {src1 && (
-                  <img
-                      className="custom-image-1 wow animate__animated   animate__fadeInLeft"
-                      src={src1}
-                      alt="Magicbot uz images"
-                  />
+                  <Image className="custom-image-1 wow animate__animated animate__fadeInLeft" src={src1} alt='Magicbot' width={200} height={200} quality={100}/>
                 )}
                 {src2 && (
-                  <img
-                      className="custom-image-2 wow animate__animated    animate__fadeInLeft hidden md:block"
-                      src={src2}
-                      alt="Magicbot uz images"
-                  />
+                  <Image className="custom-image-2 wow animate__animated animate__fadeInLeft hidden md:block" src={src2} alt='Magicbot' width={200} height={200} quality={100}/>
                 )}
               </div>
             </div>
