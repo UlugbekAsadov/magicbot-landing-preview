@@ -90,9 +90,7 @@ export default function RootLayout({children}) {
         }}/>
     </head>
     <body className={inter.className}>
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3SDK5VG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <LocaleContextProvider>{children}</LocaleContextProvider>
     </body>
     </html>
