@@ -13,6 +13,7 @@ import { ThemeContextProvider } from "@/context/theme.context";
 import MarketSection from "@/components/sections/market-section";
 import SellSection from "@/components/sections/sell-section";
 import OurLeadsSection from "@/components/sections/our-leads-section";
+import { Footer } from "@/components/sections/footer";
 
 export default function HomeAppShowcase({ params }) {
   const { lang } = params;
@@ -36,6 +37,7 @@ export default function HomeAppShowcase({ params }) {
         <OurLeadsSection />
         <PlansSection />
         <BannerSection />
+        <Footer />
       </Layout>
     </ThemeContextProvider>
   );
