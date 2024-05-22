@@ -2,6 +2,7 @@ import {Inter} from "next/font/google";
 import Script from "next/script";
 import "./globals.scss";
 import {LocaleContextProvider} from "@/context/locale.context";
+import {UtmContextProvider} from "@/context/utm.context";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -91,7 +92,11 @@ export default function RootLayout({children}) {
     </head>
     <body className={inter.className}>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3SDK5VG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <LocaleContextProvider>{children}</LocaleContextProvider>
+    <LocaleContextProvider>
+      <UtmContextProvider>
+        {children}
+      </UtmContextProvider>
+    </LocaleContextProvider>
     </body>
     </html>
   );

@@ -6,6 +6,7 @@ import { getOffsetTop } from "@/utils/funtions/calculate-distance";
 import { useEffect, useRef, useState } from "react";
 import "./styles/hero-section.css";
 import Image from "next/image";
+import {useUtmContext} from "@/context/utm.context";
 
 export const HeroSection = () => {
   const { translate } = useLocaleContext();
@@ -55,7 +56,8 @@ export const HeroSection = () => {
 };
 
 function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
-  const { currentLang, translate } = useLocaleContext();
+  const { translate } = useLocaleContext();
+  const { link } = useUtmContext();
 
   return (
     <section className="section pt-8 md:pt-16 has-shape hero__section spdb">
@@ -75,7 +77,7 @@ function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
             {buttonText && (
               <div className="flex flex-col sm:flex-row items-center gap-2">
                 <Link
-                    href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=hero_section&utm_campaign=landing`}
+                    href={link}
                     className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-blue-600 text-white rounded-md block"
                 >
                   {buttonText}
