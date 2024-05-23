@@ -5,6 +5,7 @@ import { useLocaleContext } from "@/context/locale.context";
 import { useRef, useState, useEffect } from "react";
 import "./styles/plans-section.css"
 import {getOffsetTop} from "@/utils/funtions/calculate-distance";
+import {useUtmContext} from "@/context/utm.context";
 
 export default function PlansSection() {
   const { translate } = useLocaleContext();
@@ -122,6 +123,7 @@ export default function PlansSection() {
 
 export const PlansCard = ({ name, desc, isPopular, discount, price, duration, advantages = [], buttonText }) => {
   const { currentLang } = useLocaleContext();
+  const { link } = useUtmContext();
 
   return (
    <>
@@ -151,7 +153,7 @@ export const PlansCard = ({ name, desc, isPopular, discount, price, duration, ad
            </ul>
            <div className="button-wrap">
              <Link
-                 href={`https://magicstore.uz/${currentLang}/register?utm_source=landing&utm_medium=plan&utm_campaign=plans&plan=${name}`}
+                 href={link}
                  className=" card__cta cta"
                  title="Начать сейчас"
              >
