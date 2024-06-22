@@ -12,6 +12,6 @@ export const navbarLinks = [
   {
     id: 1.6,
     title: "navbar.contacts",
-    href: "/contact",
+    href: "/lead",
   },
 ];

@@ -188,5 +188,20 @@
   },
   "auth": {
     "login": "Kirish"
+  },
+  "who_is_magicbot_for": {
+    "title": "Magicbot Kimlarga to'g'ri keladi?",
+    "col_1": {
+      "title": "Onlaynda savdoni boshlayotganlarga",
+      "description": "Oflaynda ishlab, endi onlaynda ham sotuvni boshlamoqchi bo'lganlar uchun hamyonbop narxda bot tayyorlash imkonini beramiz"
+    },
+    "col_2": {
+      "title": "Telegramdagi do kon egalariga",
+      "description": "Instagram va Telegramdagi guruhlarda savdo qilib, juda ko'p vaqtini javob berish uchun sarflayotgan biznes egalarining vaqtini tejab beramiz"
+    },
+    "col_3": {
+      "title": "Marketpleyslardagi do'konlarga",
+      "description": "Turli marketpleyslarda o'z savdosini yo'lga qo'yib, kengaymoqchi bo'layotgan do'konlarga telegramda yechim taklif qilamiz"
+    }
   }
 }
