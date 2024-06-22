@@ -15,6 +15,7 @@ import SellSection from "@/components/sections/sell-section";
 import OurLeadsSection from "@/components/sections/our-leads-section";
 import { Footer } from "@/components/sections/footer";
 import { Blogs } from "@/components/sections/blogs/blogs-section";
+import { MagicbotClientsSertion } from "@/components/sections/magicbot-clients-section";
 
 export default function HomeAppShowcase({ params }) {
   const { lang } = params;
@@ -27,11 +28,12 @@ export default function HomeAppShowcase({ params }) {
       >
         <HeroSection />
         <StatisticsSection />
-        <SellSection />
-        <MarketSection />
+        <MagicbotClientsSertion />
+        {/* <SellSection /> */}
+        {/* <MarketSection /> */}
         <MarketingSection />
         <InterfaceSection />
-        <AiSection />
+        {/* <AiSection /> */}
         <CrmSection />
         <IntegrationSection />
         <GuideSection />
