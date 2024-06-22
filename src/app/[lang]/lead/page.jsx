@@ -5,26 +5,37 @@ import { useLocaleContext } from "@/context/locale.context";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { ThemeContextProvider } from "@/context/theme.context";
-
+import { Select } from "@headlessui/react";
+import { DropDown } from "@/components/elements/dropdown";
+import {
+  businessTypes,
+  onlineBusinessOptions,
+} from "@/utils/mocks/lead-form.mock";
 export default function ContactOne({ params }) {
   const { lang } = params;
   const [hasSubmitted, setHasSubmitForm] = useState(
-    sessionStorage.getItem("isLeadSubmitted"),
+    sessionStorage.getItem("isLeadSubmitted")
   );
   const [isLoading, setIsLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     full_name: "",
     phone_number: "+998",
-    question: "",
+    store_name: "",
   });
 
   const [hasError, setHasError] = useState(false);
   const [hasNameError, setHasNameError] = useState(false);
   const [hasQuestionError, setHasQuestionError] = useState(false);
   const [hasCaptchaError, setHasCaptchaError] = useState(false);
-  const recaptchaRef = React.createRef();
+  const { translate, currentLang } = useLocaleContext();
+  const [selectedBusiness, setSelectedBusiness] = useState(
+    onlineBusinessOptions[currentLang][0]
+  );
+  const [selectedBusinessType, setSelectedBusinessType] = useState(
+    businessTypes[currentLang][0]
+  );
 
-  const { translate } = useLocaleContext();
+  const recaptchaRef = React.createRef();
 
   const handleChangeValue = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -60,7 +71,7 @@ export default function ContactOne({ params }) {
 
     try {
       const body = {
-        title: 'Новый лид с сайта',
+        title: "Новый лид с сайта",
         name: formValues.full_name,
         phone: formValues.phone_number,
         question: formValues.question,
@@ -169,7 +180,7 @@ export default function ContactOne({ params }) {
                           name="full_name"
                           id="full_name"
                           placeholder={translate(
-                            "contact_page.form.full_name_placeholder",
+                            "contact_page.form.full_name_placeholder"
                           )}
                           className="px-3 "
                           value={formValues.full_name}
@@ -194,7 +205,7 @@ export default function ContactOne({ params }) {
                           maxLength={13}
                           minLength={13}
                           placeholder={translate(
-                            "contact_page.form.phone_number_placeholder",
+                            "contact_page.form.phone_number_placeholder"
                           )}
                           className="px-3 "
                           value={formValues.phone_number}
@@ -216,20 +227,55 @@ export default function ContactOne({ params }) {
                     <div className="col-md-12">
                       <div className="field-input">
                         <label htmlFor="shop_name">
-                          {translate("form.question")}*
+                          {translate("form.do_you_sell_online")}*
+                        </label>
+
+                        <DropDown
+                          dropdown={onlineBusinessOptions[currentLang]}
+                          selectedOption={selectedBusiness}
+                          setSelectedOption={setSelectedBusiness}
+                        />
+                        {hasQuestionError && (
+                          <span className="text-xs text-red-500">
+                            {translate("form.required")}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="field-input">
+                        <label htmlFor="store_name">
+                          {translate("form.store_name")}*
                         </label>
                         <input
                           type="text"
-                          name="question"
-                          id="question"
+                          name="store_name"
+                          id="store_name"
                           placeholder={translate(
-                            "contact_page.form.question_placeholder",
+                            "contact_page.form.store_name_placeholder"
                           )}
                           className="px-3 "
-                          value={formValues.question}
+                          value={formValues.store_name}
                           onChange={handleChangeValue}
                         />
+                        {hasNameError && (
+                          <span className="text-xs text-red-500">
+                            {translate("form.required")}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="field-input">
+                        <label htmlFor="shop_name">
+                          {translate("form.business_type")}*
+                        </label>
 
+                        <DropDown
+                          dropdown={businessTypes[currentLang]}
+                          selectedOption={selectedBusinessType}
+                          setSelectedOption={setSelectedBusinessType}
+                        />
                         {hasQuestionError && (
                           <span className="text-xs text-red-500">
                             {translate("form.required")}

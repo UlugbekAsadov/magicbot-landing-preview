@@ -168,15 +168,18 @@
     "our_address": "Bizning manzilimiz",
     "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A",
     "captcha_required": "Kaptcha talab qilinadi",
-    "question": "Siz qanday mahsulot yoki xizmatlarni sotishni rejalashtirmoqdasiz?"
+    "question": "Siz qanday mahsulot yoki xizmatlarni sotishni rejalashtirmoqdasiz?",
+      "do_you_sell_online": "Onlayn sotasizmi?",
+    "business_type": "Qaysi biznes turi?"
   },
   "contact_page": {
     "title": "Biz bilan bog'lanish",
     "form": {
       "full_name_placeholder": "Ism va familiyangizni kiriting",
       "phone_number_placeholder": "Telefon raqamingizni kiriting",
-      "shop_name_placeholder": "Do'koningizning nomini kiriting",
+      "store_name_placeholder": "Do'koningizning nomini kiriting",
       "question_placeholder": " "
+      
     }
   },
   "our_leads": {
