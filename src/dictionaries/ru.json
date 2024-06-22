@@ -1,7 +1,8 @@
 {
   "common": {
     "million_short": "млн",
-    "thousand_short": "тысяч"
+    "thousand_short": "тысяч",
+    "show_more": "Показать больше"
   },
   "navbar": {
     "main": "Главная",
