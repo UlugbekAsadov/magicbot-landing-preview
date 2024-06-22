@@ -1,7 +1,8 @@
 {
   "common": {
     "million_short": "mln",
-    "thousand_short": "ming"
+    "thousand_short": "ming",
+    "show_more": "Ko'proq ko'rsatish"
   },
   "navbar": {
     "main": "Bosh sahifa",
