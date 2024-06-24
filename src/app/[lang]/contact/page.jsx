@@ -11,6 +11,7 @@ import {
   businessTypes,
   onlineBusinessOptions,
 } from "@/utils/mocks/lead-form.mock";
+import { useRouter } from "next/navigation";
 export default function ContactOne({ params }) {
   const { lang } = params;
   const [hasSubmitted, setHasSubmitForm] = useState(
@@ -34,6 +35,7 @@ export default function ContactOne({ params }) {
   const [selectedBusinessType, setSelectedBusinessType] = useState(
     businessTypes[currentLang][0]
   );
+  const route = useRouter();
 
   const recaptchaRef = React.createRef();
 
@@ -90,6 +92,7 @@ export default function ContactOne({ params }) {
         .then((res) => res.json())
         .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);
+          route(`/${lang}/contact/success`);
           setHasSubmitForm(true);
         })
         .finally(() => {
