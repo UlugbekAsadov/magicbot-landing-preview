@@ -28,18 +28,17 @@ export default function HomeAppShowcase({ params }) {
       >
         <HeroSection />
         <StatisticsSection />
-        <MagicbotClientsSertion />
-        {/* <SellSection /> */}
-        {/* <MarketSection /> */}
+        <SellSection />
+        <MarketSection />
         <MarketingSection />
         <InterfaceSection />
-        {/* <AiSection /> */}
+        <AiSection />
         <CrmSection />
         <IntegrationSection />
         <GuideSection />
         <OurLeadsSection />
         <PlansSection />
-        <Blogs />
+        {/* <Blogs /> */}
         <BannerSection />
         <Footer />
       </Layout>
