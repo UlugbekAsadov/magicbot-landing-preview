@@ -180,7 +180,10 @@
       "phone_number_placeholder": "Telefon raqamingizni kiriting",
       "store_name_placeholder": "Do'koningizning nomini kiriting",
       "question_placeholder": " "
-      
+    },
+    "success": {
+      "title": "Ma'lumotlaringiz qabul qilindi. Menejerlarimiz siz bilan bog'lanib batafsil ma'lumot berishadi.",
+      "watch_video": "Menejerlarimiz qo'g'iroq qilgunicha, platforma sizning biznesingizdagi muammolarni yechishi haqida bilib oling."
     }
   },
   "our_leads": {
