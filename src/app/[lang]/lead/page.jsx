@@ -30,8 +30,8 @@ export default function Page({ params }) {
         <MagicbotClientsSertion />
         <MarketingSection />
         <InterfaceSection />
-        <CrmSection />
         <IntegrationSection />
+        <CrmSection />
         <GuideSection />
         <OurLeadsSection />
         <PlansSection />

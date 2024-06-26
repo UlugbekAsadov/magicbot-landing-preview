@@ -116,9 +116,9 @@ export const Footer = () => {
                 </svg>
               </Link>
               <div className="footer_info">
-                <a href="tel:+998770034404">+998 77 003 44 04</a>
+                <a href="tel:+998771149998">+998 77 114 99 98</a>
                 <a href="https://yandex.uz/maps/-/CDbxNLPp">
-                  Toshkent shahar, Mirzo Ulug'bek tumani, Muminov ko’chasi, 4A
+                  Toshkent shaxar, Mirzo Ulug'bek tumani, Muminov ko’chasi, 4A
                 </a>
               </div>
             </div>

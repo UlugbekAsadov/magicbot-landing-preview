@@ -5,7 +5,6 @@ import { useLocaleContext } from "@/context/locale.context";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { ThemeContextProvider } from "@/context/theme.context";
-import { Select } from "@headlessui/react";
 import { DropDown } from "@/components/elements/dropdown";
 import {
   businessTypes,
@@ -88,7 +87,7 @@ export default function ContactOne({ params }) {
         },
       };
 
-      fetch("https://crm.magicbot.uz/api/v1/leads", config)
+      fetch("https://magicrm.uz/api/v1/leads", config)
         .then((res) => res.json())
         .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);
@@ -126,7 +125,7 @@ export default function ContactOne({ params }) {
                           className="background-navy"
                         >
                           {translate("form.phone")}
-                          <span>+998 77 003 44 04</span>
+                          <span>+998 77 114 99 98</span>
                         </a>
                       </div>
                     </div>
@@ -154,7 +153,7 @@ export default function ContactOne({ params }) {
                   </div>
                 </div>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d529.5290001742414!2d69.33705364378801!3d41.342172252350636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bdeadef8619%3A0x5989fa5f19361243!2sMohirdev!5e0!3m2!1sen!2s!4v1692260587456!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.47601299182!2d69.33467371288474!3d41.34200619868728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef559bf190579%3A0x2b4d73828f4c1eb5!2sHumocommerce!5e0!3m2!1sru!2s!4v1719404519043!5m2!1sru!2s"
                   width="600"
                   height="450"
                   allowFullScreen=""
