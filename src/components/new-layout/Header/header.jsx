@@ -1,9 +1,8 @@
-import NavList from "./nav-list";
-import CanvasMenu from "./canvas-menu";
 import { useEffect, useState } from "react";
 import HeaderRightSection from "@/components/layout/Header/header-right-section";
 import Link from "next/link";
 import SwitchDarkLight from "@/components/elements/SwitchDarkLight";
+import Image from "next/image";
 
 export default function Header({ headerClass, lang }) {
   const [width, setWidth] = useState(window.innerWidth);

@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import Footer1 from "./Footer/footer";
 import Header1 from "./Header/header";
-import { useLocaleContext } from "@/context/locale.context";
 import { HeaderTop } from "@/components/new-sections/header-top";
 import { BackToTop } from "@/components/elements/BackToTop";
 

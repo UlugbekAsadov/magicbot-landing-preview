@@ -14,6 +14,7 @@ import { Footer } from "@/components/sections/footer";
 import { Blogs } from "@/components/sections/blogs/blogs-section";
 import { MagicbotClientsSertion } from "@/components/sections/magicbot-clients-section";
 import ContactOne from "@/components/new-sections/lead-form-section";
+import { BrandsSection } from "@/components/sections/brands-section";
 
 export default function Page({ params }) {
   const { lang } = params;
@@ -26,6 +27,7 @@ export default function Page({ params }) {
         lang={lang}
       >
         <HeroSection />
+        <BrandsSection />
         <StatisticsSection />
         <MagicbotClientsSertion />
         <MarketingSection />
