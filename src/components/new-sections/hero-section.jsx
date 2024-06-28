@@ -1,12 +1,13 @@
 "use client";
 
-import { useLocaleContext } from "@/context/locale.context";
+import Image from "next/image";
 import Link from "next/link";
 import { getOffsetTop } from "@/utils/funtions/calculate-distance";
 import { useEffect, useRef, useState } from "react";
-import "./styles/hero-section.css";
-import Image from "next/image";
 import { useUtmContext } from "@/context/utm.context";
+import { useLocaleContext } from "@/context/locale.context";
+
+import "./styles/hero-section.css";
 
 export const HeroSection = () => {
   const { translate } = useLocaleContext();
@@ -78,16 +79,9 @@ function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
               <div className="flex flex-col sm:flex-row items-center gap-2">
                 <Link
                   href={link}
-                  className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md block"
+                  className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-blue-600 text-white rounded-md block"
                 >
                   {buttonText}
-                </Link>
-                <Link
-                  href={`https://t.me/magicstoreuz_bot`}
-                  target="_blank"
-                  className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-black text-white rounded-md block fullfield"
-                >
-                  {translate("hero.shop-text")}
                 </Link>
               </div>
             )}

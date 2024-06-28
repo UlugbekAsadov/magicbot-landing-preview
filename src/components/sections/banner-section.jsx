@@ -8,7 +8,7 @@ export default function BannerSection() {
   const { link } = useUtmContext();
   return (
     <>
-      <section className="section-banner layout-09 mb-16">
+      <section className="section-banner layout-09 mb-16 mt-16">
         <div className="container">
           <div className="inner">
             <div className="row flex-align-c">

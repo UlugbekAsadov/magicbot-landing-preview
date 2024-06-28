@@ -1,24 +1,24 @@
-import Layout from "@/components/layout/layout";
-import HeroSection from "@/components/sections/hero-section";
+import Layout from "@/components/new-layout/layout";
+import HeroSection from "@/components/new-sections/hero-section";
 import StatisticsSection from "@/components/sections/statistics-section";
 import MarketingSection from "@/components/sections/marketing-section";
 import InterfaceSection from "@/components/sections/interface-section";
-import AiSection from "@/components/sections/ai-section";
 import CrmSection from "@/components/sections/crm-section";
-import PlansSection from "@/components/sections/plans-section";
+import PlansSection from "@/components/new-sections/plans-section";
 import BannerSection from "@/components/sections/banner-section";
 import IntegrationSection from "@/components/sections/integration-section";
 import GuideSection from "@/components/sections/guide-section";
 import { ThemeContextProvider } from "@/context/theme.context";
-import MarketSection from "@/components/sections/market-section";
-import SellSection from "@/components/sections/sell-section";
 import OurLeadsSection from "@/components/sections/our-leads-section";
 import { Footer } from "@/components/sections/footer";
 import { Blogs } from "@/components/sections/blogs/blogs-section";
+import { MagicbotClientsSertion } from "@/components/sections/magicbot-clients-section";
+import ContactOne from "@/components/new-sections/lead-form-section";
 import { BrandsSection } from "@/components/sections/brands-section";
 
-export default function HomeAppShowcase({ params }) {
+export default function Page({ params }) {
   const { lang } = params;
+
   return (
     <ThemeContextProvider>
       <Layout
@@ -29,17 +29,15 @@ export default function HomeAppShowcase({ params }) {
         <HeroSection />
         <BrandsSection />
         <StatisticsSection />
-        <SellSection />
-        <MarketSection />
+        <MagicbotClientsSertion />
         <MarketingSection />
         <InterfaceSection />
-        <AiSection />
-        <CrmSection />
         <IntegrationSection />
+        <CrmSection />
         <GuideSection />
         <OurLeadsSection />
         <PlansSection />
-        {/* <Blogs /> */}
+        <ContactOne />
         <BannerSection />
         <Footer />
       </Layout>

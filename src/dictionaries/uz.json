@@ -1,7 +1,8 @@
 {
   "common": {
     "million_short": "mln",
-    "thousand_short": "ming"
+    "thousand_short": "ming",
+    "show_more": "Ko'proq ko'rsatish"
   },
   "navbar": {
     "main": "Bosh sahifa",
@@ -168,15 +169,21 @@
     "our_address": "Bizning manzilimiz",
     "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A",
     "captcha_required": "Kaptcha talab qilinadi",
-    "question": "Siz qanday mahsulot yoki xizmatlarni sotishni rejalashtirmoqdasiz?"
+    "question": "Siz qanday mahsulot yoki xizmatlarni sotishni rejalashtirmoqdasiz?",
+      "do_you_sell_online": "Onlayn sotasizmi?",
+    "business_type": "Qaysi biznes turi?"
   },
   "contact_page": {
     "title": "Biz bilan bog'lanish",
     "form": {
       "full_name_placeholder": "Ism va familiyangizni kiriting",
       "phone_number_placeholder": "Telefon raqamingizni kiriting",
-      "shop_name_placeholder": "Do'koningizning nomini kiriting",
+      "store_name_placeholder": "Do'koningizning nomini kiriting",
       "question_placeholder": " "
+    },
+    "success": {
+      "title": "Ma'lumotlaringiz qabul qilindi. Menejerlarimiz siz bilan bog'lanib batafsil ma'lumot berishadi.",
+      "watch_video": "Menejerlarimiz qo'g'iroq qilgunicha, platforma sizning biznesingizdagi muammolarni yechishi haqida bilib oling."
     }
   },
   "our_leads": {
@@ -184,5 +191,20 @@
   },
   "auth": {
     "login": "Kirish"
+  },
+  "who_is_magicbot_for": {
+    "title": "Magicbot Kimlarga to'g'ri keladi?",
+    "col_1": {
+      "title": "Onlaynda savdoni boshlayotganlarga",
+      "description": "Oflaynda ishlab, endi onlaynda ham sotuvni boshlamoqchi bo'lganlar uchun hamyonbop narxda bot tayyorlash imkonini beramiz"
+    },
+    "col_2": {
+      "title": "Telegramdagi do kon egalariga",
+      "description": "Instagram va Telegramdagi guruhlarda savdo qilib, juda ko'p vaqtini javob berish uchun sarflayotgan biznes egalarining vaqtini tejab beramiz"
+    },
+    "col_3": {
+      "title": "Marketpleyslardagi do'konlarga",
+      "description": "Turli marketpleyslarda o'z savdosini yo'lga qo'yib, kengaymoqchi bo'layotgan do'konlarga telegramda yechim taklif qilamiz"
+    }
   }
 }

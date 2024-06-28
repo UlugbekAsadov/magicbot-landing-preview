@@ -7,7 +7,10 @@ export default function HeaderRightSection({ lang }) {
   const { link } = useUtmContext();
   return (
     <div className=" flex flex-align-center flex-content-end">
-      <Link href={link} className="w-12 h-12 bg-blue-600 rounded-md flex items-center justify-center text-white">
+      <Link
+        href={link}
+        className="w-12 h-12 bg-blue-600 rounded-md flex items-center justify-center text-white"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

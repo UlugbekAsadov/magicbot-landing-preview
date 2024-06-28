@@ -1,0 +1,58 @@
+.footer_info {
+  max-width: 300px;
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+a:hover {
+  background: unset;
+}
+
+.payments {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.payment-wrapper {
+  height: 48px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(100, 100, 100);
+  border-radius: 8px;
+}
+
+.certificates {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.certificates img {
+  width: 78px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.certificates a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
