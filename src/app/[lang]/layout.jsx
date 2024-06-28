@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
           <img
             height="1"
             width="1"
-            style="display:none"
+            style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=1585615572223846&ev=PageView&noscript=1"
           />
         </noscript>
@@ -91,7 +91,7 @@ export default function RootLayout({ children }) {
           <div>
             <img
               src="https://mc.yandex.ru/watch/97130109"
-              style="position:absolute; left:-9999px;"
+              style={{ position: "absolute", left: "-9999px" }}
               alt=""
             />
           </div>
@@ -109,7 +109,7 @@ export default function RootLayout({ children }) {
             src="https://www.googletagmanager.com/ns.html?id=GTM-P3SDK5VG"
             height="0"
             width="0"
-            style="display:none;visibility:hidden"
+            style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
         <LocaleContextProvider>

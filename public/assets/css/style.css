@@ -12228,7 +12228,7 @@ form.checkout-coupon input[type="text"] {
   .pricing__box-header {
     display: flex;
     flex-direction: column;
-    align-items: start !important;
+    align-items: flex-start !important;
   }
 
   .pricing-box .badge-popular {
