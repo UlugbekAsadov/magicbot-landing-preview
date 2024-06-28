@@ -22,7 +22,7 @@ export default function ContactOne() {
 
   const [hasError, setHasError] = useState(false);
   const [hasNameError, setHasNameError] = useState(false);
-  const [hasQuestionError, setHasQuestionError] = useState(false);
+  const [hasStoreNameError, setHasStoreNameError] = useState(false);
   const [hasCaptchaError, setHasCaptchaError] = useState(false);
   const { translate, currentLang } = useLocaleContext();
   const [selectedBusiness, setSelectedBusiness] = useState(
@@ -41,7 +41,7 @@ export default function ContactOne() {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
 
-    setHasQuestionError(false);
+    setHasStoreNameError(false);
     setHasNameError(false);
     setHasError(false);
     setHasCaptchaError(false);
@@ -50,8 +50,8 @@ export default function ContactOne() {
       return setHasNameError(true);
     }
 
-    if (!formValues.question.length) {
-      return setHasQuestionError(true);
+    if (!formValues.store_name.length) {
+      return setHasStoreNameError(true);
     }
 
     if (formValues.phone_number.length !== 13) {
@@ -61,20 +61,23 @@ export default function ContactOne() {
     setIsLoading(true);
     const token = await recaptchaRef.current.getValue();
 
-    if (!Boolean(token)) {
-      setHasCaptchaError(true);
-      return setIsLoading(false);
-    }
+    // if (!Boolean(token)) {
+    //   setHasCaptchaError(true);
+    //   return setIsLoading(false);
+    // }
 
     try {
       const body = {
         title: "Новый лид с сайта",
         name: formValues.full_name,
         phone: formValues.phone_number,
-        question: formValues.question,
+        store_name: formValues.store_name,
+        business_type: selectedBusinessType.name,
+        business_location: selectedBusiness.name,
         token,
       };
 
+      console.log({ body });
       const config = {
         method: "POST",
         body: JSON.stringify(body),
@@ -177,11 +180,6 @@ export default function ContactOne() {
                       selectedOption={selectedBusiness}
                       setSelectedOption={setSelectedBusiness}
                     />
-                    {hasQuestionError && (
-                      <span className="text-xs text-red-500">
-                        {translate("form.required")}
-                      </span>
-                    )}
                   </div>
                 </div>
                 <div className="col-md-12">
@@ -200,7 +198,7 @@ export default function ContactOne() {
                       value={formValues.store_name}
                       onChange={handleChangeValue}
                     />
-                    {hasNameError && (
+                    {hasStoreNameError && (
                       <span className="text-xs text-red-500">
                         {translate("form.required")}
                       </span>
@@ -218,11 +216,6 @@ export default function ContactOne() {
                       selectedOption={selectedBusinessType}
                       setSelectedOption={setSelectedBusinessType}
                     />
-                    {hasQuestionError && (
-                      <span className="text-xs text-red-500">
-                        {translate("form.required")}
-                      </span>
-                    )}
                   </div>
                 </div>
                 <div className="col-md-12">
