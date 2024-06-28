@@ -118,11 +118,11 @@ export default function ContactOne({ params }) {
                 <div className="contact-boxs">
                   <div className="row">
                     <div className="col-md-6">
-                      <div className="contact-box">
+                      <div className="contact-box ">
                         <a
                           href="tel:+998770034404"
                           title="Call us"
-                          className="background-navy"
+                          className="background-navy hover:bg-blue-700"
                         >
                           {translate("form.phone")}
                           <span>+998 77 114 99 98</span>
@@ -130,11 +130,11 @@ export default function ContactOne({ params }) {
                       </div>
                     </div>
                     <div className="col-md-6">
-                      <div className="contact-box">
+                      <div className="contact-box  ">
                         <a
                           href="https://t.me/magicbotuz_support"
                           title="Email us"
-                          className="background-dark"
+                          className="background-dark hover:bg-black"
                           target={"_blank"}
                         >
                           {translate("form.telegram")}
