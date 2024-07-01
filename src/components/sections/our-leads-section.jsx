@@ -37,11 +37,11 @@ export default function OurLeadsSection() {
             <div className="flex flex-col items-center">
               <img
                 className="w-[200px]"
-                src="/assets/images/getbook.png"
+                src="/assets/images/fcnshop.png"
                 alt="image"
               />
-              <a href="https://t.me/getbookrobot" target="_blank" className="mt-2">
-                @getbookrobot
+              <a href="https://t.me/fcnshopbot" target="_blank" className="mt-2">
+                @fcnshopbot
               </a>
             </div>
           </SwiperSlide>
@@ -52,7 +52,7 @@ export default function OurLeadsSection() {
                 src="/assets/images/cwatches.png"
                 alt="image"
               />
-              <a href="https://t.me/cwatches_bot" className="mt-2">
+              <a href="https://t.me/cwatches_bot" target="_blank" className="mt-2">
                 @cwatches_bot
               </a>
             </div>
@@ -61,11 +61,11 @@ export default function OurLeadsSection() {
             <div className="flex flex-col items-center">
               <img
                 className="w-[200px]"
-                src="/assets/images/ellos.png"
+                src="/assets/images/kokchoy.png"
                 alt="image"
               />
-              <a href="https://t.me/ellos_home_bot" className="mt-2">
-                @ellos_home_bot
+              <a href="https://t.me/kokchoymarketbot" target="_blank" className="mt-2">
+                @kokchoymarketbot
               </a>
             </div>
           </SwiperSlide>
@@ -76,7 +76,7 @@ export default function OurLeadsSection() {
                 src="/assets/images/beautylish.png"
                 alt="image"
               />
-              <a href="https://t.me/Beautylish_bot" className="mt-2">
+              <a href="https://t.me/Beautylish_bot" target="_blank" className="mt-2">
                 @Beautylish_bot
               </a>
             </div>

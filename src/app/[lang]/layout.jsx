@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import "./globals.scss";
 import { LocaleContextProvider } from "@/context/locale.context";
+import { UtmContextProvider } from "@/context/utm.context";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,10 @@ export default function RootLayout({ children }) {
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
           rel="stylesheet"
+        />
+        <meta
+          name="facebook-domain-verification"
+          content="u1q50wffgw3uky83uq0i29gb8ohog5"
         />
         <Script
           strategy="afterInteractive"
@@ -83,8 +89,7 @@ export default function RootLayout({ children }) {
               webvisor:true
          });`,
           }}
-        ></script>
-
+        />
         <noscript>
           <div>
             <img
@@ -94,27 +99,25 @@ export default function RootLayout({ children }) {
             />
           </div>
         </noscript>
-
         <Script
+          id="gtag-metrics"
           dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1914552095649289');
-              fbq('track', 'PageView');
-              `,
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P3SDK5VG');`,
           }}
         />
       </head>
-
       <body className={inter.className}>
-        <LocaleContextProvider>{children}</LocaleContextProvider>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P3SDK5VG"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        </noscript>
+        <LocaleContextProvider>
+          <UtmContextProvider>{children}</UtmContextProvider>
+        </LocaleContextProvider>
       </body>
     </html>
   );

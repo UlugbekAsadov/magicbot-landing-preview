@@ -5,26 +5,38 @@ import { useLocaleContext } from "@/context/locale.context";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { ThemeContextProvider } from "@/context/theme.context";
-
+import { DropDown } from "@/components/elements/dropdown";
+import {
+  businessTypes,
+  onlineBusinessOptions,
+} from "@/utils/mocks/lead-form.mock";
+import { useRouter } from "next/navigation";
 export default function ContactOne({ params }) {
   const { lang } = params;
   const [hasSubmitted, setHasSubmitForm] = useState(
-    sessionStorage.getItem("isLeadSubmitted"),
+    sessionStorage.getItem("isLeadSubmitted")
   );
   const [isLoading, setIsLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     full_name: "",
     phone_number: "+998",
-    question: "",
+    store_name: "",
   });
 
   const [hasError, setHasError] = useState(false);
   const [hasNameError, setHasNameError] = useState(false);
   const [hasQuestionError, setHasQuestionError] = useState(false);
   const [hasCaptchaError, setHasCaptchaError] = useState(false);
-  const recaptchaRef = React.createRef();
+  const { translate, currentLang } = useLocaleContext();
+  const [selectedBusiness, setSelectedBusiness] = useState(
+    onlineBusinessOptions[currentLang][0]
+  );
+  const [selectedBusinessType, setSelectedBusinessType] = useState(
+    businessTypes[currentLang][0]
+  );
+  const route = useRouter();
 
-  const { translate } = useLocaleContext();
+  const recaptchaRef = React.createRef();
 
   const handleChangeValue = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -60,7 +72,7 @@ export default function ContactOne({ params }) {
 
     try {
       const body = {
-        title: 'Новый лид с сайта',
+        title: "Новый лид с сайта",
         name: formValues.full_name,
         phone: formValues.phone_number,
         question: formValues.question,
@@ -75,10 +87,11 @@ export default function ContactOne({ params }) {
         },
       };
 
-      fetch("https://crm.magicbot.uz/api/v1/leads", config)
+      fetch("https://magicrm.uz/api/v1/leads", config)
         .then((res) => res.json())
         .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);
+          route(`/${lang}/contact/success`);
           setHasSubmitForm(true);
         })
         .finally(() => {
@@ -105,23 +118,23 @@ export default function ContactOne({ params }) {
                 <div className="contact-boxs">
                   <div className="row">
                     <div className="col-md-6">
-                      <div className="contact-box">
+                      <div className="contact-box ">
                         <a
                           href="tel:+998770034404"
                           title="Call us"
-                          className="background-navy"
+                          className="background-navy hover:bg-blue-700"
                         >
                           {translate("form.phone")}
-                          <span>+998 77 003 44 04</span>
+                          <span>+998 77 114 99 98</span>
                         </a>
                       </div>
                     </div>
                     <div className="col-md-6">
-                      <div className="contact-box">
+                      <div className="contact-box  ">
                         <a
                           href="https://t.me/magicbotuz_support"
                           title="Email us"
-                          className="background-dark"
+                          className="background-dark hover:bg-black"
                           target={"_blank"}
                         >
                           {translate("form.telegram")}
@@ -140,7 +153,7 @@ export default function ContactOne({ params }) {
                   </div>
                 </div>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d529.5290001742414!2d69.33705364378801!3d41.342172252350636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bdeadef8619%3A0x5989fa5f19361243!2sMohirdev!5e0!3m2!1sen!2s!4v1692260587456!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.47601299182!2d69.33467371288474!3d41.34200619868728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef559bf190579%3A0x2b4d73828f4c1eb5!2sHumocommerce!5e0!3m2!1sru!2s!4v1719404519043!5m2!1sru!2s"
                   width="600"
                   height="450"
                   allowFullScreen=""
@@ -169,7 +182,7 @@ export default function ContactOne({ params }) {
                           name="full_name"
                           id="full_name"
                           placeholder={translate(
-                            "contact_page.form.full_name_placeholder",
+                            "contact_page.form.full_name_placeholder"
                           )}
                           className="px-3 "
                           value={formValues.full_name}
@@ -194,7 +207,7 @@ export default function ContactOne({ params }) {
                           maxLength={13}
                           minLength={13}
                           placeholder={translate(
-                            "contact_page.form.phone_number_placeholder",
+                            "contact_page.form.phone_number_placeholder"
                           )}
                           className="px-3 "
                           value={formValues.phone_number}
@@ -216,20 +229,55 @@ export default function ContactOne({ params }) {
                     <div className="col-md-12">
                       <div className="field-input">
                         <label htmlFor="shop_name">
-                          {translate("form.question")}*
+                          {translate("form.do_you_sell_online")}*
+                        </label>
+
+                        <DropDown
+                          dropdown={onlineBusinessOptions[currentLang]}
+                          selectedOption={selectedBusiness}
+                          setSelectedOption={setSelectedBusiness}
+                        />
+                        {hasQuestionError && (
+                          <span className="text-xs text-red-500">
+                            {translate("form.required")}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="field-input">
+                        <label htmlFor="store_name">
+                          {translate("form.store_name")}*
                         </label>
                         <input
                           type="text"
-                          name="question"
-                          id="question"
+                          name="store_name"
+                          id="store_name"
                           placeholder={translate(
-                            "contact_page.form.question_placeholder",
+                            "contact_page.form.store_name_placeholder"
                           )}
                           className="px-3 "
-                          value={formValues.question}
+                          value={formValues.store_name}
                           onChange={handleChangeValue}
                         />
+                        {hasNameError && (
+                          <span className="text-xs text-red-500">
+                            {translate("form.required")}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="field-input">
+                        <label htmlFor="shop_name">
+                          {translate("form.business_type")}*
+                        </label>
 
+                        <DropDown
+                          dropdown={businessTypes[currentLang]}
+                          selectedOption={selectedBusinessType}
+                          setSelectedOption={setSelectedBusinessType}
+                        />
                         {hasQuestionError && (
                           <span className="text-xs text-red-500">
                             {translate("form.required")}

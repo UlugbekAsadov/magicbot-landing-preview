@@ -13,6 +13,9 @@ import { ThemeContextProvider } from "@/context/theme.context";
 import MarketSection from "@/components/sections/market-section";
 import SellSection from "@/components/sections/sell-section";
 import OurLeadsSection from "@/components/sections/our-leads-section";
+import { Footer } from "@/components/sections/footer";
+import { Blogs } from "@/components/sections/blogs/blogs-section";
+import { BrandsSection } from "@/components/sections/brands-section";
 
 export default function HomeAppShowcase({ params }) {
   const { lang } = params;
@@ -24,6 +27,7 @@ export default function HomeAppShowcase({ params }) {
         lang={lang}
       >
         <HeroSection />
+        <BrandsSection />
         <StatisticsSection />
         <SellSection />
         <MarketSection />
@@ -35,7 +39,9 @@ export default function HomeAppShowcase({ params }) {
         <GuideSection />
         <OurLeadsSection />
         <PlansSection />
+        {/* <Blogs /> */}
         <BannerSection />
+        <Footer />
       </Layout>
     </ThemeContextProvider>
   );
