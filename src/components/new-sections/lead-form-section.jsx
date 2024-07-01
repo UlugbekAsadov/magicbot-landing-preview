@@ -101,7 +101,7 @@ export default function ContactOne() {
   };
 
   return (
-    <div className="container">
+    <div className="container" id="lead-section">
       <div className="row">
         <div className="col-lg-6 mx-auto shadow p-5 rounded-3xl block max-w-5xl w-full relative">
           <div className="contact-form layout-01">
