@@ -20,7 +20,7 @@ export default function StatisticsSection() {
                 <div className="item">
                   <h4 className="title">{translate("statistics.first_col")}</h4>
                   <div className="number">
-                    <span style={{ marginRight: "12px" }} className="first">
+                    <span className="first mr-3">
                       18
                     </span>
                     <span className="first">
@@ -34,7 +34,7 @@ export default function StatisticsSection() {
                 <div className="item">
                   <h4 className="title">{translate("statistics.sec_col")}</h4>
                   <div className="number">
-                    <span style={{ marginRight: "12px" }} className="first">
+                    <span className="first mr-3">
                       740
                     </span>
                     <span className="first">
@@ -47,7 +47,7 @@ export default function StatisticsSection() {
                 <div className="item">
                   <h4 className="title">{translate("statistics.third_col")}</h4>
                   <div className="number">
-                    <span style={{ marginRight: "12px" }} className="first">
+                    <span className="first mr-3">
                       18
                     </span>
                     <span className="first">

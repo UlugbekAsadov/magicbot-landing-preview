@@ -20,7 +20,7 @@ export default function BannerSection() {
                 </div>
                 <div className="button-wrap">
                   <Link
-                    href={link}
+                    href="/lead#lead-section"
                     className="button fullfield"
                     title="Try it free"
                   >
