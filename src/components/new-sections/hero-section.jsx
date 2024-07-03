@@ -78,8 +78,9 @@ function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
             {buttonText && (
               <div className="flex flex-col sm:flex-row items-center gap-2">
                 <Link
-                  href={link}
-                  className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-blue-600 text-white rounded-md block"
+                  href="/lead#lead-section"
+                  scroll={true}
+                  className="w-full text-center sm:w-fit px-3 text-lg md:text-lg md:px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md block"
                 >
                   {buttonText}
                 </Link>

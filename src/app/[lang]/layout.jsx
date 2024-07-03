@@ -14,7 +14,12 @@ export default function RootLayout({ children }) {
         <title>{"Magicbot"}</title>
         <meta
           name="description"
-          content="Превратите свой Telegram-бот в полноценный онлайн-магазин с Magicstore"
+          content="Превратите свой Telegram-бот в полноценный онлайн-магазин
+            с Magicstore"
+        />
+        <meta
+          name="facebook-domain-verification"
+          content="u1q50wffgw3uky83uq0i29gb8ohog5"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
@@ -44,7 +49,6 @@ export default function RootLayout({ children }) {
         />
 
         <Script
-          id="facebook-metrics"
           dangerouslySetInnerHTML={{
             __html: `
         !function(f,b,e,v,n,t,s)
@@ -68,9 +72,8 @@ export default function RootLayout({ children }) {
             src="https://www.facebook.com/tr?id=1585615572223846&ev=PageView&noscript=1"
           />
         </noscript>
-
-        <Script
-          id="yandex-metrics"
+        <script
+          type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `
          (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
