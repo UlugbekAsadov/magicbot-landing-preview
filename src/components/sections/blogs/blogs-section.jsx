@@ -9,10 +9,12 @@ export const Blogs = () => {
   return (
     <section className="section spdt py-12">
       <div className="container">
-        <Link href="/blog/id" className="d-flex justify-end">{translate("common.show_more")}</Link>
+        <Link href="/blog/id" className="d-flex justify-end">
+          {translate("common.show_more")}
+        </Link>
         <div className="row mt-8">
-          {blogContents.map(blog => (
-            <Blog blog={blog} />
+          {blogContents.map((blog, index) => (
+            <Blog key={index} blog={blog} />
           ))}
         </div>
       </div>

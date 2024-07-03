@@ -77,7 +77,6 @@ export default function ContactOne() {
         token,
       };
 
-      console.log({ body });
       const config = {
         method: "POST",
         body: JSON.stringify(body),
@@ -86,7 +85,7 @@ export default function ContactOne() {
         },
       };
 
-      fetch("https://crm.magicbot.uz/api/v1/leads", config)
+      fetch("https://magicrm.uz/api/v1/leads", config)
         .then((res) => res.json())
         .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);

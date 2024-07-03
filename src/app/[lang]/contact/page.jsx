@@ -65,7 +65,7 @@ export default function ContactOne({ params }) {
     setIsLoading(true);
     const token = await recaptchaRef.current.getValue();
 
-    if (!Boolean(token)) {
+    if (!token) {
       setHasCaptchaError(true);
       return setIsLoading(false);
     }
