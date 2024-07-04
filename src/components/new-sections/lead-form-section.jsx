@@ -100,8 +100,8 @@ export default function ContactOne() {
       fetch("https://magicstore.uz/api/v1/landing/lead", config)
         .then(() => {
           router.push(`/${currentLang}/contact/success`);
-          sessionStorage.setItem("isLeadSubmitted", true);
-          setHasSubmitForm(true);
+          // sessionStorage.setItem("isLeadSubmitted", true);
+          // setHasSubmitForm(true);
         })
         .finally(() => {
           setIsLoading(false);
