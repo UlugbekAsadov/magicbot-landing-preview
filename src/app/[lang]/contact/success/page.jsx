@@ -18,7 +18,7 @@ export default function FormSuccessPage({ params }) {
             {translate("contact_page.success.watch_video")}
           </p>
 
-          <div className="max-w-xl mx-auto w-full h-[300px] border rounded-2xl mt-10 mx-auto"></div>
+          <div className="max-w-xl  w-full h-[300px] border rounded-2xl mt-10 mx-auto"></div>
         </div>
       </Layout>
     </ThemeContextProvider>
