@@ -68,7 +68,7 @@ export default function ContactOne() {
 
     try {
       const body = {
-        title: "Новый лид с сайта",
+        title: "Yangi Lead",
         name: formValues.full_name,
         phone: formValues.phone_number,
         store_name: formValues.store_name,
@@ -85,7 +85,7 @@ export default function ContactOne() {
         },
       };
 
-      fetch("https://magicrm.uz/api/v1/leads", config)
+      fetch("https://magicstore.uz/api/v1/landing/lead", config)
         .then((res) => res.json())
         .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);
