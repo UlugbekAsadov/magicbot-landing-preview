@@ -8,6 +8,7 @@ import {
   businessTypes,
   onlineBusinessOptions,
 } from "@/utils/mocks/lead-form.mock";
+import { useUtmContext } from "@/context/utm.context";
 
 export default function ContactOne() {
   const [hasSubmitted, setHasSubmitForm] = useState(
@@ -31,6 +32,9 @@ export default function ContactOne() {
   const [selectedBusinessType, setSelectedBusinessType] = useState(
     businessTypes[currentLang][0]
   );
+
+  const { utmSource, utmMedium, utmCampaign, utmContent, utmTerm, ref } =
+    useUtmContext();
 
   const recaptchaRef = React.createRef();
 
@@ -75,6 +79,11 @@ export default function ContactOne() {
         business_type: selectedBusinessType.name,
         business_location: selectedBusiness.name,
         token,
+        utm_source: utmSource,
+        utm_medium: utmMedium,
+        utm_campaign: utmCampaign,
+        utm_term: utmTerm,
+        ref: ref,
       };
 
       const config = {
