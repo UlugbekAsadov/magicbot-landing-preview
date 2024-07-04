@@ -8,6 +8,7 @@ import {
   businessTypes,
   onlineBusinessOptions,
 } from "@/utils/mocks/lead-form.mock";
+import { useUtmContext } from "@/context/utm.context";
 
 export default function ContactOne() {
   const [hasSubmitted, setHasSubmitForm] = useState(
@@ -31,6 +32,9 @@ export default function ContactOne() {
   const [selectedBusinessType, setSelectedBusinessType] = useState(
     businessTypes[currentLang][0]
   );
+
+  const { utmSource, utmMedium, utmCampaign, utmContent, utmTerm, ref } =
+    useUtmContext();
 
   const recaptchaRef = React.createRef();
 
@@ -68,16 +72,20 @@ export default function ContactOne() {
 
     try {
       const body = {
-        title: "Новый лид с сайта",
+        title: "Yangi Lead",
         name: formValues.full_name,
         phone: formValues.phone_number,
         store_name: formValues.store_name,
         business_type: selectedBusinessType.name,
         business_location: selectedBusiness.name,
         token,
+        utm_source: utmSource,
+        utm_medium: utmMedium,
+        utm_campaign: utmCampaign,
+        utm_term: utmTerm,
+        ref: ref,
       };
 
-      console.log({ body });
       const config = {
         method: "POST",
         body: JSON.stringify(body),
@@ -86,7 +94,7 @@ export default function ContactOne() {
         },
       };
 
-      fetch("https://crm.magicbot.uz/api/v1/leads", config)
+      fetch("https://magicstore.uz/api/v1/landing/lead", config)
         .then((res) => res.json())
         .then((_) => {
           sessionStorage.setItem("isLeadSubmitted", true);
