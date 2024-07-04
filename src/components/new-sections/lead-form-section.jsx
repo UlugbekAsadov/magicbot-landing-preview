@@ -9,6 +9,7 @@ import {
   onlineBusinessOptions,
 } from "@/utils/mocks/lead-form.mock";
 import { useUtmContext } from "@/context/utm.context";
+import { useRouter } from "next/navigation";
 
 export default function ContactOne() {
   const [hasSubmitted, setHasSubmitForm] = useState(
@@ -32,6 +33,7 @@ export default function ContactOne() {
   const [selectedBusinessType, setSelectedBusinessType] = useState(
     businessTypes[currentLang][0]
   );
+  const router = useRouter();
 
   const { utmSource, utmMedium, utmCampaign, utmContent, utmTerm, ref } =
     useUtmContext();
@@ -83,6 +85,7 @@ export default function ContactOne() {
         utm_medium: utmMedium,
         utm_campaign: utmCampaign,
         utm_term: utmTerm,
+        utm_content: utmContent,
         ref: ref,
       };
 
@@ -95,8 +98,8 @@ export default function ContactOne() {
       };
 
       fetch("https://magicstore.uz/api/v1/landing/lead", config)
-        .then((res) => res.json())
-        .then((_) => {
+        .then(() => {
+          router.push(`/${currentLang}/contact/success`);
           sessionStorage.setItem("isLeadSubmitted", true);
           setHasSubmitForm(true);
         })
