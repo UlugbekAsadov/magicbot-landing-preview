@@ -14,11 +14,11 @@ export default function FormSuccessPage({ params }) {
           <h2 className="text-3xl  text-center max-w-3xl w-full mx-auto">
             {translate("contact_page.success.title")}
           </h2>
-          <p className="text-lg mt-6 text-center max-w-3xl w-full mx-auto">
+          {/* <p className="text-lg mt-6 text-center max-w-3xl w-full mx-auto">
             {translate("contact_page.success.watch_video")}
           </p>
 
-          <div className="max-w-xl  w-full h-[300px] border rounded-2xl mt-10 mx-auto"></div>
+          <div className="max-w-xl  w-full h-[300px] border rounded-2xl mt-10 mx-auto"></div> */}
         </div>
       </Layout>
     </ThemeContextProvider>
