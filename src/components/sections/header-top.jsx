@@ -1,14 +1,16 @@
 import LanguageDropdown from "@/components/elements/LanguageDropdown";
 import { useEffect, useState } from "react";
 import SwitchDarkLight from "@/components/elements/SwitchDarkLight";
-import {useLocaleContext} from "@/context/locale.context";
+import { useLocaleContext } from "@/context/locale.context";
 
 export const HeaderTop = () => {
-  const [colorMode, setColorMode] = useState(localStorage.getItem("theme"));
+  const [colorMode] = useState(localStorage.getItem("theme"));
+
   useEffect(() => {
     document.body.classList.toggle("sala-dark-scheme", colorMode === "light");
   }, []);
-  const {translate} = useLocaleContext();
+
+  const { translate } = useLocaleContext();
 
   return (
     <header
@@ -24,12 +26,17 @@ export const HeaderTop = () => {
             </span>
           </div>
           <div className="header-right flex items-center gap-3">
-            <SwitchDarkLight/>
+            <SwitchDarkLight />
             <div>
-              <LanguageDropdown/>
+              <LanguageDropdown />
             </div>
             <div>
-              <a href="https://magicstore.uz/login" className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded">{translate("auth.login")}</a>
+              <a
+                href="https://magicstore.uz/login"
+                className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded"
+              >
+                {translate("auth.login")}
+              </a>
             </div>
           </div>
         </div>

@@ -4,10 +4,8 @@ import { useEffect, useState } from "react";
 import HeaderRightSection from "@/components/layout/Header/header-right-section";
 import Link from "next/link";
 import SwitchDarkLight from "@/components/elements/SwitchDarkLight";
-import {useUtmContext} from "@/context/utm.context";
 
 export default function Header({ headerClass, lang }) {
-  const { link } = useUtmContext();
   const [width, setWidth] = useState(window.innerWidth);
   const tabletScreenWidth = 768;
   useEffect(() => {

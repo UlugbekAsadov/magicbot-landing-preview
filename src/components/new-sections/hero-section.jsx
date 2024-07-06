@@ -57,9 +57,6 @@ export const HeroSection = () => {
 };
 
 function HeroContents({ paragraph, text, buttonText, src1, src2 }) {
-  const { translate } = useLocaleContext();
-  const { link } = useUtmContext();
-
   return (
     <section className="section pt-8 md:pt-16 has-shape hero__section spdb">
       <div className="shape shape-yellow layout-01" />
