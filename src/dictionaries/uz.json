@@ -97,6 +97,9 @@
     "step_3": "Sotishni boshlang"
   },
   "plans": {
+    "one_month": "Oylik",
+    "six_month": "6 oy",
+    "year": "Yillik",
     "our_plans": "Bizning tariflarimiz",
     "monthly": "OYLIK TO`LOV",
     "per_month": "bir oy uchun",
@@ -170,7 +173,7 @@
     "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A",
     "captcha_required": "Kaptcha talab qilinadi",
     "question": "Siz qanday mahsulot yoki xizmatlarni sotishni rejalashtirmoqdasiz?",
-      "do_you_sell_online": "Onlayn sotasizmi?",
+    "do_you_sell_online": "Onlayn sotasizmi?",
     "business_type": "Qaysi biznes turi?"
   },
   "contact_page": {

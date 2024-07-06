@@ -14,7 +14,6 @@ import MarketSection from "@/components/sections/market-section";
 import SellSection from "@/components/sections/sell-section";
 import OurLeadsSection from "@/components/sections/our-leads-section";
 import { Footer } from "@/components/sections/footer";
-import { Blogs } from "@/components/sections/blogs/blogs-section";
 import { BrandsSection } from "@/components/sections/brands-section";
 
 export default function HomeAppShowcase({ params }) {
