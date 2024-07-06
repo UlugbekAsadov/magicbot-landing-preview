@@ -128,19 +128,33 @@ export default function PlansSection() {
           </h2>
         </div>
         <div className=" items-center gap-2 justify-center p-2 mb-4 border w-fit mx-auto rounded-xl grid grid-cols-3">
-          {months.map((month) => (
-            <div
-              key={month.duration}
-              className={twMerge(
-                "py-2 px-3 cursor-pointer text-center",
-                selectedDuration === month.duration &&
-                  "background-grey rounded-xl"
-              )}
-              onClick={() => setSelectedDuration(month.duration)}
-            >
-              {translate(month.title)}
-            </div>
-          ))}
+          {months.map((month) => {
+            let discount = "0";
+
+            if (month.duration === 6) {
+              discount = "15";
+            } else if (month.duration === 12) {
+              discount = "20";
+            }
+            return (
+              <div
+                key={month.duration}
+                className={twMerge(
+                  "py-2 px-3 cursor-pointer text-center flex items-center justify-center",
+                  selectedDuration === month.duration &&
+                    "background-grey rounded-xl"
+                )}
+                onClick={() => setSelectedDuration(month.duration)}
+              >
+                {translate(month.title)}
+                {discount !== "0" && (
+                  <span className="ml-3 py-1 px-1.5 bg-green-500 text-white rounded-lg text-xs">
+                    -{discount}%
+                  </span>
+                )}
+              </div>
+            );
+          })}
         </div>
         <div
           className="pricing-table layout-01 is-active"
