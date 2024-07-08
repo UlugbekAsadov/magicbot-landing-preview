@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useLocaleContext } from "@/context/locale.context";
 import { useRef, useState, useEffect } from "react";
-import "./styles/plans-section.css";
 import { getOffsetTop } from "@/utils/funtions/calculate-distance";
 import { useUtmContext } from "@/context/utm.context";
 import { twMerge } from "tailwind-merge";
+import { EffectCards } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./styles/plans-section.css";
 
 const months = [
   {
@@ -116,6 +118,40 @@ export default function PlansSection() {
     <PlansCard key={idx} selectedDuration={selectedDuration} {...plan} />
   ));
 
+  const renderPlanCardsMobile = plans.map((plan, idx) => (
+    <SwiperSlide key={idx}>
+      <PlansCard selectedDuration={selectedDuration} {...plan} />
+    </SwiperSlide>
+  ));
+
+  const renderMonth = months.map((month) => {
+    let discount = "0";
+
+    if (month.duration === 6) {
+      discount = "15";
+    } else if (month.duration === 12) {
+      discount = "20";
+    }
+    return (
+      <div
+        key={month.duration}
+        className={twMerge(
+          "py-2 px-3 text-xs cursor-pointer text-center h-full border-b md:border-b-0 flex items-center justify-center",
+          selectedDuration === month.duration &&
+            "border-blue-500 md:bg-[var(--sala-shade-background)] md:rounded-xl"
+        )}
+        onClick={() => setSelectedDuration(month.duration)}
+      >
+        {translate(month.title)}
+        {discount !== "0" && (
+          <span className="ml-3 py-0.5 md:py-1 px-1.5 bg-green-500 text-white rounded-lg text-[9px] md:text-xs">
+            -{discount}%
+          </span>
+        )}
+      </div>
+    );
+  });
+
   return (
     <div
       id="plans"
@@ -127,59 +163,49 @@ export default function PlansSection() {
             {translate("plans.our_plans")}
           </h2>
         </div>
-        <div className=" items-center gap-2 justify-center p-2 mb-4 border w-fit mx-auto rounded-xl grid grid-cols-3">
-          {months.map((month) => {
-            let discount = "0";
-
-            if (month.duration === 6) {
-              discount = "15";
-            } else if (month.duration === 12) {
-              discount = "20";
-            }
-            return (
-              <div
-                key={month.duration}
-                className={twMerge(
-                  "py-2 px-3 cursor-pointer text-center flex items-center justify-center",
-                  selectedDuration === month.duration &&
-                    "background-grey rounded-xl"
-                )}
-                onClick={() => setSelectedDuration(month.duration)}
-              >
-                {translate(month.title)}
-                {discount !== "0" && (
-                  <span className="ml-3 py-1 px-1.5 bg-green-500 text-white rounded-lg text-xs">
-                    -{discount}%
-                  </span>
-                )}
-              </div>
-            );
-          })}
+        <div className="items-end md:items-center md:gap-2 justify-center sm:p-2 mb-4  md:border w-fit mx-auto md:rounded-xl grid grid-cols-3">
+          {renderMonth}
         </div>
-        <div
-          className="pricing-table layout-01 is-active"
-          ref={cardsContainerRef}
-        >
-          <div className="row">{renderPlanCards}</div>
 
-          {selectedCard && (
-            <div
-              className="row overlay__pricing"
-              style={{
-                "--x": `${selectedCard.x}px`,
-                "--y": `${selectedCard.y}px`,
-                opacity: selectedCard ? "1" : "0",
-              }}
-            >
-              {[...Array(3)].map((_, i) => (
-                <PlansCard
-                  key={i}
-                  {...Object.values(selectedCard)[0]}
-                  buttonText={translate("plans.start_now")}
-                />
-              ))}
-            </div>
-          )}
+        <div className="hidden md:block">
+          <div
+            className="pricing-table layout-01 is-active "
+            ref={cardsContainerRef}
+          >
+            <div className="row">{renderPlanCards}</div>
+
+            {selectedCard && (
+              <div
+                className="row overlay__pricing"
+                style={{
+                  "--x": `${selectedCard.x}px`,
+                  "--y": `${selectedCard.y}px`,
+                  opacity: selectedCard ? "1" : "0",
+                }}
+              >
+                {[...Array(3)].map((_, i) => (
+                  <PlansCard
+                    key={i}
+                    {...Object.values(selectedCard)[0]}
+                    buttonText={translate("plans.start_now")}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="block md:hidden">
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            navigation
+            loop
+            className="mySwiper"
+            style={{ padding: "0 22px" }}
+          >
+            {renderPlanCardsMobile}
+          </Swiper>
         </div>
       </div>
     </div>
@@ -198,7 +224,6 @@ export const PlansCard = ({
   selectedDuration,
 }) => {
   const { link } = useUtmContext();
-  console.log({ price });
 
   return (
     <>
@@ -214,14 +239,18 @@ export const PlansCard = ({
                 </span>
               )}
             </div>
-            <div className="price">
-              <div className="number">{price?.[selectedDuration]}</div>{" "}
+            <div className="flex items-end gap-2">
+              <p className="text-4xl font-bold md:text-5xl">
+                {price?.[selectedDuration]}
+              </p>{" "}
               {duration}
             </div>
-            <div className="text-sm leading-6 text-gray-600">{desc}</div>
+            <div className="sm:text-sm text-xs sm:leading-6 text-gray-600">
+              {desc}
+            </div>
             <ul className="list">
               {advantages?.map((adv, idx) => (
-                <li className="active" key={idx}>
+                <li className="active text-sm sm:text-base" key={idx}>
                   {adv}
                 </li>
               ))}

@@ -5,6 +5,8 @@ import { LocaleContextProvider } from "@/context/locale.context";
 import { UtmContextProvider } from "@/context/utm.context";
 
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/effect-cards";
 
 const inter = Inter({ subsets: ["latin"] });
 
