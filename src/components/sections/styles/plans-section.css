@@ -1,112 +1,99 @@
-
-
 .cards {
-    position: relative;
+  position: relative;
 }
 
 .cards__inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5em;
 }
 
 .card {
-    --flow-space: 0.5em;
-    --hsl: var(--hue), var(--saturation), var(--lightness);
-    flex: 1 1 14rem;
-    padding: 1.5em 2em;
-    display: grid;
-    grid-template-rows: auto auto auto 1fr;
-    align-items: start;
-    gap: 1.25em;
-    background-color: var(--sala-shade-background,#f8f9fc);
-    border: 1px solid #eceff133;
-    border-radius: 15px;
+  --flow-space: 0.5em;
+  --hsl: var(--hue), var(--saturation), var(--lightness);
+  flex: 1 1 14rem;
+  padding: 1.5em 2em;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  align-items: start;
+  gap: 1.25em;
+  background-color: var(--sala-shade-background, #f8f9fc);
+  border: 1px solid #eceff133;
+  border-radius: 15px;
 }
 
 .pricing-card-wrapper:nth-child(1) .pricing-box .card {
-    --hue: 165;
-    --saturation: 82.26%;
-    --lightness: 51.37%;
+  --hue: 165;
+  --saturation: 82.26%;
+  --lightness: 51.37%;
 }
 
 .pricing-card-wrapper:nth-child(2) .pricing-box .card {
-    --hue: 291.34;
-    --saturation: 95.9%;
-    --lightness: 61.76%;
+  --hue: 291.34;
+  --saturation: 95.9%;
+  --lightness: 61.76%;
 }
 
 .pricing-card-wrapper:nth-child(3) .pricing-box .card {
-    --hue: 338.69;
-    --saturation: 100%;
-    --lightness: 48.04%;
+  --hue: 338.69;
+  --saturation: 100%;
+  --lightness: 48.04%;
 }
 
-
-
-
 .cta {
-    display: block;
-    align-self: end;
-    margin: 1em 0 0.5em 0;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    background-color: var(--sala-pricing-button-background);
-    padding: 0.7em;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
+  display: block;
+  align-self: end;
+  margin: 1em 0 0.5em 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--sala-pricing-button-background);
+  padding: 0.7em;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .overlay__pricing {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    user-select: none;
-    -webkit-mask: radial-gradient(
-            25rem 25rem at var(--x) var(--y),
-            #000 1%,
-            transparent 50%
-    );
-    mask: radial-gradient(
-            25rem 25rem at var(--x) var(--y),
-            #000 1%,
-            transparent 50%
-    );
-    transition: 400ms mask ease;
-    will-change: mask;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #000 1%,
+    transparent 50%
+  );
+  mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #000 1%,
+    transparent 50%
+  );
+  transition: 400ms mask ease;
+  will-change: mask;
 }
 
 .overlay__pricing .card {
-    background-color: hsla(var(--hsl), 0.15);
-    border-color: hsla(var(--hsl), 1);
-    box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+  background-color: hsla(var(--hsl), 0.15);
+  border-color: hsla(var(--hsl), 1);
+  box-shadow: 0 0 0 1px inset hsl(var(--hsl));
 }
 
 .overlay__pricing .cta {
-    display: block;
-    grid-row: -1;
-    width: 100%;
-    background-color: hsl(var(--hsl));
-    box-shadow: 0 0 0 1px hsl(var(--hsl));
+  display: block;
+  grid-row: -1;
+  width: 100%;
+  background-color: hsl(var(--hsl));
+  box-shadow: 0 0 0 1px hsl(var(--hsl));
 }
 
 :not(.overlay__pricing) > .card {
-    transition: 400ms background ease;
-    will-change: background;
+  transition: 400ms background ease;
+  will-change: background;
 }
 
-@media  (max-width: 1000px) {
-    .card{
-        height: 600px !important;
-    }
+@media (max-width: 1000px) {
+  .card {
+    height: 670px !important;
+  }
 }
-
-@media  (max-width: 500px) {
-    .card{
-        height: 680px !important;
-    }
-}
-
-
