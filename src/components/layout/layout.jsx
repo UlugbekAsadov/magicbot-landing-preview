@@ -17,7 +17,6 @@ export default function Layout({
   headerClass,
   lang,
 }) {
-  const { translate } = useLocaleContext();
   useEffect(() => {
     const WOW = require("wowjs");
     window.wow = new WOW.WOW({

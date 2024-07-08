@@ -1,20 +1,8 @@
-import { useEffect, useState } from "react";
-import HeaderRightSection from "@/components/layout/Header/header-right-section";
+import HeaderRightSection from "./header-right-section";
 import Link from "next/link";
 import SwitchDarkLight from "@/components/elements/SwitchDarkLight";
-import Image from "next/image";
 
 export default function Header({ headerClass, lang }) {
-  const [width, setWidth] = useState(window.innerWidth);
-  const tabletScreenWidth = 768;
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <div className="w-full  header-color sticky top-0 z-30">
       <div

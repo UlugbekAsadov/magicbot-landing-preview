@@ -1,11 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useLocaleContext } from "@/context/locale.context";
-import { useUtmContext } from "@/context/utm.context";
 
 export default function BannerSection() {
   const { translate } = useLocaleContext();
-  const { link } = useUtmContext();
   return (
     <>
       <section className="section-banner layout-09 mb-16 mt-16">
@@ -20,7 +18,7 @@ export default function BannerSection() {
                 </div>
                 <div className="button-wrap">
                   <Link
-                    href={link}
+                    href="/lead#lead-section"
                     className="button fullfield"
                     title="Try it free"
                   >
