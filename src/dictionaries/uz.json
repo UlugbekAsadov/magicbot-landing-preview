@@ -209,5 +209,13 @@
       "title": "Marketpleyslardagi do'konlarga",
       "description": "Turli marketpleyslarda o'z savdosini yo'lga qo'yib, kengaymoqchi bo'layotgan do'konlarga telegramda yechim taklif qilamiz"
     }
+  },
+  "coupon": {
+    "title": "",
+    "description": "",
+    "coupon_not_found": "Kupon topilmadi",
+    "coupon_successfully_applied": "Kupon aktivlashtirildi",
+    "enter_coupon_code": "Kuponni kiriting",
+    "check": "Tekshirish"
   }
 }
