@@ -12,7 +12,7 @@ export default function HeaderRightSection({ lang }) {
             className="button fullfield"
           >
             <i className="las la-headset" />
-            <span>{translate("header.free_demo")}</span>
+            <span>{translate("hero.button-text")}</span>
           </Link>
         </div>
       </div>
