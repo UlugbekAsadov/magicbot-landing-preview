@@ -20,11 +20,7 @@ export const HeaderTop = () => {
       <div className="max-w-[1600px] w-full mx-auto py-3 md:px-0 site-header">
         <div className="flex items-center justify-between container-fluid">
           <h2 className="header-left font-bold">+998 77 114 99 98</h2>
-          <div className="flex justify-center items-center">
-            <span className="text-green-600 font-bold text-sm">
-              {translate("header.announce")}
-            </span>
-          </div>
+
           <div className="header-right flex items-center gap-3">
             <SwitchDarkLight />
             <div>

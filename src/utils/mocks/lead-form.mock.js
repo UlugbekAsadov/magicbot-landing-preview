@@ -1,5 +1,6 @@
 export const onlineBusinessOptions = {
   ru: [
+    { name: "Выберите", choose: true },
     {
       name: "Telegram, Instagramda",
     },
@@ -14,6 +15,8 @@ export const onlineBusinessOptions = {
     },
   ],
   uz: [
+    { name: "Tanlash", choose: true },
+
     {
       name: "Telegram, Instagramda",
     },
@@ -32,7 +35,8 @@ export const onlineBusinessOptions = {
 export const businessTypes = {
   ru: [
     {
-      name: "Kiyim-kechak",
+      name: "Выберите",
+      choose: true,
     },
     {
       name: "Kosmetika",
@@ -54,6 +58,10 @@ export const businessTypes = {
     },
   ],
   uz: [
+    {
+      name: "Tanlash",
+      choose: true,
+    },
     {
       name: "Kiyim-kechak",
     },

@@ -12,9 +12,6 @@ import { useUtmContext } from "@/context/utm.context";
 import { useRouter } from "next/navigation";
 
 export default function ContactOne() {
-  const [hasSubmitted, setHasSubmitForm] = useState(
-    sessionStorage.getItem("isLeadSubmitted")
-  );
   const [isLoading, setIsLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     full_name: "",
@@ -27,6 +24,11 @@ export default function ContactOne() {
   const [hasStoreNameError, setHasStoreNameError] = useState(false);
   const [hasCaptchaError, setHasCaptchaError] = useState(false);
   const { translate, currentLang } = useLocaleContext();
+  const [selectInputErrors, setSelectInputErrors] = useState({
+    businessType: false,
+    businessLocation: false,
+  });
+
   const [selectedBusiness, setSelectedBusiness] = useState(
     onlineBusinessOptions[currentLang][0]
   );
@@ -51,6 +53,10 @@ export default function ContactOne() {
     setHasNameError(false);
     setHasError(false);
     setHasCaptchaError(false);
+    setSelectInputErrors({
+      businessType: false,
+      businessLocation: false,
+    });
 
     if (!formValues.full_name.length) {
       return setHasNameError(true);
@@ -64,13 +70,22 @@ export default function ContactOne() {
       return setHasError(true);
     }
 
+    if (selectedBusiness?.choose) {
+      return setSelectInputErrors((prevVal) => ({
+        ...prevVal,
+        businessLocation: true,
+      }));
+    }
+
+    if (selectedBusinessType?.choose) {
+      return setSelectInputErrors((prevVal) => ({
+        ...prevVal,
+        businessType: true,
+      }));
+    }
+
     setIsLoading(true);
     const token = await recaptchaRef.current.getValue();
-
-    // if (!Boolean(token)) {
-    //   setHasCaptchaError(true);
-    //   return setIsLoading(false);
-    // }
 
     try {
       const body = {
@@ -192,6 +207,11 @@ export default function ContactOne() {
                         selectedOption={selectedBusiness}
                         setSelectedOption={setSelectedBusiness}
                       />
+                      {selectInputErrors.businessLocation && (
+                        <span className="text-xs text-red-500">
+                          {translate("form.required")}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="col-md-12">
@@ -228,6 +248,11 @@ export default function ContactOne() {
                         selectedOption={selectedBusinessType}
                         setSelectedOption={setSelectedBusinessType}
                       />
+                      {selectInputErrors.businessType && (
+                        <span className="text-xs text-red-500">
+                          {translate("form.required")}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="col-md-12">
@@ -285,18 +310,6 @@ export default function ContactOne() {
                 </div>
               </form>
             </div>
-            {hasSubmitted && (
-              <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center  backdrop-blur-lg">
-                <div className="header-color animate-submittionPopup flex flex-col items-center justify-center max-w-5xl w-full rounded-xl mx-5 px-5 py-8 md:py-14">
-                  <h2 className="font-bold text-3xl md:text-4xl  gradient-text text-center">
-                    {translate("form.thanks")}
-                  </h2>
-                  <p className="font-medium max-w-md w-full mt-3 md:mt-9 text-xl md:text-2xl text-center text-zinc-400">
-                    {translate("form.message")}
-                  </p>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>
