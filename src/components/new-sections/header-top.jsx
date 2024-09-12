@@ -1,4 +1,3 @@
-import LanguageDropdown from "@/components/elements/LanguageDropdown";
 import { useEffect, useState } from "react";
 import SwitchDarkLight from "@/components/elements/SwitchDarkLight";
 import { useLocaleContext } from "@/context/locale.context";

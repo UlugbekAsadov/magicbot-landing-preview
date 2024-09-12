@@ -161,7 +161,6 @@ export default function PlansSection() {
 
   return (
     <>
-      <CouponSection coupon={coupon} setCoupon={setCoupon} />
       <div
         id="plans"
         className="section-pricing section has-icon icon-bottom-center header-color mb-20"
