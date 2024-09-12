@@ -54,10 +54,6 @@ export default function ContactOne({ params }) {
       return setHasNameError(true);
     }
 
-    if (!formValues.question.length) {
-      return setHasQuestionError(true);
-    }
-
     if (formValues.phone_number.length !== 13) {
       return setHasError(true);
     }
@@ -76,6 +72,8 @@ export default function ContactOne({ params }) {
         name: formValues.full_name,
         phone: formValues.phone_number,
         question: formValues.question,
+        business_type: selectedBusinessType.name,
+        business_location: selectedBusiness.name,
         token,
       };
 

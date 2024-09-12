@@ -9,6 +9,7 @@ import { twMerge } from "tailwind-merge";
 import { EffectCards } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./styles/plans-section.css";
+import { CouponSection } from "./coupon-section";
 
 const months = [
   {
@@ -30,6 +31,7 @@ export default function PlansSection() {
   const cardsContainerRef = useRef();
   const [selectedCard, setSelectedCard] = useState(null);
   const [selectedDuration, setSelectedDuration] = useState(months[0].duration);
+  const [coupon, setCoupon] = useState(null);
 
   const plans = [
     {
@@ -115,7 +117,12 @@ export default function PlansSection() {
   }, []);
 
   const renderPlanCards = plans.map((plan, idx) => (
-    <PlansCard key={idx} selectedDuration={selectedDuration} {...plan} />
+    <PlansCard
+      key={idx}
+      selectedDuration={selectedDuration}
+      coupon={coupon}
+      {...plan}
+    />
   ));
 
   const renderPlanCardsMobile = plans.map((plan, idx) => (
@@ -153,62 +160,65 @@ export default function PlansSection() {
   });
 
   return (
-    <div
-      id="plans"
-      className="section-pricing section has-icon icon-bottom-center header-color mb-20"
-    >
-      <div className="container">
-        <div className=" heading align-center mt-16">
-          <h2 className="text-center  heading-title size-l">
-            {translate("plans.our_plans")}
-          </h2>
-        </div>
-        <div className="items-end md:items-center md:gap-2 justify-center sm:p-2 mb-4  md:border w-fit mx-auto md:rounded-xl grid grid-cols-3">
-          {renderMonth}
-        </div>
+    <>
+      <CouponSection coupon={coupon} setCoupon={setCoupon} />
+      <div
+        id="plans"
+        className="section-pricing section has-icon icon-bottom-center header-color mb-20"
+      >
+        <div className="container">
+          <div className=" heading align-center mt-16">
+            <h2 className="text-center  heading-title size-l">
+              {translate("plans.our_plans")}
+            </h2>
+          </div>
+          <div className="items-end md:items-center md:gap-2 justify-center sm:p-2 mb-4  md:border w-fit mx-auto md:rounded-xl grid grid-cols-3">
+            {renderMonth}
+          </div>
 
-        <div className="hidden md:block">
-          <div
-            className="pricing-table layout-01 is-active "
-            ref={cardsContainerRef}
-          >
-            <div className="row">{renderPlanCards}</div>
+          <div className="hidden md:block">
+            <div
+              className="pricing-table layout-01 is-active "
+              ref={cardsContainerRef}
+            >
+              <div className="row">{renderPlanCards}</div>
 
-            {selectedCard && (
-              <div
-                className="row overlay__pricing"
-                style={{
-                  "--x": `${selectedCard.x}px`,
-                  "--y": `${selectedCard.y}px`,
-                  opacity: selectedCard ? "1" : "0",
-                }}
-              >
-                {[...Array(3)].map((_, i) => (
-                  <PlansCard
-                    key={i}
-                    {...Object.values(selectedCard)[0]}
-                    buttonText={translate("plans.start_now")}
-                  />
-                ))}
-              </div>
-            )}
+              {selectedCard && (
+                <div
+                  className="row overlay__pricing"
+                  style={{
+                    "--x": `${selectedCard.x}px`,
+                    "--y": `${selectedCard.y}px`,
+                    opacity: selectedCard ? "1" : "0",
+                  }}
+                >
+                  {[...Array(3)].map((_, i) => (
+                    <PlansCard
+                      key={i}
+                      {...Object.values(selectedCard)[0]}
+                      buttonText={translate("plans.start_now")}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="block md:hidden">
+            <Swiper
+              effect={"cards"}
+              grabCursor={true}
+              modules={[EffectCards]}
+              navigation
+              loop
+              className="mySwiper"
+              style={{ padding: "0 22px" }}
+            >
+              {renderPlanCardsMobile}
+            </Swiper>
           </div>
         </div>
-        <div className="block md:hidden">
-          <Swiper
-            effect={"cards"}
-            grabCursor={true}
-            modules={[EffectCards]}
-            navigation
-            loop
-            className="mySwiper"
-            style={{ padding: "0 22px" }}
-          >
-            {renderPlanCardsMobile}
-          </Swiper>
-        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -222,8 +232,23 @@ export const PlansCard = ({
   advantages = [],
   buttonText,
   selectedDuration,
+  coupon,
 }) => {
   const { link } = useUtmContext();
+
+  const productPrice = parseInt(price?.[selectedDuration].replace(",", ""));
+
+  const calculateDiscountedPrice = () => {
+    const { type, value } = coupon || {};
+    const totalSum = productPrice;
+
+    const val =
+      type === "amount"
+        ? totalSum - (totalSum - value)
+        : totalSum - (totalSum * value) / 100;
+
+    return val.toLocaleString();
+  };
 
   return (
     <>
@@ -241,7 +266,9 @@ export const PlansCard = ({
             </div>
             <div className="flex items-end gap-2">
               <p className="text-4xl font-bold md:text-5xl">
-                {price?.[selectedDuration]}
+                {coupon
+                  ? calculateDiscountedPrice()
+                  : price?.[selectedDuration]}
               </p>{" "}
               {duration}
             </div>
