@@ -270,6 +270,7 @@ export default function ContactOne() {
                   <div className="col-md-12">
                     <div className="field-submit">
                       <button
+                        disabled={isLoading}
                         type="submit"
                         className="bg-blue-600 px-3 py-3 rounded-lg text-white w-full mt-4"
                       >
