@@ -128,8 +128,8 @@
     },
     "growth": {
       "desc": "O'rta biznes va o'z biznesini rivojlantirayotganlar uchun",
-      "clients_limit": "Mijozlar soni 25 000 tagacha",
-      "products_limit": "Mahsulotlar soni 10 000 tagacha",
+      "clients_limit": "Mijozlar soni 10 000 tagacha",
+      "products_limit": "Mahsulotlar soni 3 000 tagacha",
       "newsletters_limit": "Xabarnomalar soni 20 tagacha",
       "employees_limit": "Xodimlar soni 10 tagacha",
       "modules": "Kengaytirilgan modullar",
