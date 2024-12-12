@@ -174,8 +174,30 @@
     "address": "Город Ташкент, Мирзо-Улугбекский район, ул. Муминова 4а",
     "captcha_required": "Требуется капча",
     "question": "Какие товары или услуги вы планируете продавать?",
-    "do_you_sell_online": "Вы продаете онлайн?",
-    "business_type": "Тип бизнеса"
+    "do_you_sell_online": {
+      "title": "Вы продаете онлайн?",
+      "yes": "Да",
+      "no": "Нет"
+    },
+    "business_type": {
+      "title": "Тип бизнеса",
+      "clothes": "Одежда",
+      "cosmetics": "Косметика",
+      "parfums": "Парфюмерия",
+      "biologics": "Биологически активные добавки",
+      "electronics": "Электроника",
+      "accessories": "Аксессуары",
+      "others": "Другое"
+    },
+    "telegram_username": "Telegram username (sizga telefon orqali bog'lana olmasak, telegram orqali yozamiz)",
+    "store_social_links": "Do'koningizning instagram, telegramdagi linklari (yo'q bo'lsa, 0 raqamini yozib qoldiring)",
+    "do_you_know_magicbot": {
+      "title": "Magicbot haqida ma'lumotga egamisiz?",
+      "yes": "Ha bilaman",
+      "not_really": "To'liq tanish emasman"
+    },
+    "step": "Этап",
+    "next": "Далее"
   },
   "contact_page": {
     "title": "Свяжитесь с нами",
