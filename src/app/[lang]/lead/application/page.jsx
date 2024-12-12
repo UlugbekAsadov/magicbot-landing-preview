@@ -96,36 +96,36 @@ export default function Page() {
   };
 
   return (
-    <div className="w-full p-4  bg-[#111111] min-h-screen border-gray-800">
-      <div className="  space-y-8">
-        <div className="flex items-center justify-between">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-gray-400 hover:text-white"
-            asChild
+    <div className="w-full p-4  bg-[#111111] min-h-screen flex flex-col border-gray-800">
+      <div className="flex items-center justify-between">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="text-gray-400 hover:text-white"
+          asChild
+        >
+          <button
+            disabled={currentStep === 0}
+            onClick={() => setCurrentStep((prevVal) => prevVal - 1)}
+            href="/onboarding/previous-step"
+            className={twMerge("flex items-center text-white")}
           >
-            <button
-              disabled={currentStep === 0}
-              onClick={() => setCurrentStep((prevVal) => prevVal - 1)}
-              href="/onboarding/previous-step"
-              className={twMerge("flex items-center text-white")}
-            >
-              <ArrowLeftIcon className="w-4 h-4 mr-2" />
-              Back
-            </button>
-          </Button>
+            <ArrowLeftIcon className="w-4 h-4 mr-2" />
+            Back
+          </button>
+        </Button>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-gray-400 hover:text-white"
-          >
-            <XCircleIcon />
-          </Button>
-        </div>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-gray-400 hover:text-white"
+        >
+          <XCircleIcon />
+        </Button>
+      </div>
 
-        <div className="space-y-2  text-center">
+      <div className="flex-grow flex flex-col items-center justify-center ">
+        <div className="space-y-2  text-center ">
           <h1 className="text-2xl font-semibold text-white">
             {translate(currentQuiz.title)}
           </h1>
@@ -136,25 +136,25 @@ export default function Page() {
           ) : null}
         </div>
 
-        <div className="space-y-4 container">{getQuiz()}</div>
+        <div className="space-y-4 container mt-3">{getQuiz()}</div>
+      </div>
 
-        <div className="space-y-2">
-          <div className="flex justify-center gap-2">
-            {survey.map((_, idx) => (
-              <button
-                key={idx}
-                disabled={idx > currentStep}
-                onClick={() => setCurrentStep(idx)}
-                className={twMerge(
-                  "w-12 h-1 rounded-full cursor-pointer",
-                  idx > currentStep ? "bg-gray-700" : "bg-white"
-                )}
-              />
-            ))}
-          </div>
-          <div className="text-center text-sm text-gray-400">
-            {translate("form.step")}: {currentStep + 1}/{survey.length}
-          </div>
+      <div className="space-y-2">
+        <div className="flex justify-center gap-2">
+          {survey.map((_, idx) => (
+            <button
+              key={idx}
+              disabled={idx > currentStep}
+              onClick={() => setCurrentStep(idx)}
+              className={twMerge(
+                "w-12 h-1 rounded-full cursor-pointer",
+                idx > currentStep ? "bg-gray-700" : "bg-white"
+              )}
+            />
+          ))}
+        </div>
+        <div className="text-center text-sm text-gray-400">
+          {translate("form.step")}: {currentStep + 1}/{survey.length}
         </div>
       </div>
     </div>
