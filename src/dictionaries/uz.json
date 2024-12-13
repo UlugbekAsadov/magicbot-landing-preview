@@ -173,8 +173,30 @@
     "address": "Toshkent shaxar, Mirzo-Ulug`bek tumani, Muminov 4A",
     "captcha_required": "Kaptcha talab qilinadi",
     "question": "Siz qanday mahsulot yoki xizmatlarni sotishni rejalashtirmoqdasiz?",
-    "do_you_sell_online": "Onlayn sotasizmi?",
-    "business_type": "Qaysi biznes turi?"
+    "do_you_sell_online": {
+      "title": "Onlayn sotasizmi?",
+      "yes": "Ha",
+      "no": "Yo'q"
+    },
+    "business_type": {
+      "title": "Qaysi biznes yo'nalishida ishlaysiz?",
+      "clothes": "Kiyimlar",
+      "cosmetics": "Kosmetika",
+      "parfums": "Parfumeriya",
+      "biologics": "Biologik faol qo'shimchalar",
+      "electronics": "Elektronika",
+      "accessories": "Aksesuarlar",
+      "others": "Boshqalar"
+    },
+    "telegram_username": "Telegram username (sizga telefon orqali bog'lana olmasak, telegram orqali yozamiz)",
+    "store_social_links": "Do'koningizning instagram, telegramdagi linklari (yo'q bo'lsa, 0 raqamini yozib qoldiring)",
+    "do_you_know_magicbot": {
+      "title": "Magicbot haqida ma'lumotga egamisiz?",
+      "yes": "Ha bilaman",
+      "not_really": "To'liq tanish emasman"
+    },
+    "step": "Qadam",
+    "next": "Keyingi"
   },
   "contact_page": {
     "title": "Biz bilan bog'lanish",
