@@ -5,7 +5,8 @@ import { SingleChoice } from "@/components/survey/single-choice";
 import { useLocaleContext } from "@/context/locale.context";
 import { Button } from "@headlessui/react";
 import { ArrowLeftIcon, XCircleIcon } from "@heroicons/react/20/solid";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useCallback, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 const survey = [
@@ -13,6 +14,7 @@ const survey = [
     type: "single-choice",
     title: "form.do_you_sell_online.title",
     variants: ["form.do_you_sell_online.yes", "form.do_you_sell_online.no"],
+    field: "do_you_sell_online",
   },
   {
     type: "single-choice",
@@ -26,6 +28,7 @@ const survey = [
       "form.business_type.accessories",
       "form.business_type.others",
     ],
+    field: "business_type",
   },
   {
     type: "single-choice",
@@ -34,45 +37,68 @@ const survey = [
       "form.do_you_know_magicbot.yes",
       "form.do_you_know_magicbot.not_really",
     ],
+    field: "do_you_know_magicbot",
   },
   {
     type: "input",
     example: "",
     title: "form.store_name",
+    field: "store_name",
   },
   {
     type: "input",
     example: "",
     title: "form.full_name",
+    field: "full_name",
   },
   {
     type: "input",
     example: "",
     title: "form.phone_number",
+    field: "phone_number",
   },
   {
     type: "input",
     example: "",
     title: "form.telegram_username",
+    field: "telegram_username",
   },
   {
     type: "input",
     example: "",
     title: "form.store_social_links",
+    field: "store_social_links",
   },
 ];
 
 export default function Page() {
   const [currentStep, setCurrentStep] = useState(0);
-  const { translate } = useLocaleContext();
+  const { translate, currentLang } = useLocaleContext();
   const currentQuiz = survey[currentStep];
+  const router = useRouter();
+  const [form, setForm] = useState({
+    do_you_sell_online: "",
+    business_type: "",
+    do_you_know_magicbot: "",
+    store_name: "",
+    full_name: "",
+    phone_number: "+998",
+    telegram_username: "",
+    store_social_links: "",
+  });
+
+  const handleChangeInput = (value) => {
+    setForm((prevVal) => ({ ...prevVal, [currentQuiz.field]: value }));
+  };
 
   const handleChangeStep = (value) => {
     if (currentStep + 1 !== survey.length) {
-      setCurrentStep((prevState) => prevState + 1);
+      setForm((prevVal) => ({ ...prevVal, [currentQuiz.field]: value }));
+      setTimeout(() => {
+        setCurrentStep((prevState) => prevState + 1);
+      }, 500);
     } else {
-      console.log("submitted");
-      // Submit Form
+      router.push(`/${currentLang}/lead/application/success`);
     }
   };
 
@@ -83,6 +109,7 @@ export default function Page() {
           <SingleChoice
             variants={currentQuiz.variants}
             onChange={handleChangeStep}
+            value={form[currentQuiz.field]}
           />
         );
       case "input":
@@ -90,6 +117,8 @@ export default function Page() {
           <SurveyInput
             title={currentQuiz.title}
             handleNextQuestion={handleChangeStep}
+            handleChangeInput={handleChangeInput}
+            value={form[currentQuiz.field]}
           />
         );
     }
@@ -126,9 +155,15 @@ export default function Page() {
 
       <div className="flex-grow flex flex-col items-center justify-center ">
         <div className="space-y-2  text-center ">
+          {currentStep === 0 && (
+            <h1 className="text-2xl font-semibold text-white mb-10">
+              {translate("form.answer_these_questions")}
+            </h1>
+          )}
           <h1 className="text-2xl font-semibold text-white">
-            {translate(currentQuiz.title)}
+            {currentStep + 1}. {translate(currentQuiz.title)}
           </h1>
+
           {currentQuiz?.example ? (
             <p className="text-sm text-gray-400">
               {translate(currentQuiz?.example)}

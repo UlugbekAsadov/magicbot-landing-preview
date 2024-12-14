@@ -2,7 +2,8 @@
   "common": {
     "million_short": "mln",
     "thousand_short": "ming",
-    "show_more": "Ko'proq ko'rsatish"
+    "show_more": "Ko'proq ko'rsatish",
+    "back_to_home": "Asosiy sahifaga qaytish"
   },
   "navbar": {
     "main": "Bosh sahifa",
@@ -196,7 +197,8 @@
       "not_really": "To'liq tanish emasman"
     },
     "step": "Qadam",
-    "next": "Keyingi"
+    "next": "Keyingi",
+    "answer_these_questions": "Quyidagi savollarga javob bering va siz bilan tez orada bog'lanamiz"
   },
   "contact_page": {
     "title": "Biz bilan bog'lanish",

@@ -7,10 +7,7 @@ export default function HeaderRightSection({ lang }) {
     <>
       <div className=" flex flex-align-c flex-content-e">
         <div className="buttons">
-          <Link
-            href={`/${lang}/lead#lead-section`}
-            className="button fullfield"
-          >
+          <Link href={`/${lang}/lead/application`} className="button fullfield">
             <i className="las la-headset" />
             <span>{translate("hero.button-text")}</span>
           </Link>

@@ -11,9 +11,9 @@ export const SingleChoice = ({ variants, onChange, value }) => {
           onClick={() => onChange(variant)}
           variant="outline"
           className={twMerge(
-            "w-full rounded-xl  cursor-pointer  justify-between h-auto py-3 px-6",
+            "w-full rounded-xl cursor-pointer justify-between h-auto py-3 px-6",
             value === variant
-              ? "bg-[#272a30] border-blue-600 hover:bg-[#212429] hover:border-gray-600"
+              ? "bg-green-500"
               : "bg-[#272a30] border-gray-700 hover:bg-[#212429] hover:border-gray-600"
           )}
         >
