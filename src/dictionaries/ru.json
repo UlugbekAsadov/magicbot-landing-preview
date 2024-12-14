@@ -2,7 +2,8 @@
   "common": {
     "million_short": "млн",
     "thousand_short": "тысяч",
-    "show_more": "Показать больше"
+    "show_more": "Показать больше",
+    "back_to_home": "Вернуться на главную страницу"
   },
   "navbar": {
     "main": "Главная",
@@ -197,7 +198,8 @@
       "not_really": "To'liq tanish emasman"
     },
     "step": "Этап",
-    "next": "Далее"
+    "next": "Далее",
+    "answer_these_questions": "Ответьте на следующие вопросы и мы свяжемся с вами в ближайшее время"
   },
   "contact_page": {
     "title": "Свяжитесь с нами",

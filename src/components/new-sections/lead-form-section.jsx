@@ -140,7 +140,7 @@ export default function ContactOne() {
                   {translate("form.title")}
                 </div>
               </div>
-              <form onSubmit={handleSubmitForm}>
+              {/* <form onSubmit={handleSubmitForm}>
                 <div className="row">
                   <div className="col-md-12">
                     <div className="field-input">
@@ -309,7 +309,7 @@ export default function ContactOne() {
                     </div>
                   </div>
                 </div>
-              </form>
+              </form> */}
             </div>
           </div>
         </div>

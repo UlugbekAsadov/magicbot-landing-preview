@@ -12,7 +12,6 @@ import { ThemeContextProvider } from "@/context/theme.context";
 import OurLeadsSection from "@/components/sections/our-leads-section";
 import { Footer } from "@/components/sections/footer";
 import { MagicbotClientsSertion } from "@/components/sections/magicbot-clients-section";
-import ContactOne from "@/components/new-sections/lead-form-section";
 import { BrandsSection } from "@/components/sections/brands-section";
 
 export default function Page({ params }) {
@@ -36,7 +35,6 @@ export default function Page({ params }) {
         <GuideSection />
         <OurLeadsSection />
         <PlansSection />
-        <ContactOne />
         <BannerSection />
         <Footer />
       </Layout>
